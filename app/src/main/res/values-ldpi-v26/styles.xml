@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="btn_menu_text.title">
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/playfairdisplay_black</item>
+        <item name="android:textColor">@color/misteri_black</item>
+    </style>
+</resources>

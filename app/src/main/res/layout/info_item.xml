@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/infoitem_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/content_description_dummy"
+        android:gravity="center"
+        android:src="@drawable/festividad_thumb" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/infoitem_image"
+        android:layout_alignBottom="@id/infoitem_image"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/infoitem_image"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/infoitem_title"
+            style="@style/infolistitemTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left" />
+
+        <TextView
+            android:id="@+id/infoitem_subtitle"
+            style="@style/infolistitemSubtitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".infoList.InfoListActivity">
+
+    <TextView
+        android:id="@+id/title_info_text"
+        style="@style/titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:text="@string/cast"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/nextStep"
+        style="@style/btnImage"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginBottom="19dp"
+        android:contentDescription="@string/content_description_dummy"
+        android:src="@drawable/btn_adelante"
+        app:layout_constraintBottom_toBottomOf="@+id/title_info_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/today_cast_text"
+        style="@style/titleCast"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/today_cast"
+        android:textAllCaps="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_info_text" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cast_recycler_view"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        app:layoutManager="LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/today_cast_text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
