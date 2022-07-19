@@ -1,0 +1,289 @@
+<resources>
+    <!-- Application-->
+    <string name="app_name">Misteri d\'Elx 2022</string>
+    <string name="content_description_dummy">dummy</string>
+
+    <!-- DB configuration  -->
+    <string name="db_path">/data/data/es.gorilapp.misteri/databases/</string>
+    <!-- string name="db_name">diapositivas.sqlite</string-->
+
+
+    <string name="prueba_dummy">iNvitación a las mraias y pacos</string>
+    <string name="prueba_nbslide_dummy">99/99</string>
+
+    <!-- Misteri dates -->
+    <string-array name="misteri_dates">
+        <item>11/08/2014</item>
+        <item>12/08/2014</item>
+        <item>13/08/2014</item>
+        <item>14/08/2014</item>
+        <item>15/08/2014</item>
+    </string-array>
+
+    <!-- Language setting activity-->
+    <string name="ca_button">Valencià</string>
+    <string name="es_button">Español</string>
+    <string name="en_button">English</string>
+    <string name="de_button">Deutsch</string>
+    <string name="it_button">Italiano</string>
+    <string name="fr_button">Français</string>
+
+    <!-- Credits activity-->
+    <string name="cred_title1">Textos explicativos:</string>
+    <string name="cred_text1">Joan Castaño García</string>
+    <string name="cred_title2">Traducciones:</string>
+    <string name="cred_text2">Gaspar Jaén i Urban, Joan Castaño García, Valeriano Venneri, Daniel McEvoy Bravo, Pedro Antonio Ródenas Caparrós, Belén García Jaramillo, Sophie Albert, Juan Carlos Romero Centurión y Nicolas Wyrwoll</string>
+    <string name="cred_title3">Fotografías:</string>
+    <string name="cred_text3">Sixto Marco Lozano, Juan Huedo Díaz, Fernando Huedo Díaz, Patronato Misteri d\'Elx</string>
+    <string name="cred_title4">Idea y concepto:</string>
+    <string name="cred_text4">José Vicente Castaño</string>
+    <string name="cred_title5">Producción:</string>
+    <string name="cred_text5">Tarsa &amp; Gorilapp</string>
+    <string name="cred_title6">Desarrollo:</string>
+    <string name="cred_text6">Gorilapp</string>
+    <string name="cred_title7">Patrocinado por:</string>
+
+
+    <string name="sharedPreferences">es.gorillap.misteri.SETTINGS</string>
+    <string name="lang">lang</string>
+    <string name="user_ringmode">user_ringmode</string>
+    <string name="are_audios_downloaded">are_audios_downloaded</string>
+
+    <!-- string name="lang_es">es</string>
+    <string name="lang_en">en</string>
+    <string name="lang_fr">fr</string>
+    <string name="lang_de">de</string-->
+
+    <!-- Dialogs messages -->
+    <string name="dialog_btn_accept">Aceptar</string>
+    <string name="dialog_btn_cancel">Cancelar</string>
+    <string name="warning_live_mute_title">¡Atención!</string>
+    <string name="warning_live_mute_msg">Su dispositivo ha sido silenciado.\n El dispositivo debe de permanecer en silencio durante la representación. Muchas gracias por su colaboración.</string>
+    <string name="warning_no_listen_title">¡Atención!</string>
+    <string name="warning_no_listen_msg">Opción no disponible en días de representación. Disculpe las molestias.</string>
+    <string name="dialog_download_title">Información importante</string>
+    <string name="dialog_download_msg">Es necesaria la descarga de los contenidos de audio para esta sección.\nSólo se descargarán una vez.\nRecomendamos conectarse a una red WiFi.</string>
+    <string name="progressdialog_download_title">Descarga de audios</string>
+    <string name="progressdialog_download_msg">Descargando los contenidos de audio&#8230;\nEste proceso puede tardar un poco.</string>
+    <string name="progressdialog_unzip_title">Preparando audios</string>
+    <string name="progressdialog_unzip_msg">Preparando los contenidos de audio&#8230;</string>
+    <string name="alert_unzip_error_title">Error preparando audios</string>
+    <string name="alert_unzip_error_msg">Error preparando audios.\nPor favor inténtelo de nuevo.</string>
+    <string name="alert_remotedbmanager_error_title">Error</string>
+    <string name="alert_remotedbmanager_error_msg">Error recibiendo datos. Puede deberse a que su conexión a internet no sea estable.\nPor favor, revísela.</string>
+    <string name="alert_audio_notfound_error_title">Error</string>
+    <string name="alert_audio_notfound_error_msg">Este audio no se encuentra, puede que se haya desconectado de internet mientras se descargaba. Recomendamos borre los datos de la aplicación en Ajustes y vuelva a acceder.</string>
+
+    <!-- Menu activity-->
+    <string name="btn_language">Español</string>
+    <string name="btn_menu_live_title">Seguir en Directo</string>
+    <string name="btn_menu_live_subtitle">Sigue la representación en directo</string>
+    <string name="btn_menu_listen_title">Escucha el Misteri</string>
+    <string name="btn_menu_listen_subtitle">Sigue la Festa de forma manual</string>
+    <string name="btn_menu_info_title">Información e Historia</string>
+    <string name="btn_menu_info_subtitle">Conoce todo sobre la representación</string>
+    <string name="btn_menu_tickets_title">Compra de Entradas</string>
+    <string name="btn_menu_tickets_subtitle">Servicio de venta de entradas</string>
+
+
+    <!-- Menu option 1. Live activities-->
+    <string name="cast">Reparto</string>
+    <string name="today_cast">Hoy intervienen en la representación:</string>
+    <string name="cast1" translatable="false">Apostolat</string>
+    <string name="cast2">Sant Joan</string>
+    <string name="cast3">Sant Tomás</string>
+    <string name="cast4">Sant Pere</string>
+    <string name="cast5">Ternari</string>
+    <string name="cast6">Tenors 1</string>
+    <string name="cast7">Gran rabí</string>
+    <string name="cast8">Tenors 2</string>
+    <string name="cast9">Baritons</string>
+    <string name="cast10">Baixos</string>
+    <string name="cast11">María Major</string>
+    <string name="cast12">María Salomé</string>
+    <string name="cast13">María Iacobe</string>
+    <string name="cast14">Àngels coixí</string>
+    <string name="cast15">Àngels Mantell</string>
+    <string name="cast16">Àngel</string>
+    <string name="cast17">Araceli</string>
+    <string name="cast18">Coronació</string>
+    <string name="live">En directo</string>
+    <string name="cast_response_keys">apostolat-joan-tomas-pere-ternari-tenors1-granrabi-tenors2-baritons-baixos-mariamajor-mariasalome-mariaiacobe-angelsdecoixi-angelsdemantell-angel-araceli-coronacio</string>
+    <string name="live_originalText_key">textoOriginal</string>
+    <string name="live_translationText_key">traduccion</string>
+    <string name="live_info_key">info</string>
+    <string name="live_title_key">titulo</string>
+    <string name="live_imageName_key">nombreImagen</string>
+    <string name="liveinfo_infotext">info</string>
+    <string name="liveinfo_titletext">title</string>
+    <string name="liveinfo_image_id">imageId</string>
+
+
+    <!-- Menu option 2. Scene player activities-->
+    <!-- Scene menu -->
+    <string name="scenes">Selección de Escenas</string>
+    <string name="scene_vespra">La Vespra</string>
+    <string name="nb_scenelist_vespra">8</string>
+    <string name="scene_vespra1">María</string>
+    <string name="scene_vespra2">Ángel</string>
+    <string name="scene_vespra3">San Juan</string>
+    <string name="scene_vespra4">San Pedro</string>
+    <string name="scene_vespra5">Ternario</string>
+    <string name="scene_vespra6">Salve</string>
+    <string name="scene_vespra7">Dormición</string>
+    <string name="scene_vespra8">Araceli</string>
+    <string name="scene_festa">La Festa</string>
+    <string name="nb_scenelist_festa">9</string>
+    <string name="scene_festa1">Invitación a las Marias</string>
+    <string name="scene_festa2">San Pedro y San Juan</string>
+    <string name="scene_festa3">Apóstoles</string>
+    <string name="scene_festa4">Judíos</string>
+    <string name="scene_festa5">Conversión y bautismo</string>
+    <string name="scene_festa6">Entierro</string>
+    <string name="scene_festa7">Asunción</string>
+    <string name="scene_festa8">Santo Tomás</string>
+    <string name="scene_festa9">Coronación</string>
+
+
+    <string name="scene_vespra1_thumbnail">escenas_maria</string>
+    <string name="scene_vespra2_thumbnail">escenas_angel</string>
+    <string name="scene_vespra3_thumbnail">escenas_sanjuan</string>
+    <string name="scene_vespra4_thumbnail">escenas_sanpedro</string>
+    <string name="scene_vespra5_thumbnail">escenas_ternario</string>
+    <string name="scene_vespra6_thumbnail">escenas_salve</string>
+    <string name="scene_vespra7_thumbnail">escenas_dormicion</string>
+    <string name="scene_vespra8_thumbnail">escenas_araceli</string>
+    <string name="scene_festa1_thumbnail">escenas_invitacion</string>
+    <string name="scene_festa2_thumbnail">escenas_sanpedrosanjuan</string>
+    <string name="scene_festa3_thumbnail">escenas_apostoles</string>
+    <string name="scene_festa4_thumbnail">escenas_judios</string>
+    <string name="scene_festa5_thumbnail">escenas_conversion</string>
+    <string name="scene_festa6_thumbnail">escenas_entierro</string>
+    <string name="scene_festa7_thumbnail">escenas_asuncion</string>
+    <string name="scene_festa8_thumbnail">escenas_santomas</string>
+    <string name="scene_festa9_thumbnail">escenas_coronacion</string>
+
+    <string name="nb_total_slides">62</string>
+    <string name="scene_vespra1_first_slide">1</string>
+    <string name="scene_vespra2_first_slide">8</string>
+    <string name="scene_vespra3_first_slide">12</string>
+    <string name="scene_vespra4_first_slide">19</string>
+    <string name="scene_vespra5_first_slide">20</string>
+    <string name="scene_vespra6_first_slide">24</string>
+    <string name="scene_vespra7_first_slide">28</string>
+    <string name="scene_vespra8_first_slide">30</string>
+    <string name="scene_festa1_first_slide">31</string>
+    <string name="scene_festa2_first_slide">35</string>
+    <string name="scene_festa3_first_slide">37</string>
+    <string name="scene_festa4_first_slide">40</string>
+    <string name="scene_festa5_first_slide">46</string>
+    <string name="scene_festa6_first_slide">52</string>
+    <string name="scene_festa7_first_slide">58</string>
+    <string name="scene_festa8_first_slide">59</string>
+    <string name="scene_festa9_first_slide">61</string>
+
+    <string name="dummy_sceneplayer_mp3">prueba</string>
+    <string name="dummy_sceneplayer_act">La Vespra</string>
+    <string name="dummy_sceneplayer_scene">María contesta a San Juan</string>
+    <string name="dummy_sceneplayer_image">imagen7</string>
+    <string name="dummy_sceneplayer_originalText">"<span style="color:red">Ai fill Joan e amic meu conforte‐us lo ver Fill de Déu car lo meu cor és molt plaent del vostre bon adveniment.</span>"</string>
+    <string name="dummy_sceneplayer_translationText">"Ay Juan, hijo y amigo mío, conforteos el verdadero Dios Hijo pues mi corazón está muy contento de vuestro buen advenimiento."</string>
+    <string name="dummy_sceneplayer_infoText">"María informa a San Juan de su inminente muerte y le entrega la palma para que la lleve en su entierro"</string>
+
+
+    <!-- Menu option 3. Information and history activities-->
+    <string name="info">Información</string>
+    <string name="info_history_id">history</string>
+    <string name="info_history_title">Historia</string>
+    <string name="info_history_subtitle">El origen del Misteri d\'Elx</string>
+    <string name="info_history_thumbnail">historia_thumb</string>
+    <string name="info_history_header_img">historia_01</string>
+    <string name="info_history_footer_img">historia_02</string>
+    <string name="info_history_longtext">La tradición vincula el nacimiento del Misterio de Elche a la conquista del Elche musulmán por las tropas aragonesas de Jaime I de Aragón, en 1265. Otros relatos lo relacionan con la milagrosa aparición o "Venida" de la imagen de la Virgen ilicitana el 29 de diciembre de 1370. Las últimas investigaciones proponen la segunda mitad del siglo XV como la época más probable para datar el origen de la celebración. \n\n
+        En sus comienzos estuvo organizada por algunas familias de la pequeña nobleza local, como los Perpiñán o los Caro. La referencia documental más antigua se halla en el testamento de la ilicitana Isabel Caro, de 1523. En 1530 ya se documenta una Cofradía de Nuestra Señora de la Asunción que, con sede en la ermita de San Sebastián (hoy Museo Municipal de la Festa), era la encargada de preparar la festividad. \n\n
+		En 1609, ante la falta de recursos económicos de dicha Cofradía, el Consejo de la villa tomó el acuerdo de hacerse cargo de la organización y financiación de la Festa, para lo que estableció una serie de impuestos municipales. \n\n
+		Las directrices del Concilio de Trento, que prohibían representaciones en el interior de las iglesias, hicieron buscar la protección papal: Urbano VIII remitió un privilegio fechado en 1632 que aseguró la continuidad de la Festa. \n\n
+		Ante la decadencia experimentada por la obra en el siglo XIX, en 1924 se llevó a cabo una revisión escénica y musical. La partitura fue depurada por el músico alicantino Oscar Esplá. En 1931 el Misterio fue declarado Monumento Nacional por el Gobierno de la II República. \n\n
+		En 1940 se organizó la llamada Junta Nacional Restauradora del Misterio de Elche y de sus Templos, con la misión de restaurar la iglesia de Santa María y recuperar  el Misterio, suspendido durante la Guerra Civil. En 1948 esta Junta fue transformada en el Patronato Nacional del Misterio de Elche y, a partir de la aprobación de la Ley del Misteri d’Elx por las Cortes Valencianas, en diciembre de 2005, en el actual Patronat del Misteri d’Elx, con el soporte institucional del Ayuntamiento de Elche, la Generalitat Valenciana y el Obispado de Orihuela-Alicante.
+	</string>
+
+    <string name="info_text_id">text</string>
+    <string name="info_text_title">Texto</string>
+    <string name="info_text_subtitle">El texto literario del Misterio</string>
+    <string name="info_text_thumbnail">texto_thumb</string>
+    <string name="info_text_header_img">texto_01</string>
+    <string name="info_text_footer_img"></string>
+    <string name="info_text_longtext">El texto literario del Misterio de Elche, escrito en valenciano y con un salmo y algunos versos latinos, consta de doscientos cincuenta y nueve versos que aparecen distribuidos en estrofas de diversos tipos. \n\n
+		Los textos literario y musical, así como las acotaciones escénicas, se han conservado en unos manuscritos denominados consuetas. El primero está fechada en 1625 y es una copia del original que guardaba el Consejo de la villa realizada por Gaspar Soler Chacón. Ni el original ni esta copia se conservan actualmente, pero nos son conocidos por la edición realizada por el que fuera cronista de Elche, Pedro Ibarra i Ruiz (1858-1934). \n\n
+		En el año 1639, "un devoto" realizó una nueva copia del manuscrito oficial. Incluyó anotaciones con los nombres de los compositores que participaron en la reforma polifónica del Misterio, en el siglo XVI. Esta copia del consueta también nos es conocida únicamente a través de una edición parcial realizada por el publicista murciano Javier Fuentes y Ponte (1830-1903). \n\n
+		Ante los desperfectos ocasionados en el consueta oficial por la Guerra de Sucesión,  el beneficiado Joseph Lozano y Roiz realizó una nueva copia en 1709 destinada a los Maestros de Capilla. Se conserva en el Archivo Histórico Municipal de Elche. \n\n
+		El mismo Lozano y Roiz confeccionó en 1722 una nueva copia, prácticamente idéntica a la anterior, que se custodia en la biblioteca del que fuera cronista de la ciudad, Juan Orts Román (1898-1958). \n\n
+		El último de los consuetas históricos está fechada en 1751 y se trata de una copia realizada por Carlos Tàrrega i Caro del texto de 1625 ya mencionado. Se conserva en la biblioteca de los herederos del cronista ilicitano José M. Ruiz de Lope y Pérez (1831-1900). \n\n
+    </string>
+
+    <string name="info_music_id">music</string>
+    <string name="info_music_title">Música</string>
+    <string name="info_music_subtitle">Sobre los canticos del Misteri</string>
+    <string name="info_music_thumbnail">musica_thumb</string>
+    <string name="info_music_header_img">musica_01</string>
+    <string name="info_music_footer_img">musica_02</string>
+    <string name="info_music_longtext">El Misterio de Elche es totalmente cantado y contiene melodías de origen medieval,  renacentista y añadidos barroco y aún posteriores. Sin embargo, su unidad musical es extraordinaria. \n\n
+		Algunos de sus cantos monódicos, más abundantes en la primera parte de la obra, presentan claras influencias del gregoriano medieval. La técnica de adaptar textos literarios nuevos a músicas preexistentes, conocida como “contrafactum”, era muy común en las representaciones de este tipo. \n\n
+		También se han hallado en algunos de sus cantos polifónicos del siglo XVI puntos de concordancia con villancicos y otras obras recopiladas en el Cancionero Musical de Palacio. \n\n
+		Conocemos el nombre de tres de los compositores que participaron en la mencionada reforma polifónica. Se trata de Ribera que, con ciertas prevenciones, se ha identificado con Antonio de Ribera, cantor de la capilla pontificia de Roma, aunque otros estudiosos se inclinan a favor de Bernardino de Ribera. El canónigo Ginés Pérez, maestro de capilla de las catedrales de Valencia y de Orihuela. Y Lluís Vich, organista de la iglesia de Santa María de Elche y primer maestro conocido de su capilla musical (entre 1562 y 1594). \n\n
+		Hasta 1835 contó la iglesia de Santa María con una capilla de músicos y cantores profesionales que tenían entre sus funciones interpretar cada año el drama asuncionista. Tras la Desamortización se hicieron cargo de la Festa cantores aficionados de la ciudad.  Actualmente, son los miembros de la Capilla y Escolanía, dirigidos por su Maestro de Capilla, quienes interpretan el Misterio de Elche. Y aunque salvo muy contadas excepciones ninguno de ellos es profesional del canto, la conjunción de voces alcanzada y el buen hacer de tales cantores queda patente en las celebraciones anuales y en los conciertos que suelen ofrecer de manera extraordinaria. \n\n      
+    </string>
+
+    <string name="info_tramoya_id">tramoya</string>
+    <string name="info_tramoya_title">Escenarios</string>
+    <string name="info_tramoya_subtitle">La basílica de Santa María</string>
+    <string name="info_tramoya_thumbnail">tramoya_thumb</string>
+    <string name="info_tramoya_header_img">tramoya_02</string>
+    <string name="info_tramoya_footer_img"></string>
+    <string name="info_tramoya_longtext">El gran escenario del Misterio de Elche es la Basílica de Santa María, un templo barroco cuya construcción se inició en 1673 y concluyó en 1784. La escena propiamente dicha se divide en dos partes bien diferenciadas: la horizontal o "terrestre" y la vertical o "aérea". \n\n
+		La primera está formado por un tablado o “cadafal” que se levanta en el crucero del templo. Su disposición permite que los espectadores, según la costumbre medieval, puedan situarse por sus cuatro lados. A este tablado se accede desde la puerta Mayor del templo mediante un plano inclinado denominado andador. A lo largo de este corredor se hallan colocados tres pequeños altares que representan el huerto de Getsemaní, el monte Calvario y el Santo Sepulcro. \n\n
+		El escenario aéreo o vertical se instala en la cúpula de la iglesia que simboliza el cielo. Por encima de la lona de cubre la cúpula, oculto a la vista de los espectadores, se instala en voladizo un pequeño tablado de madera que permite a los tramoyistas realizar todas las operaciones y trabajos necesarios para bajar y subir los aparatos aéreos con los personajes del mundo celestial. \n\n
+		Tales aparatos son tres: la Nube o Granada en la que desciende el ángel que anuncia a María su muerte; la Recèlica o Araceli, ocupado por cinco ángeles, tres adultos y dos niños, que en la segunda parte permite la Asunción de la Virgen; y la Coronación o Trinidad, similar al Araceli, pero de tamaño más reducido, ocupado por un adulto y dos niños que figuran ser la Santísima Trinidad. Estos tres ingenios bajan y suben atados con gruesas maromas accionadas mediante dos tornos manuales fijados en las terrazas de la iglesia. \n\n
+		Los cantores que no descienden del cielo se caracterizan fuera del templo, primitivamente en la ermita de San Sebastián y actualmente en la Casa de la Festa contigua. Desde esta ermita parten cantores y autoridades al inicio de la obra en un pequeño cortejo festivo con lo que también las calles de la ciudad se convierten en escenario de la Festa. Escenario que se amplia a todo el antiguo núcleo medieval cuando, en la mañana del 15 de agosto, se realiza la procesión-entierro de María. \n\n
+	</string>
+
+    <string name="info_celebration_id">celebration</string>
+    <string name="info_celebration_title">Festividad</string>
+    <string name="info_celebration_subtitle">El Misteri vivido por la ciudad</string>
+    <string name="info_celebration_thumbnail">festividad_thumb</string>
+    <string name="info_celebration_header_img">festividad_01</string>
+    <string name="info_celebration_footer_img">festividad_02</string>
+    <string name="info_celebration_longtext">El Misterio de Elche es la única muestra viva de las grandes celebraciones dedicadas a la Asunción de la Virgen que desde la Edad Media se extendieron por las tierras de la antigua Corona de Aragón. El Misterio es una celebración festiva, una manifestación de fe, una catequesis dramatizada, y, sobre todo, es la fiesta comunitaria más importante de la ciudad, la Festa por antonomasia. \n\n
+		La celebración está formada por un ciclo de diferentes actos. En los primeros días de agosto tienen lugar algunos actos preparatorios como la Prueba de Voces en donde se escogen las voces infantiles de la obra, o la Prueba del Ángel en la que se comprueba el buen funcionamiento de la tramoya aérea y la serenidad de los pequeños cantores. La festividad tradicional se inicia en la noche del 13 de agosto, con la llamada Nit de l\'Albà. Se trata de un acto comunitario que congrega en las azoteas de la ciudad a todos los ilicitanos que durante una hora lanzan constantemente cohetes y fuegos artificiales, en una ofrenda de luz y sonido a su patrona. \n\n
+		Entre las dos jornadas tradicionales del Misterio, es decir, en la noche y madrugada que va del 14 al 15 de agosto, se desarrolla otro acto popular y festivo: la Roà. Miles de ilicitanos recorren con un cirio encendido las calles de la ciudad por las que, a la mañana siguiente, pasará la procesión de la Virgen. Y, acabada la fiesta, entre el 16 y el 22 de agosto, se desarrolla su octava. Ante la imagen de la Virgen, de nuevo yacente, se celebran las Salves de la Madre de Dios, con una predicación solemne y el canto de unos gozos asuncionistas, posiblemente del siglo XVII. \n\n
+		La devoción popular hacia la Patrona de la ciudad se manifiesta también en diversos detalles, especialmente la numerosa asistencia a las celebraciones, incluidas las misas que, desde las cuatro de la madrugada del día 15 de agosto, se celebran en el mismo cadafal de Santa María. También en el interés manifiesto de recoger fragmentos de oropel caídos del cielo de Santa María o alguna de la hojas de la palma dorada que baja el ángel de la Granada, objetos de devoción que son guardados como verdaderas reliquias. \n\n
+    </string>
+
+    <string name="info_recognition_id">recognition</string>
+    <string name="info_recognition_title">Reconocimientos</string>
+    <string name="info_recognition_subtitle"></string>
+    <string name="info_recognition_thumbnail">reconocimientos_thumb</string>
+    <string name="info_recognition_header_img">reconocimientos_01</string>
+    <string name="info_recognition_footer_img"></string>
+    <string name="info_recognition_longtext">En los últimos años, los valores artísticos y tradicionales contenidos en el Misterio de Elche y su carácter único y excepcional, han sido objeto de diferentes reconocimientos y distinciones. Los más destacados son los siguientes:\n\n 
+        · 1931: Declaración de Monumento Nacional por el Gobierno de la II República española\n 
+        · 1965: Declaración de Fiesta de Interés Turístico Nacional por el Ministerio de Información y Turismo\n 
+        · 1980: Declaración de Fiesta de Interés Turístico Internacional por el Ministerio de Información y Turismo\n 
+        · 1982: Placa de Oro al Mérito Turístico del Ministerio de Transportes, Turismo y Comunicaciones\n 
+        · 1982: Medalla de Oro de la Real Academia de Bellas Artes de San Carlos de Valencia\n 
+        · 1988: Creu de Sant Jordi de la Generalitat de Cataluña\n 
+        · 1988: Corbata de la Orden de Alfonso X el Sabio del Ministerio de Educación y Ciencia\n 
+        · 1990: Corbata de la Orden de Isabel la Católica del Ministerio de Asuntos Exteriores\n 
+        · 1990: Alta Distinción de la Generalitat de Valencia\n 
+        · 1993: Medalla de Oro de la Real Academia de Bellas Artes de San Fernando de Madrid\n 
+        · 1997: Medalla de Oro del Bimilenario de la Ciudad del Ayuntamiento de Elche\n 
+        · 2001: Medalla de Oro del Consejo Valenciano de Cultura\n 
+        · 2001: Declaración de Obra Maestra del Patrimonio Oral e Inmaterial de la Humanidad por la UNESCO\n 
+        · 2005: Caballero (el Presidente Gestor) de la Orden Pontificia de San Silvestre.</string>
+
+    <!-- Menu option 4. buy tickets activities-->
+    <string name="buytickets">Compra de entradas</string>
+
+    <!-- TitleBars-->
+    <string name="seleccion_idioma">Selección de idioma</string>
+</resources>

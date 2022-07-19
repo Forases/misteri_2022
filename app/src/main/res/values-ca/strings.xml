@@ -1,0 +1,108 @@
+<resources>
+    <!-- Dialogs messages -->
+    <string name="dialog_btn_accept">Acceptar</string>
+    <string name="dialog_btn_cancel">Cancel·lar</string>
+    <string name="warning_live_mute_title">¡Atenció!</string>
+    <string name="warning_live_mute_msg">El seu dispositiu ha sigut silenciat. El dispositiu deu romandre en silenci durant la representació. Moltes gràcies per la seua col·laboració.</string>
+    <string name="warning_no_listen_title">¡Atenció!</string>
+    <string name="warning_no_listen_msg">Opció no disponible en dies de representació. Disculpe les molèsties.</string>
+    <string name="dialog_download_title">Informació important</string>
+    <string name="dialog_download_msg">És necessària la descàrrega dels continguts d\'àudio per a esta secció. Només es descarregaran una vegada. Es recomana connectar-se a una xarxa WiFi.</string>
+    <string name="progressdialog_download_title">Informació</string>
+    <string name="progressdialog_download_msg">Descarregant els contigunts d\'àudio. Este procés pot tardar un poc</string>
+    <string name="progressdialog_unzip_title">Informació</string>
+    <string name="progressdialog_unzip_msg">Preparant els continguts d\'àudio&#8230;</string>
+    <string name="alert_unzip_error_title">Error</string>
+    <string name="alert_unzip_error_msg">Error preparant àudios. Per favor intente-ho novament.</string>
+    <string name="alert_remotedbmanager_error_title">Error</string>
+    <string name="alert_remotedbmanager_error_msg">Error rebent dades. Es pot deure que la seua connexió a internet no siga estable. Per favor, vaig revi-se-la.</string>
+    <string name="alert_audio_notfound_error_title">Error</string>
+    <string name="alert_audio_notfound_error_msg">Este àudio no es troba, potser s\'haja desconnectat d\'internet mentres es descarregava. Es recomana esborrar les dades de l\'aplicació en Ajustos i torne a accedir.</string>
+    
+    <!-- Menu activity-->
+    <string name="btn_language">Valencià</string>
+    <string name="btn_menu_live_title">Seguir en directe</string>
+    <string name="btn_menu_live_subtitle">Segueix la representació en directe</string>
+    <string name="btn_menu_listen_title">Escolta el Misteri</string>
+    <string name="btn_menu_listen_subtitle">Segueix la Festa manualment</string>
+    <string name="btn_menu_info_title">Informació i Història</string>
+    <string name="btn_menu_info_subtitle">Coneix tot sobre la representació</string>
+    <string name="btn_menu_tickets_title">Compra d\'entrades</string>
+    <string name="btn_menu_tickets_subtitle">Servei de venda d\'entrades</string>
+    
+    
+    <!-- Menu option 1. Live activities-->
+    <string name="cast">Repartiment</string>
+    <string name="today_cast">Hui intervinen en la representació:</string>
+    <!--string name="live">En directo DE</string-->   
+    
+    <!-- Menu option 2. Scene player activities-->
+    <!-- Scene menu -->
+    <string name="scenes">Selecció d\'escenes</string>    
+    
+    <!-- Menu option 3. Information and history activities-->
+    <string name="info">Informació</string>
+    <string name="info_history_title">Història</string>
+    <string name="info_history_subtitle">L\'orige del Misteri d\'Elx</string>
+    <string name="info_history_longtext">La tradició vincula el naixement del Misteri d\'Elx a la conquista de l\'Elx musulmà per les tropes aragoneses de Jaume I d\'Aragó, en 1265. Altres relats el relacionen amb la miraculosa aparició o "Vinguda" de la imatge de la Mare de Déu il·licitana el 29 de desembre de 1370. Les últimes investigacions proposen la segona meitat del segle XV com l\'època més probable per a datar l\'origen de la celebració. \n\n
+        En els seus començaments va estar organitzada per algunes famílies de la petita noblesa local, com els Perpinyà o els Caro. La referència documental més antiga es troba en el testament de la il·licitana Isabel Caro, de 1523. En 1530 ja es documenta una Confraria de la Mare de Déu de l\'Assumpció que, amb seu en l\'ermita de Sant Sebastià (hui Museu Municipal de la Festa), era l\'encarregada de preparar la festivitat. \n\n
+        En 1609, davant de la manca de recursos econòmics de la dita Confraria, el Consell de la vila va prendre l\'acord de fer-se càrrec de l\'organització i finançament de la Festa i va establir al respecte un seguit d\'impostos municipals. \n\n
+        Les directrius del Concili de Trento, que prohibien representacions en l\'interior de les esglésies, van fer buscar la protecció papal: Urbà VIIIè va remetre un privilegi datat en 1632 que va assegurar la continuïtat de la Festa. \n\n
+        Davant de la decadència experimentada per l\'obra en el segle XIX, en 1924 es va dur a terme una revisió escènica i musical. La partitura va ser depurada pel músic alacantí Oscar Esplá. En 1931 el Misteri va ser declarat Monument Nacional pel Govern de la II República. \n\n
+        En 1940 es va organitzar l\'anomenada Junta Nacional Restauradora del Misterio de Elche y de sus Templos, amb la missió de restaurar l\'església de Santa Maria i recuperar  el Misteri, suspés durant la Guerra Civil. En 1948 aquesta Junta va ser transformada en el Patronato Nacional del Misterio de Elche i, a partir de l\'aprovació de la Llei del Misteri d\'Elx per les Corts Valencianes, al desembre del 2005, en l\'actual Patronat del Misteri d\'Elx, amb el suport institucional de l\'Ajuntament d\'Elx, la Generalitat Valenciana i el Bisbat d\'Oriola-Alacant.</string>
+    
+    <string name="info_text_title">Text</string>
+    <string name="info_text_subtitle">El text literari del Misteri</string>
+    <string name="info_text_longtext">El text literari del Misteri d\'Elx, escrit en valencià —amb un salm i alguns versos llatins—, és relativament breu si el comparem amb altres representacions de característiques semblants de les quals s\'han conservat els llibrets, com poden ser el misteri assumpcionista de Tarragona (segle xiv) o el que s\'escenificava en la catedral de València (segle xv). L\'obra il·licitana consta d\'un total de dos-cents cinquanta-nou versos que apareixen distribuïts en estrofes de diversos tipus. Les més nombroses són les quartetes de versos octosíl·labs rimats en la seqüència aabb, és a dir, del model conegut com a noves rimades. També hi figuren, encara que en menor nombre, versos decasíl·labs distribuïts en quartetes amb rima abab, així com heptasíl·labs rimats en aabb i abab. \n\n
+        La brevetat del text potser es deu a la menor importància que, a través de la història, s\'ha concedit a la part literària en relació amb la part musical i l\'escènica. La complicació d\'alguns cants, amb abundants ornaments musicals i l\'ús d\'una espectacular tramoia aèria, va fer que se sacrificaren part dels versos per a no allargar excessivament la duració de la representació. Les referències conservades apunten cap al segle xvii com l\'època en què va tindre lloc la definitiva fixació de la part literària del drama il·licità. \n\n
+        Els texts literaris i musicals, així com les acotacions escèniques que permeten la representació de l\'obra, s\'han conservat al llarg dels segles en uns manuscrits denominats consuetes. Tot i que hi ha investigadors que suposen l\'existència d\'una primitiva consueta en mans de la Confraria de la Mare de Déu de l\'Assumpció, encarregada de l\'escenificació del Misteri abans del 1609, la primera referència concreta a un d\'estos llibrets no apareix fins al 1625. En este any, Honorat Martí de Montsí, cavaller del Sant Ofici a Oriola, va demanar a l\'il·licità Gaspar Soler Chacón una còpia del text de la Festa, molt possiblement perquè la Inquisició controlara l\'ortodòxia de l\'obra. Esta obra és el Llibre de la Festa de Nostra Senyora de la Sumptió ditta vulgarment la Festa de la vila d\'Elig, treta de són original registre a instància del senyor Honorat Martí de Montsí, cavaller familiar del Sant Offisi i Capità per sa Magestat en la ciutat d\'Oriola. Soler Chacón únicament va copiar els versos dels cants i les acotacions teatrals —però no la partitura— de la consueta oficial que custodiava el Consell de la vila en la seua arca de tres claus o caixa forta. Esta còpia es va permetre perquè es tractava d\'un encàrrec inquisitorial, ja que, segons indica el mateix Soler, el Consell il·licità no autoritzava cap tipus de transcripcions de la consueta per «la gravetat de la Festa». D\'altra banda, el manuscrit va ser enriquit amb una sèrie d\'anotacions històriques referides a la ciutat i als festeigs relacionats amb la representació assumpcionista, obra del mateix Soler Chacón. El manuscrit original d\'esta consueta del 1625 no es conserva, però la coneixem a través d\'una edició realitzada pel que fóra cronista d\'Elx, Pere Ibarra i Ruiz (1858-1934), en 1933. \n\n
+        L\'any 1639, un personatge anònim —un devot— va realitzar una nova còpia del manuscrit oficial: Consueta de la Festa de Nostra Senyora de l\'Assuntió, que se celebra en dos actes, vespra i dia, en la insigne vila d\'Elig. Escrit per un devot seu en VI dies del mes de febrer de l\'any MDCXXXIX. En esta ocasió es va incloure la música dels cants, així com les anotacions amb els noms dels compositors que van participar en la reforma polifònica del Misteri, en el segle xvi. Esta còpia de la consueta també la coneixem únicament a través d\'una edició parcial realitzada pel publicista murcià Javier Fuentes y Ponte (1830-1903) en 1887. \n\n
+        En 1706, l\'arxiu del Consell il·licità va ser saquejat per les tropes borbòniques, en plena Guerra de Successió. En este incident la consueta original va patir greus desperfectes i va ser copiada tres anys més tard pel beneficiat Josep Lozano i Roiz perquè poguera ser usada pels mestres de capella o directors musicals del Misteri. El document es titula Consueta o Director per a la gran funció de la vespra i dia de la Mare de Déu de la Asumpció, Patrona de Ells, per als mestres de capella (...) escrita pel beneficiat Josep Lozano i Roiz, prevere, l\'any 1709. Esta còpia de Lozano —que inclou acotacions i els texts amb una temàtica musical i literària— és el llibret més antic que es conserva, i l\'únic que roman en una institució pública, concretament en l\'Arxiu Històric Municipal d\'Elx. D\'esta consueta del 1709 s\'han fet dos edicions facsímils: una en 1941, sufragada per l\'Institut d\'Espanya, amb un pròleg d\'Eugenio d\'Ors, i una altra en 1986, confeccionada per la Generalitat Valenciana, amb estudis preliminars de Francesc Massip i Mari Carmen Gómez Muntané. \n\n
+        El mateix Lozano i Roiz va fer en 1722 una nova còpia de la consueta, que resulta ser pràcticament idèntica a l\'anterior, encara que no en conserva el títol, i que es custodia actualment en la biblioteca d\'aquell que va ser cronista de la ciutat, Juan Orts Roman (1898-1958). L\'any 2002, el Patronat del Misteri d\'Elx va publicar una edició facsímil d\'este document amb un estudi previ de l\'investigador Luis Quirante Santacruz (1959-2000). \n\n
+        L\'última de les consuetes —cronològicament parlant— de les quals es tenen notícies està datada l\'any 1751 i es tracta d\'una còpia realitzada per Carlos Tàrrega i Caro del text del 1625 ja esmentat. Es titula Llibre de la Festa de Nostra Senyora de la Sumptió ditta vulgarment la Festa de la vila d\'Elig, treta d\'originals registres antichs... No conté, per tant, la partitura de l\'obra, encara que sí que hi ha una sèrie d\'anotacions d\'esdeveniments ocorreguts en les representacions del Misteri entre els segles xvi i xviii, que resulten d\'una gran utilitat per a analitzar la història i l\'evolució escènica del drama assumpcionista. Esta consueta es conserva en la biblioteca dels hereus del cronista il·licità José María Ruiz de Lope y Pérez (1831-1900) i va ser reproduïda en edició facsimilar en 1992 per l\'editorial de Manuel Pastor, d\'Elx, amb un estudi preliminar de Joan Castaño. </string>
+       
+    <string name="info_music_title">Música</string>
+    <string name="info_music_subtitle">Sobre els càntics del Misteri</string>
+	<string name="info_music_longtext">El Misteri d\'Elx és totalment cantat i conté melodies d\'origen medieval,  renaixentista i afegits barrocs i encara posteriors. No obstant, la seua unitat musical és extraordinària. \n\n
+        Alguns dels seus cants monòdics, més abundants en la primera part de l\'obra, presenten clares influències del gregorià medieval. La tècnica d\'adaptar textos literaris nous a músiques preexistents, coneguda com “contrafactum”, era molt comú en les representacions d\'aquest tipus.  \n\n
+        També s\'han trobat en alguns dels seus cants polifònics del segle XVI punts de concordança amb nadales i altres obres recopilades en el Cancionero musical de Palacio. \n\n
+        Coneixem el nom de tres dels compositors que van participar en la mencionada reforma polifònica. Es tracta de Ribera que, amb certes prevencions, s\'ha identificat amb Antonio de Ribera, cantor de la capella pontifícia de Roma, encara que altres estudiosos s\'inclinen a favor de Bernardino de Ribera. El canonge Ginés Pérez, mestre de capella de les catedrals de València i d\'Oriola. I Lluís Vich, organista de l\'església de Santa Maria d\'Elx i primer mestre conegut de la seua capella musical (entre 1562 i 1594). \n\n
+        Fins a 1835 va comptar l\'església de Santa Maria amb una capella de músics i cantors professionals que tenien entre les seues funcions interpretar cada any el drama assumpcionista. Després de la Desamortització es van fer càrrec de la Festa cantors aficionats de la ciutat.  Actualment, són els membres de la Capella i Escolania, dirigits pel seu Mestre de Capella, els que interpreten el Misteri d\'Elx. I encara que excepte molt comptades excepcions cap d\'ells és professional del cant, la conjunció de veus aconseguida i el bon fer de tals cantors queda patent en les celebracions anuals i en els concerts que solen oferir de manera extraordinària.</string>
+	
+    <string name="info_tramoya_title">Tramoia</string>
+    <string name="info_tramoya_subtitle">La basílica de Santa Maria</string>
+    <string name="info_tramoya_longtext">El gran escenari del Misteri d\'Elx és la Basílica de Santa Maria, un temple barroc la construcció del qual es va iniciar en 1673 i va concloure en 1784. L\'escena pròpiament dita es divideix en dos parts ben diferenciades: l\'horitzontal o "terrestre" i la vertical o "aèria". \n\n
+        La primera està format per un taulat o cadafal que s\'alça en el creuer del temple. La seua disposició permet que els espectadors, segons el costum medieval, puguen situar-se pels seus quatre costats. A aquest taulat s\'accedeix des de la porta Major del temple per mitjà d\'un pla inclinat denominat andador. Al llarg d\'aquest corredor es troben col·locats tres petits altars que representen l\'hort de Getsemaní, la muntanya Calvari i el Sant Sepulcre. \n\n
+        L\'escenari aeri o vertical s\'instal·la en la cúpula de l\'església que simbolitza el cel. Per damunt de la lona de cobreix la cúpula, ocult a la vista dels espectadors, s\'instal·la en volada un xicotet taulat de fusta que permet als tramoistes realitzar totes les operacions i treballs necessaris per a baixar i pujar els aparells aeris amb els personatges del món celestial. \n\n
+        Tals aparells són tres: el Núvol o Mangrana en què descendeix l\'àngel que anuncia a Maria la seua mort; la Recèlica o Araceli, ocupat per cinc àngels, tres adults i dos xiquets, que en la segona part permet l\'Assumpció de la Mare de Déu; i la Coronació o Trinitat, semblant a l\'Araceli, però més reduït, ocupat per un adult i dos xiquets que figuren ser la Santíssima Trinitat. Aquests tres enginys baixen i pugen lligats amb gruixudes maromes accionades per mitjà de dos torns manuals fixats en les terrasses de l\'església. \n\n
+        Els cantors que no descendeixen del cel es caracteritzen fora del temple, primitivament en l\'ermita de Sant Sebastià i actualment en la Casa de la Festa contigua. Des d\'aquesta ermita parteixen cantors i autoritats a l\'inici de l\'obra en un xicotet seguici festiu amb el que també els carrers de la ciutat es converteixen en escenari de la Festa. Escenari que s’amplia a tot l\'antic nucli medieval quan, en el matí del 15 d\'agost, es realitza la processó-soterrar de Maria.</string>
+        
+    <string name="info_celebration_title">Festivitat</string>
+    <string name="info_celebration_subtitle">El Misteri vixcut per la ciutat</string>
+    <string name="info_celebration_longtext">El Misteri d\'Elx és l\'única mostra viva de les grans celebracions dedicades a l\'Assumpció de la Mare de Déu que des de l\'Edat Mitjana es van estendre per les terres de l\'antiga Corona d\'Aragó. El Misteri és una celebració festiva, una manifestació de fe, una catequesi dramatitzada, i, sobretot, és la festa comunitària més important de la ciutat, la Festa per antonomàsia. \n\n
+        La celebració està formada per un cicle de diferents actes. En els primers dies d\'agost tenen lloc alguns actes preparatoris com la Prova de Veus on es trien les veus infantils de l\'obra, o la Prova de l’Àngel en la que es comprova el bon funcionament de la tramoia aèria i la serenitat dels petits cantors. La festivitat tradicional s\'inicia en la nit del 13 d\'agost, amb l\'anomenada Nit de l\'Albà. Es tracta d\'un acte comunitari que congrega en els terrats de la ciutat a tots els il·licitans que durant una hora llancen constantment coets i focs artificials, en una ofrena de llum i so a la seua patrona. \n\n
+        Entre les dues jornades tradicionals del Misteri, és a dir, en la nit i matinada que va del 14 al 15 d\'agost, es desenvolupa un altre acte popular i festiu: la Roà. Milers d\'il·licitans recorren amb un ciri encés els carrers de la ciutat pels quals, al matí següent, passarà la processó de la Mare de Déu. I, acabada la festa, entre el 16 i el 22 d\'agost, es desenvolupa la seua octava. Davant de la imatge de la Verge, de nou jacent, se celebren les Salves de la Mare de Déu, amb una predicació solemne i el cant d\'uns goigs assumpcionistes, possiblement del segle XVII. \n\n
+        La devoció popular cap a la Patrona de la ciutat es manifesta també en diversos detalls, especialment la nombrosa assistència a les celebracions, incloses les misses que, des de les quatre de la matinada del dia 15 d\'agost, se celebren en el mateix cadafal de Santa Maria. També en l\'interés manifest d\'arreplegar fragments d\'oripell caiguts del cel de Santa Maria o algunes de les fulles de la palma daurada que baixa l\'àngel de la Mangrana, objectes de devoció que són guardats com a verdaderes relíquies.</string>
+        
+    <string name="info_recognition_title">Reconeixements</string>
+    <!--  string name="info_recognition_subtitle">-.-.- DE</string-->
+    <string name="info_recognition_longtext">En els últims anys, els valors artístics i tradicionals continguts en el Misteri d\'Elx i el seu caràcter únic i excepcional han sigut objecte de diferents reconeixements i distincions. Els més destacats són els següents: \n\n
+        
+        · 1931: Declaració de Monument Nacional pel Govern de la II República espanyola \n
+        · 1965: Declaració de Festa d\'Interés Turístic Nacional pel Ministeri d\'Informació i Turisme \n
+        · 1980: Declaració de Festa d\'Interés Turístic Internacional pel Ministeri d\'Informació i Turisme \n
+        · 1982: Placa d\'Or al Mèrit Turístic del Ministeri de Transports, Turisme i Comunicacions \n
+        · 1982: Medalla d\'Or de la Reial Acadèmia de Belles Arts de Sant Carles de València \n
+        · 1988: Creu de Sant Jordi de la Generalitat de Catalunya \n
+        · 1988: Corbata de l\'Orde d\'Alfons X el Savi del Ministeri d\'Educació i Ciència \n
+        · 1990: Corbata de l\'Orde d\'Isabel la Catòlica del Ministeri d\'Assumptes Exteriors \n
+        · 1990: Alta Distinció de la Generalitat de València \n
+        · 1993: Medalla d\'Or de la Reial Acadèmia de Belles Arts de Sant Ferran de Madrid \n
+        · 1997: Medalla d\'Or del Bimil·lenari de la Ciutat de l\'Ajuntament d\'Elx \n
+        · 2001: Medalla d\'Or del Consell Valencià de Cultura \n
+        · 2001: Declaració d\'Obra Mestra del Patrimoni Oral i Immaterial de la Humanitat per la  UNESCO \n
+        · 2005: Cavaller (el president gestor) de l\'Orde Pontifícia de Sant Silvestre \n</string>
+   
+   	<!-- Menu option 4. buy tickets activities-->
+   	<string name="buytickets">Compra d\'entrades</string>
+</resources>

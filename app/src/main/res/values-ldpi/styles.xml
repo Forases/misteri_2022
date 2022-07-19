@@ -1,0 +1,127 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    <style name="btn_menu">
+        <item name="android:background">#910101</item>
+        <item name="android:padding">8dp</item>
+    </style>
+    
+    <style name="btn_menu.lang">
+		<item name="android:textColor">#FFFFFF</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">14sp</item> 
+    </style>
+    <style name="btn_menu.main">
+        <item name="android:clickable">true</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:background">@color/misteri_yellow</item>
+    </style>
+    <style name="btn_menu_text">
+        <item name="android:textColor">#FFFFFF</item>
+         <item name="android:gravity">center</item>
+    </style>
+    <style name="btn_menu_text.title">
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/playfairdisplay_black</item>
+        <item name="android:textColor">@color/misteri_black</item>
+    </style>
+    <style name="btn_menu_text.subtitle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/raleway_semibold</item>
+    </style>
+    <style name="titlebar">
+        <item name="android:background">#910101</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="subtitlebar">
+        <item name="android:background">#470400</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="titleCast">
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="character">
+        <item name="android:textColor">#690011</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="liveOriginalText">
+        <item name="android:background">#D8D8D8</item>
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+        <item name="android:paddingRight">3dp</item>
+        <item name="android:paddingLeft">3dp</item>
+        <item name="android:textSize">14sp</item>
+        
+    </style>
+     <style name="liveTranslationText">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+        <item name="android:paddingRight">3dp</item>
+        <item name="android:paddingLeft">3dp</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+     <style name="liveInfoText">
+ 		<item name="android:gravity">center_horizontal</item>
+ 		<item name="android:paddingTop">30dp</item>
+ 		<item name="android:paddingRight">15dp</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingBottom">20dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="scenelistImage">
+        <item name="android:layout_marginRight">25dp</item>
+    </style>
+    <style name="scenelistText">
+        <item name="android:textColor">#690011</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="infolistImage">
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
+     <style name="infolistitemTitle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#470400</item>
+    </style>
+    <style name="infolistitemSubtitle">
+        <item name="android:textColor">#470400</item>
+    </style>
+    <style name="infoLongText">
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:lineSpacingExtra">3dp</item>
+    </style>
+    <style name="btnImage">
+        <item name="android:padding">20dp</item>
+        <item name="android:background">#0000</item>
+    </style>
+    <style name="btnImage.play_pause">
+        <item name="android:padding">10dp</item>
+    </style>
+</resources>

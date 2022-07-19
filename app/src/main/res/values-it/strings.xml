@@ -1,0 +1,65 @@
+<resources>
+    <!-- Dialogs messages -->
+    <string name="dialog_btn_accept">Accettare</string>
+    <string name="dialog_btn_cancel">Cancellare</string>
+    <string name="warning_live_mute_title">¡Attenzione!</string>
+    <string name="warning_live_mute_msg">Il suo dispositivo è in silenzio. Il dispositivo dovrebbe essere in silenzio durante la rappresentazione. Molte grazie per la sua collaborazione.</string>
+    <string name="warning_no_listen_title">¡Attenzione!</string>
+    <string name="warning_no_listen_msg">Opzione non disponibile nei giorni della rappresentazione. Siamo spiacenti per il disturbo.</string>
+    <string name="dialog_download_title">Informazione importante</string>
+    <string name="dialog_download_msg">È necessario scaricare i contenuti audio per questa sezione. Si scaricano una sola volta. Consigliamo collegarsi ad una rete WiFi.</string>
+    <string name="progressdialog_download_title">Informazione</string>
+    <string name="progressdialog_download_msg">Scaricando i contenuti audio&#8230;Questo procedimento può tardare un poco</string>
+    <string name="progressdialog_unzip_title">Informazione</string>
+    <string name="progressdialog_unzip_msg">Preparando i contenuti audio&#8230;</string>
+    <string name="alert_unzip_error_title">Errore</string>
+    <string name="alert_unzip_error_msg">Errore preparando gli audio.Per favore riprovalo di nuovo.</string>
+    <string name="alert_remotedbmanager_error_title">Errore</string>
+    <string name="alert_remotedbmanager_error_msg">Errore ricevendo dati.Potrebbe essere dovuto a che il suo collegamento non sia stabile. Per favore lo controlli.</string>
+    <string name="alert_audio_notfound_error_title">Errore</string>
+    <string name="alert_audio_notfound_error_msg">Questo audio non si trova, può essere che sia disconnesso da internet mentre si scaricava. Consigliamo che si cancellino i dati dell\'opzione Sintonizzazione e ritorni ad accedere.</string>
+    
+    <!-- Menu activity-->
+    <string name="btn_language">Italiano</string>
+    <string name="btn_menu_live_title">Seguire in diretta</string>
+    <string name="btn_menu_live_subtitle">Seguire la Rappresentazione in diretta.</string>
+    <string name="btn_menu_listen_title">Ascolta il Misteri</string>
+    <string name="btn_menu_listen_subtitle">Segui la Festa in maniera manuale</string>
+    <string name="btn_menu_info_title">Informazione e Storia</string>
+    <string name="btn_menu_info_subtitle">Conosci tutto della Rappresentazione</string>
+    <string name="btn_menu_tickets_title">Acquisto delle entrate</string>
+    <string name="btn_menu_tickets_subtitle">Servizio vendita delle entrate</string>
+    
+    
+    <!-- Menu option 1. Live activities-->
+    <string name="cast">Ripartizione</string>
+    <string name="today_cast">Oggi intervengono nella Rappresentazione:</string>
+    <string name="live">En directo IT</string>   
+    
+    <!-- Menu option 2. Scene player activities-->
+    <!-- Scene menu -->
+     <string name="scenes">Selezione di scene</string>    
+    
+    <!-- Menu option 3. Information and history activities-->
+    <string name="info">Informazione</string>
+    <string name="info_history_title">Storia</string>
+    <string name="info_history_subtitle">L\'origine del Misteri d\’Elx</string>
+    
+    <string name="info_text_title">Testo</string>
+    <string name="info_text_subtitle">Testo letterario del Misteri</string>
+       
+    <string name="info_music_title">Musica</string>
+    <string name="info_music_subtitle">Sui cantici del Misteri</string>
+
+    <string name="info_tramoya_title">Attrezzature</string>
+    <string name="info_tramoya_subtitle">La Basilica di Santa Maria</string>
+        
+    <string name="info_celebration_title">Celebrazione</string>
+    <string name="info_celebration_subtitle">Il Misteri vissuto dalla città</string>
+        
+    <string name="info_recognition_title">Riconoscimenti</string>
+    <!-- string name="info_recognition_subtitle">-,-,-</string-->
+   
+   	<!-- Menu option 4. buy tickets activities-->
+   	<string name="buytickets">Acquisto delle entrate</string>
+</resources>

@@ -1,0 +1,112 @@
+<resources>
+    <!-- Dialogs messages -->
+    <string name="dialog_btn_accept">Annehmen</string>
+    <string name="dialog_btn_cancel">Stornieren</string>
+    <string name="warning_live_mute_title">¡Achtung!</string>
+    <string name="warning_live_mute_msg">Das Gerät wurde zum Schweigen gebracht. Vielen Dank für ihre Mitarbeit.</string>
+    <string name="warning_no_listen_title">¡Achtung!</string>
+    <string name="warning_no_listen_msg">Option an Darstellung Tagen nicht zur Verfügung. Entschuldigung für die Unannehmlichkeiten.</string>
+    <string name="dialog_download_title">Wichtige Informationen</string>
+    <string name="dialog_download_msg">Herunterladen von Audio-Inhalte für diesen Bereich erforderlich ist. Sind nur einmal heruntergeladen. Wir empfehlen, eine Verbindung zu einem WLAN-Netzwerk.</string>
+    <string name="progressdialog_download_title">Information</string>
+    <string name="progressdialog_download_msg">Herunterladen von Audio-Inhalte &#8230;\nDieser Vorgang kann eine Weile dauern</string>
+    <string name="progressdialog_unzip_title">Informationen</string>
+    <string name="progressdialog_unzip_msg">Vorbereitung Audio-Inhalte&#8230;</string>
+    <string name="alert_unzip_error_title">Fehler</string>
+    <string name="alert_unzip_error_msg">Fehler beim Vorbereiten des Audios. Versuchen Sie es erneut.</string>
+    <string name="alert_remotedbmanager_error_title">Fehler</string>
+    <string name="alert_remotedbmanager_error_msg">Fehler beim Empfang der Daten. Vielleicht ist Ihre Internetverbindung nicht stabil. Überprüfen Sie es bitte.</string>
+    <string name="alert_audio_notfound_error_title">Fehler</string>
+    <string name="alert_audio_notfound_error_msg">Dieser Ton ist nicht. Vielleicht ist das Sie vom Internet getrennt haben. Löschen von Daten aus den Anwendungseinstellungen, und starten Sie Access neu.</string>
+    
+    <!-- Menu activity-->
+    <string name="btn_language">Deutsch</string>
+    <string name="btn_menu_live_title">Folgen Sie Live</string>
+    <string name="btn_menu_live_subtitle">Folgen Sie Live Darstellung</string>
+    <string name="btn_menu_listen_title">Hören Sie das Mystery</string>
+    <string name="btn_menu_listen_subtitle">Folgen Sie die Festa manuell</string>
+    <string name="btn_menu_info_title">Informationen</string>
+    <string name="btn_menu_info_subtitle">Erfahren Sie alles über der Darstellung</string>
+    <string name="btn_menu_tickets_title">Tickets kaufen</string>
+    <string name="btn_menu_tickets_subtitle">Ticketing Service</string>
+    
+    
+    <!-- Menu option 1. Live activities-->
+    <string name="cast">Verteilung</string>
+    <string name="today_cast"> Heute nehmen Sie Teil in der Darstellung:</string>
+    <!--string name="live">En directo DE</string-->   
+    
+    <!-- Menu option 2. Scene player activities-->
+    <!-- Scene menu -->
+    <string name="scenes">Szenenauswahl</string>    
+    
+    <!-- Menu option 3. Information and history activities-->
+    <string name="info">Informationen</string>
+    <string name="info_history_title">Geschichte</string>
+    <string name="info_history_subtitle">Der Ursprung von Misteri d\'Elx</string>
+    <string name="info_history_longtext">Nach der Tradition, die Geburt von dem Mysterium von Elche ist mit der Elche muslimischen Eroberung durch die Truppen des aragonesischen James I. von Aragon im Jahre 1265. Andere Geschichten in Beziehung zu der wundersamen Erscheinung oder "Coming" von dem Bild der Jungfrau von Elche 29. Dezember 1370. Neuere Untersuchungen legen nahe, die zweite Hälfte des fünfzehnten Jahrhunderts als die wahrscheinlichste Zeit für die Datierung der Entstehung der Feier. \n\n
+		Am Anfang wurde von einigen Familien des lokalen Adels, wie Perpignan oder Caro organisiert. Die früheste urkundliche Erwähnung ist im Willen Elche Isabel Caro, 1523. Im Jahre 1530 als Bruderschaft Unserer Lieben Frau Mariä Himmelfahrt, in der Kapelle von San Sebastian (heute Städtisches Museum Festa) gelegen, war für die Vorbereitung des Festes verantwortlich ist dokumentiert. \n\n 
+		Im Jahr 1609, aufgrund des Fehlens von wirtschaftlichen Ressourcen der Bruderschaft, hat der Rat der Stadt die Vereinbarung über die Organisation und Finanzierung des Festa, für die etablierte eine Reihe von Gemeindesteuern zu nehmen. \n\n
+		Die Richtlinien des Konzils von Trient, die Darstellungen in den Kirchen verboten ist, hat zu suchen päpstlichen Schutz: Urban VIII. schickte ein Privileg datiert 1632, die Kontinuität der Festa sichergestellt. \n\n
+		Durch den Dekadenz der Darstellung im neunzehnten Jahrhundert, im Jahr 1924 wurde eine szenischen und musikalischen Beurteilung durchgeführt. Die Partitur wurde von der Alicante-Musiker Oscar Esplá gereinigt. Im Jahr 1931 wurde das Mysterium ein Nationaldenkmal von der Regierung der Zweiten Republik erklärt. \n\n
+		Im Jahre 1940 organisierte er das National Board Restorative Mysterium der Elche gennant und seine Tempel, mit der Mission die Kirche St. Mary und das Mysterium wiederherstellen erholen während des Bürgerkrieges ausgesetzt. Im Jahr 1948 wurde dieser Vorstand in den National Board of Mysterium von Elche aus der Verabschiedung des Gesetzes von der Mysterienspiel von der valencianischen Parlament im Dezember 2005 umgewandelt und der aktuelle Vorstand des Mysterium der Elche, in institutionelle Unterstützung der Stadt Elche, der Generalitat Valenciana und der Diözese Orihuela-Alicante. \n\n
+    </string>
+    
+    <string name="info_text_title">Text</string>
+    <string name="info_text_subtitle">Der Literarische Text</string>
+    <string name="info_text_longtext">Der literarische Text von dem Mysterium von Elche, Valencia und mit einem Psalm und einigen lateinischen Versen geschrieben ist, besteht aus 259 Versen, die in Strophen von verschiedenen Arten verteilt. \n\n
+		Die literarischen und musikalischen Texten und Regieanweisungen sind in Handschriften genannt Consuetas erhalten. Die erste ist datiert 1625 und ist eine Kopie des Originals, dass der Rat gehalten, die Villa von Gaspar Soler Chacon. Weder das Original noch die Kopie jetzt erhalten, aber wir sind für die Bearbeitung der Chronist war es Elche, Pedro Ibarra Ruiz (1858-1934) bekannt. \n\n
+		Im Jahr 1639, ‘ein Andächtiger’ machte eine neue Kopie der offiziellen Manuskrip. Es umfasste Anmerkungen mit den Namen der Komponisten, die in mehrstimmigem Mysterium Reform im sechzehnten Jahrhundert teilgenommen. Diese Kopie von Consueta uns ist auch nur durch einen Teil von Javier Fuentes und Ponte Murcia Publizist (1830-1903) bearbeitet bekannt. \n\n
+		Aufgrund der Schäden in der offiziellen Consueta durch den Erbfolgekrieg, den Empfänger Joseph Lozano und Roiz eine neue Kopie im Jahre 1709 gemacht Kapelle Lehrer richtet verursacht. In der Stadt Historisches Archiv Elche Konserviert. \n\n
+		Lozano und Roiz selbst verfasste im Jahre 1722 eine neue Kopie, praktisch identisch mit der vorherigen. Es ist in der Bibliothek des ehemaligen Stadthistoriker, Juan Román Orts (1898-1958). \n\n
+		Der letzte der historischen consuetas datiert 1751. Es ist eine Kopie von Carlos Caro Tarrega Text 1625 bereits erwähnt hat. Es wird in der Bibliothek der Erben von Joseph M. Ruiz de Lope und Perez, Ilicitano Chronist (1831-1900). \n\n
+    </string>
+       
+    <string name="info_music_title">Musik</string>
+    <string name="info_music_subtitle">Über die Lieder</string>
+    <string name="info_music_longtext">Das Mysterium der Elche ist komplett gesungen und enthält Melodien des Mittelalters, der Renaissance und des Barock Ergänzungen und noch später Herkunft. Allerdings ist seine außerordentliche musikalische Einheit. \n\n
+		Einige ihrer häufiger in den ersten Teil der Darstellung, einstimmige Gesänge zeigen deutliche Einflüsse von mittelalterlichen Gregorianischen. Die neue Technik der Anpassung literarische Texte zu bereits vorhandenen Musik, als "Kontrafactum" bekannt war sehr häufig in Darstellungen dieser Art. \n\n
+		Habe auch in einigen seiner polyphonen Gesang Punkte der Übereinstimmung sechzehnten Jahrhundert mit Weihnachtsliedern und anderen Werken in der Musikal Liederbuch von Palast gesammelt gefunden.  \n\n
+		Wir kennen die Namen von drei Komponisten, die in der polyphonen Reform beteiligt. Ribera ist, dass mit gewissen Einschränkungen, als Antonio de Ribera, Kantor der päpstlichen Kapelle in Rom, identifiziert worden, obwohl andere Wissenschaftler werden zugunsten Bernardino de Ribera. lehnen. Der Domherr Ginés Pérez, Chorleiter an der Kathedrale von Valencia und Orihuela. Und Lluís Vich, Organist an der Kirche Santa María de Elche und der erste Lehrer für seine Musikkapelle bekannt (zwischen 1562 und 1594). \n\n
+		Bis 1835 die Kirche Santa Maria hatte eine Kapelle von professionellen Musikern und Sängern, die zwischen ihren Namen jedes Jahr waren interpretieren Himmelfahrt-Drama. Nach der Beschlagnahme Amateursänger von der Stadt übernahm die Festa.  Derzeit Mitglieder der Kapelle und Chor, von ihren Chorleiter geführt, der das Mysterium der Elche spielen sind sie. Und obwohl nur sehr wenige Ausnahmen keine von ihnen sind professionelle Singen, die Kombination von Stimmen und dem Können der Sänger zeigt sich in den jährlichen Feierlichkeiten und Konzerte bieten in der Regel ausnehmend. \n\n
+    </string>
+
+    <string name="info_tramoya_title">Szenarien</string>
+    <string name="info_tramoya_subtitle">Die Basilika von Santa María</string>
+    <string name="info_tramoya_longtext">Die große Bühne des Mysteriums von Elche ist die Basilika von Santa Maria, ein barocker Tempel, dessen Bau begann im Jahre 1673 und endete im Jahr 1784. Die Szene selbst ist in zwei Teile geteilt: horizontal oder "terrestrische" und die vertikale oder "Luft". \n\n
+		Die erste besteht aus einer Plattform oder "cadafal" steigt in der Querschiff der Kirche. Ihre Anordnung ermöglicht es dem Zuschauer, nach mittelalterlicher Sitte, kann auf allen vier Seiten angebracht werden.. Diese Plattform wird vom Bürgermeister Tempel Tor durch eine geneigte Ebene namens Flur zugänglich. Entlang dieses Korridors sind drei kleine Altäre, die den Garten von Gethsemane, Golgatha und das Heilige Grab. \n\n
+		Die Luft Szenerie oder vertikale ist in der Kuppel der Kirche gesetzt. Es symbolisiert den Himmel. Auf der Leinwand für die Kuppel, aus Sicht der Zuschauer verborgen, gibt es ein kleines Holzbrett. Ermöglicht Bühnen alle Vorgänge und Arbeiten notwendig, senken und heben die Flugapparat mit den Zeichen der himmlischen Welt.. \n\n
+		Solche Geräte sind drei: die Wolke oder Granada in der absteigenden Engel verkündet Maria zu ihrem Tod; die Recèlica oder Araceli, belegt durch fünf Engel, drei Erwachsene und zwei Kinder, im zweiten Teil kann der Himmelfahrt der Jungfrau; und die Krönung oder Trinidad, Araceli ähnlich, aber kleiner, durch einen Erwachsenen und zwei Kinder dargelegt, um die Heilige Dreifaltigkeit besetzt sein. Diese drei Gërate nach unten und oben mit dicken Seilen von zwei manuelle Drehmaschinen auf den Terrassen der Kirche gesetzt angetrieben gebunden. \n\n
+		Die Sänger, die nicht vom Himmel herabsteigen, werden außerhalb des Tempels gekennzeichnet, ursprünglich in der Einsiedelei von San Sebastián und derzeit in der angrenzenden Casa De La Festa. Von dieser Einsiedelei fahren von Sänger und den Behörden zu Beginn der Darstellung in einer kleinen feierlichen Prozession, damit auch die Straßen werden zur Bühne der Festa. Szenario ist für alle der alten mittelalterlichen Kern erweitert, als am Morgen des 15. August, mit wird die Procesion-Entierro von María. \n\n   
+    </string>
+        
+    <string name="info_celebration_title">Festlichkeit</string>
+    <string name="info_celebration_subtitle">Das Mystery lebte in der Stadt</string>
+    <string name="info_celebration_longtext">Das Mysterium der Elche ist der einzige lebende Beispiel der großen Feierlichkeiten zu Mariä Himmelfahrt der Jungfrau Maria aus dem Mittelalter gewidmet durch die Länder der ehemaligen Krone von Aragon zu verbreiten. Das Mysterium ist ein festlichen Feier, ein Ausdruck des Glaubens, ein dramatisiert Katechese, und vor allem, ist das wichtigste Fest der Stadt-Gemeinschaft, die Quintessenz der Festa.  \n\n
+		Die Feier besteht aus einer Reihe von verschiedenen Handlungen. In den ersten Tagen des August gibt es einige vorbereitende Handlungen wie Voice-Test, wo die Arbeit von Kinderstimmen gewählt werden, oder Engel Test, in denen das ordnungsgemäße Funktionieren der Luft Requisiten und Gelassenheit der kleinen Sänger überprüft. Das traditionelle Fest beginnt am Abend des 13. August, der so genannten Nacht der Alba. Dies ist ein Community-Event, die auf den Dächern der Stadt für eine Stunde ilicitanos ständig Raketen und Feuerwerk bringt überhaupt, ein Angebot von Licht und Ton an seinen Gönner. \n\n
+		Zwischen den zwei Tagen des traditionellen Mysterium, am Abend und am frühen Morgen geht von 14. bis 15. August, findet eine weitere beliebte und festliche Veranstaltung statt: die Roà. Tausende von Elche mit einer brennenden Kerze in den Straßen der Stadt, wo in der Früh, verbringen die Prozession der Jungfrau. Und beendete die Tage, zwischen 16 und 22 August entwickelt seine achte. Vor dem Bild der Jungfrau, wieder liegerad, feierte Salves die Mutter Gottes, mit einer feierlichen Verkündigung und singt ein fröhlich Assumptionisten möglicherweise siebzehnten Jahrhundert. \n\n
+		Die volkstümliche Verehrung an den Gönner der Stadt ist auch in verschiedenen Details manifestiert, besonders große Teilnahme an den Feierlichkeiten, einschließlich Messen, von vier Uhr morgens des 15. August, auf der gleichen Santa Maria cadafal gehalten. Auch im klaren Interesse des Sammelns Fragmente vom Himmel gefallen Lametta Santa Maria oder einige von den Blättern der Handfläche nach unten goldenen Engel Granada, Objekte der Hingabe, die als wahre Relikte gespeichert werden. \n\n
+    </string>
+        
+    <string name="info_recognition_title">Anerkennung</string>
+    <!--  string name="info_recognition_subtitle">-.-.- DE</string-->
+    <string name="info_recognition_longtext">In den letzten Jahren, die künstlerische und traditionelle Inhalte in das Mysterium von Elche Werte und seine einzigartige und außergewöhnliche, war Gegenstand mehrerer Preise und Auszeichnungen haben. Die bekanntesten sind die folgenden: \n\n
+        
+        · 1931: Erklärung der Nationaldenkmal von der Regierung der Zweiten Spanischen Republik \n
+        · 1965: Erklärung von nationalem touristischem Interesse durch das Ministerium für Information und Tourismus \n
+        · 1980: Erklärung von internationalem touristischen Interesse durch das Ministerium für Information und Tourismus \n
+        · 1982: Goldplakette für Touristische Verdienste des Ministeriums für Verkehr, Tourismus und Kommunikation \n
+        · 1982: Goldmedaille der Königlichen Akademie der Schönen Künste von San Carlos in Valencia \n
+        · 1988: Kreuz der Saint Jordi von der Generalitat von Katalonien \n
+        · 1988: Krawatte des Ordens von Alfonso X. der Weise des Ministeriums für Bildung und Wissenschaft \n
+        · 1990: Krawatte des Ordens Isabella der Katholischen, Ministerium für auswärtige Angelegenheiten \n
+        · 1990: Hohe Auszeichnung der Generalitat von Valencia \n
+        · 1993: Goldmedaille der Königlichen Akademie der Schönen Künste von San Fernando in Madrid \n
+        · 1997: Goldmedaille des Bimillenium der Stadt im Rathaus von Elche \n
+        · 2001: Goldmedaille des valencianischen Rates für die Kultur \n
+        · 2001: Erklärung Meisterwerk des mündlichen und immateriellen Erbes der Menschheit von der UNESCO \n
+        · 2005: Ritter (Präsident Manager) des Päpstlichen Ordens des heiligen Sylvester.</string>
+   
+   	<!-- Menu option 4. buy tickets activities-->
+   	<string name="buytickets">Tickets kaufen</string>
+</resources>

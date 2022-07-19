@@ -1,0 +1,112 @@
+<resources>
+    <!-- Dialogs messages -->
+    <string name="dialog_btn_accept">Valider</string>
+    <string name="dialog_btn_cancel">Annuler</string>
+    <string name="warning_live_mute_title">¡Attention!</string>
+    <string name="warning_live_mute_msg">Le dispositif a été mis en mode silencieux. Il doit le rester tout le long de la représentation. Merci pour votre collaboration</string>
+    <string name="warning_no_listen_title">¡Attention!</string>
+    <string name="warning_no_listen_msg">Option indisponible les jours de représentation. Veuillez excuser la gêne occasionnée.</string>
+    <string name="dialog_download_title">Information importante</string>
+    <string name="dialog_download_msg">Cette section nécessite de télécharger les contenus audio. Ils se chargeront en une fois. Nous vous recommandons de vous connecter sur un réseau wifi.</string>
+    <string name="progressdialog_download_title">Information</string>
+    <string name="progressdialog_download_msg">Téléchargement des contenus audio. Cette opération peut durer quelques minutes.</string>
+    <string name="progressdialog_unzip_title">Information</string>
+    <string name="progressdialog_unzip_msg">Préparation des contenus audio&#8230;</string>
+    <string name="alert_unzip_error_title">Erreur</string>
+    <string name="alert_unzip_error_msg">Une erreur s’est produite pendant la préparation des contenus audio. Veuillez réessayer.</string>
+    <string name="alert_remotedbmanager_error_title">Erreur</string>
+    <string name="alert_remotedbmanager_error_msg">Une erreur s’est produite pendant la transmission des données. Cela peut être dû à la qualité de votre connexion internet. Veuillez la vérifier.</string>
+    <string name="alert_audio_notfound_error_title">Erreur</string>
+    <string name="alert_audio_notfound_error_msg">Ce fichier audio est introuvable, il se peut que la connexion internet ait été interrompue pendant le téléchargement. Nous vous recommandons d’effacer les données de l’application en allant dans « Ajustes » et de réessayer de vous connecter.</string>
+    
+    <!-- Menu activity-->
+    <string name="btn_language">Français</string>
+    <string name="btn_menu_live_title">Suivre en direct</string>
+    <string name="btn_menu_live_subtitle">Suivez la représentation en direct</string>
+    <string name="btn_menu_listen_title">Ecoutez le Misteri</string>
+    <string name="btn_menu_listen_subtitle">Suivez la Festa en mode manuel</string>
+    <string name="btn_menu_info_title">Informations et histoire</string>
+    <string name="btn_menu_info_subtitle">Tout savoir sur la représentation</string>
+    <string name="btn_menu_tickets_title">Vente de places</string>
+    <string name="btn_menu_tickets_subtitle">Service de vente de places</string>
+    
+    
+    <!-- Menu option 1. Live activities-->
+    <string name="cast">Distribution</string>
+    <string name="today_cast">Distribution du jour:</string>
+    <!-- string name="live">En directo FR</string-->   
+    
+    <!-- Menu option 2. Scene player activities-->
+    <!-- Scene menu -->
+    <string name="scenes">Sélection de scènes</string>    
+    
+    <!-- Menu option 3. Information and history activities-->
+    <string name="info">Information</string>
+    <string name="info_history_title">Histoire</string>
+    <string name="info_history_subtitle">L’origine du Misteri d\’Elx</string>
+    <string name="info_history_longtext">La tradition associe la naissance du Misteri d’Elche à la conquête de la ville musulmane par les troupes de Jacques Ier d’Aragon, en 1265. D’autres récits la relient à l’apparition miraculeuse ou Venida (arrivée) de la statue de la Vierge d’Elche le 29 décembre 1370. Les recherches les plus récentes estiment que l’origine de la célébration remonte plus probablement à la deuxième moitié du 15e siècle. \n\n
+		A ses débuts, la fête était organisée par quelques familles de la petite noblesse d’Elche, comme les Perpiñán ou les Caro. Dans les archives, la mention la plus ancienne se trouve dans le testament d’une habitante d’Elche, Isabel Caro, en 1523. En 1530 est attestée l’existence d’une Confrérie de Notre-Dame de l’Assomption dont le siège était situé dans l’ermitage de Saint-Sébastien (aujourd’hui Musée Municipal de la Festa), qui s’occupait de préparer la fête. \n\n
+		En 1609, face au manque de ressources financières de cette Confrérie, le Conseil de la ville décida de prendre en charge l’organisation et le financement de la Festa, pour lesquels il établit une série d’impôts municipaux. \n\n
+		Les directives du Concile de Trente, qui interdisaient les représentations à l’intérieur des églises, incitèrent les habitants à solliciter la protection papale : Urbain VIII édicta un privilège daté de 1632, qui garantit la continuité de la Festa. \n\n
+		Face au déclin que connut la pièce au 19e siècle, on procéda à une révision de la mise en scène et de la musique qui fut achevée en 1924. Le musicien alicantin Oscar Esplá revit la partition. En 1931, le Misteri fut déclaré Monument National par le gouvernement de la Deuxième République. \n\n
+		En 1940 fut mise en place la Junta Nacional Restauradora del Misterio de Elche y de sus Templos (Association Nationale pour la Restauration du Mystère d’Elche et de ses Temples), qui avait pour mission de restaurer l’église Sainte-Marie et le Misteri, suspendu pendant la Guerre Civile. En 1948, cette Junta devint le Patronato Nacional del Misterio de Elche (Patronat National du Mystère d’Elche), et, après l’approbation de la Loi sur le Misteri d’Elx par les Cortes valenciennes (chambres législatives), en décembre 2005, l’actuel Patronat del Misteri d’Elx (idem en valencien), avec pour supports institutionnels la Mairie d’Elche, la Generalitat Valenciana et l’Evêché d’Orihuela-Alicante. \n\n
+	</string>
+    
+    <string name="info_text_title">Texte</string>
+    <string name="info_text_subtitle">Le texte littéraire du Misteri</string>
+    <string name="info_text_longtext">Le texte littéraire du Misteri d’Elche est rédigé en valencien ; il intègre un psaume et quelques vers latins. Il comporte deux cent cinquante neuf vers distribués dans des strophes de divers types. \n\n
+        Les textes littéraires et les partitions, de même que les annotations scéniques, ont été conservés dans des manuscrits appelés consuetas. Le premier de ces manuscrits est daté de 1625 ; il s’agit d’une copie réalisée par Gaspar Soler Chacón à partir de l’original que détenait le Conseil de la ville. Ni l’original ni cette copie n’ont été conservés, mais on les connaît grâce à l’édition effectuée par Pedro Ibarra i Ruiz (1858-1934), qui fut chroniquer d’Elche. \n\n
+		En 1639, « un dévot » réalisa une nouvelle copie du manuscrit officiel. Il intégra des annotations donnant les noms des compositeurs ayant participé à la révision polyphonique du Misteri au 16e siècle. On ne connaît cette copie du Misteri qu’à travers l’édition partielle qu’en fit l’auteur de Murcie Javier Fuentes y Ponte (1830-1903). \n\n
+		Face aux dommages que subit le consueta officiel pendant la Guerre de Succession, le clerc Joseph Lozano y Reiz réalisa une nouvelle copie en 1709 à destination des maîtres de Chapelle. Elle est conservée aux Archives Municipales d’Elche. \n\n
+		Le même Lozano y Roiz effectua en 1722 une nouvelle copie, pratiquement identique à la précédente, conservée dans la bibliothèque de Juan Orts Román (1898-1958), qui fut chroniqueur de la cité. \n\n
+		Le dernier des consuetas historiques est daté de 1751. Il s’agit d’une copie du texte de 1625 mentionné plus haut, réalisée par Carlos Tàrrega i Caro. Cette copie est conservée dans la bibliothèque des héritiers du chroniqueur d’Elche José M. Ruiz de Lope y Pérez (1831-1900). \n\n
+	</string>
+       
+    <string name="info_music_title">Musique</string>
+    <string name="info_music_subtitle">A propos des chants du Misteri</string>
+    <string name="info_music_longtext">Le Misteri d’Elx est intégralement chanté. Il contient des mélodies d’origine datant du Moyen Age et de la Renaissance, ainsi que des ajouts baroques ou postérieurs. Pourtant, son unité musicale est remarquable. \n\n
+		Plusieurs de ses chants monodiques, plus nombreux dans la première partie de la pièce, manifestent une nette influence du chant grégorien médiéval. La technique consistant à adapter à des musiques préexistantes des textes littéraires nouveaux, connue sous le nom de contrafactum, était très répandue dans les représentations de ce type. \n\n
+		On a aussi retrouvé dans certains chants polyphoniques du 16e siècle des concordances avec des villancicos (chansons populaires à thème religieux chantées principalement dans la période de Noël) et avec d’autres pièces recueillies dans le Cancionero Musical de Palacio (chansonnier célèbre, conservé à la Real Biblioteca de Madrid, qui contient une compilation de pièces musicales copiées entre le dernier tiers du 15e et le début du 16e siècle). \n\n
+		On connaît le nom de trois des compositeurs qui contribuèrent à la révision polyphonique mentionnée ci-dessus. Le premier est Ribera, qui a été identifié, sans certitude absolue, à Antonio de Ribera, chanteur de la chapelle pontificale de Rome ; d’autres spécialistes penchent en faveur de Bernadino de Ribera. Le second est Ginés Pérez, maître de chapelle des cathédrales de Valence et Orihuela. Le dernier est Lluís Vich, organiste de l’église Sainte-Marie d’Elche et, de 1562 à 1594, premier maître de la chapelle musicale dont on connaisse le nom. \n\n
+		Jusqu’en 1835, l’église Sainte-Marie comportait une chapelle de musiciens et chanteurs professionnels dont l’une des fonctions consistait à interpréter chaque année le drame assomptionniste. Après la Desamortización (désamortissement : long processus économique, commencé à la fin du 18e siècle, qui consista à mettre aux enchères publiques des biens improductifs appartenant majoritairement à l’Eglise), la Festa fut prise en charge par des chanteurs amateurs de la ville d’Elche. A présent, ce sont les membres de la Capilla y Escolanía (Chapelle et école de chant), dirigés par le maître de chapelle, qui interprètent le Misteri. Et bien qu’à de rares exceptions près aucun d’eux ne soit chanteur professionnel, il faut saluer l’harmonie des voix et le savoir-faire qu’atteignent les interprètes dans les célébrations annuelles et les concerts extraordinaires qu’ils donnent par ailleurs. \n\n
+   	</string> 
+
+    <string name="info_tramoya_title">La machinerie</string>
+    <string name="info_tramoya_subtitle">La basilique Sainte-Marie</string>
+    <string name="info_tramoya_longtext">Le lieu essentiel où se joue le Misteri d’Elche est la basilique Sainte-Marie, église baroque dont la construction commença en 1673 pour s’achever en 1784. La scène proprement dite se divise en deux parties distinctes : une partie horizontale ou « terrestre » et une partie verticale ou « aérienne ». \n\n
+		La première est constituée par une estrade, le cadafal, que l’on élève pour l’occasion dans la croisée du transept. Conformément à la coutume médiévale, cette estrade est disposée de manière à permettre aux spectateurs de se placer sur ses quatre côtés. On y accède depuis l’entrée principale de l’église par une rampe inclinée appelée andador. Le long de cette rampe se dressent trois petits autels qui représentent le jardin des Oliviers, le mont Calvaire et le Saint Sépulcre. \n\n
+		La partie aérienne ou verticale de la scène est installée dans la coupole de l’église, qui symbolise le ciel. Au-dessus de la toile qui recouvre la coupole, dissimulé aux yeux des spectateurs, est monté en porte-à-faux un petit plancher de bois. Il permet aux machinistes de réaliser toutes les manœuvres et opérations nécessaires à la montée et à la descente des appareils aériens qui transportent les personnages du monde céleste. \n\n
+		Ces appareils sont au nombre de trois : la Nube (nuage) ou Granada (grenade) sur laquelle descend l’ange qui annonce sa mort à la Vierge ; la Recèlica ou Araceli (littéralement : l’autel du ciel), occupé par cinq anges, trois adultes et deux enfants, qui permet dans la seconde partie l’Assomption de la Vierge ; et la Coronación (couronnement) ou Trinité, similaire à l’Araceli, mais de taille plus modeste, occupée par un adulte et deux enfants représentant la sainte Trinité. Pendant leur descente et leur montée, ces trois appareils sont attachés par d’épaisses cordes que l’on actionne grâce à deux treuils manuels fixés sur les terrasses de l’église. \n\n
+		Pour les chanteurs qui ne descendent pas du ciel, les coulisses se situent à l’extérieur de l’église, originellement dans l’ermitage Saint-Sébastien et actuellement dans la Casa de la Festa qui lui est contiguë. De l’ermitage partent au début de la pièce les chanteurs et les autorités, en un petit cortège solennel par lequel les rues de la cité se font elles aussi cadre de la représentation. Ce cadre s’élargit à l’ensemble de l’ancien centre médiéval quand est effectuée, au matin du 15 août, la procession-enterrement de la Vierge. \n\n
+	</string>
+        
+    <string name="info_celebration_title">Le cycle festif</string>
+    <string name="info_celebration_subtitle">Le Misteri dans la vie de la cité</string>
+    <string name="info_celebration_longtext">Le Misteri d’Elche est le seul témoin vivant des grandes célébrations consacrées à l’Assomption de la Vierge qui se développèrent à partir de la période médiévale dans les terres de l’ancienne Couronne d’Aragon. Le Misteri est une fête solennelle, une manifestation de foi, une pièce de théâtre religieuse et didactique et, surtout, c’est la fête la plus importante pour la communauté civique, la Festa par antonomase. \n\n
+		La célébration comporte différents actes qui, ensemble, constituent un cycle. Dans les premiers jours d’août ont lieu divers préparatifs : la Prueba de Voces, test des voix, qui permet de choisir les enfants destinés à chanter dans la représentation, et la Prueba del Angel, test de l’ange, qui permet de vérifier le bon fonctionnement de la machinerie et la sérénité des petits chanteurs. La fête traditionnelle commence dans la nuit du 13 août, avec la Nit de l’Albà. Il s’agit d’un acte qui réunit toute la communauté des habitants d’Elche : ceux-ci se retrouvent sur les terrasses de la cité et ne cessent pendant une heure de lancer des pétards et des feux d’artifice, en une offrande lumineuse et sonore à leur sainte patronne. \n\n
+		Entre les deux journées traditionnelles du Misteri, c’est-à-dire entre la nuit du 14 et la matinée du 15 août, se déploie un autre acte de la fête : la Roà. Des milliers d’habitants d’Elche parcourent avec un cierge allumé les rues de la cité, dans lesquelles passera le lendemain matin la procession de la Vierge. Une fois la fête terminée, du 16 au 22 août, se déroule l’octave de l’Assomption. Devant la statue en position de gisante, on célèbre les Salves de la Vierge, par un prêche solennel et plusieurs gozos assomptionnistes, chants de louanges datant probablement du 17e siècle. \n\n
+		La dévotion populaire pour la patronne de la cité se manifeste aussi par plusieurs détails. Ainsi, de nombreux habitants assistent aux célébrations, y compris aux messes qui sont célébrées sur le cadafal (scène du Misteri placée dans la croisée du transept) le 15 août à partir de quatre heures du matin. Ils sont également nombreux à s’efforcer de recueillir des fragments d’oropel (papier doré) tombés du ciel de la basilique, ou une feuille de la palme dorée qu’apporte en descendant l’ange de la Granada ; ces objets de dévotion sont ensuite conservés comme de véritables reliques. \n\n
+	</string>
+        
+    <string name="info_recognition_title">Distinctions</string>
+    <!-- string name="info_recognition_subtitle">-,-,-</string-->
+    <string name="info_recognition_longtext">Au cours des dernières années, les valeurs artistiques et le contenu traditionnels dans le Mystère d\'Elche et son caractère unique et exceptionnel ont été l\'objet de différentes reconnaissances et distinctions. Le plus remarquables sont les suivantes: \n\n
+        
+        · 1931: Déclaration de monument national par le gouvernement de la République espagnole II \n
+        · 1965: Déclaration de Fête d\'Intérêt Touristique National par le Ministère de l\'Information et du Tourisme \n
+        · 1980: Déclaration de Fête d\'Intérêt Touristique International par le ministère de l\'Information et du Tourisme \n
+        · 1982: Plaque d\'Or au Mérite touristique par le ministère des Transports, du Tourisme et de la Communication \n
+        · 1982: Médaille d\'or de l\'Académie royale des Beaux-Arts de San Carlos de Valence
+        · 1988: Croix de Sant Jordi de la Generalitat de Catalogne \n
+        · 1988: Cravate de l\'Ordre de Alfonso X El Sabio par le ministère de l\'Éducation et de la Science \n
+        · 1990: Cravate de l\'Ordre d\'Isabelle la Catholique par le ministère des Affaires étrangères. \n
+        · 1990: Haute Distinction de la Generalitat de Valence \n
+        · 1993: Médaille d\'or de l\'Académie royale des Beaux-Arts de San Fernando de Madrid \n
+        · 1997: Médaille d\'or du bimillénaire de la ville par le conseil municipal d\'Elche \n
+        · 2001: Médaille d\'or du Conseil valencien de la culture \n
+        · 2001: Déclaration de chef-d\'œuvre du patrimoine culturel immatériel de l\'humanité par l\'UNESCO \n
+        · 2005: Knight (Le Consultant président) de l\'Ordre pontifical de San Silvestre. \n</string>
+   
+   	<!-- Menu option 4. buy tickets activities-->
+   	<string name="buytickets">Vente de places</string>
+</resources>
