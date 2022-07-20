@@ -11,6 +11,8 @@ import es.gorillapp.misteri_2022.data.infoList
 class InfoListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val window = this.window
+        window.statusBarColor = this.resources.getColor(R.color.misteri_yellow_2)
         setContentView(R.layout.activity_info_list)
 
         val infoItemsList = infoList(this.resources)

@@ -28,29 +28,30 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center_vertical|center_horizontal"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:gravity="center">
+
             <LinearLayout
                 android:id="@+id/es_layout"
                 style="@style/language_button"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="15dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true">
 
                 <TextView
                     style="@style/btn_menu_text.title"
-                    android:layout_width="316dp"
+                    android:layout_width="256dp"
                     android:layout_height="match_parent"
-                    android:text="@string/es_button"
                     android:gravity="center_vertical"
-                    android:paddingStart="24dp"/>
+                    android:paddingStart="24dp"
+                    android:text="@string/es_button" />
 
                 <ImageView
                     android:id="@+id/es"
                     android:layout_width="56dp"
-                    android:layout_height="50dp"
+                    android:layout_height="56dp"
                     android:background="@color/misteri_yellow_2"
                     android:scaleType="center"
                     android:src="@drawable/ic_vector_right" />
@@ -59,35 +60,36 @@
             <LinearLayout
                 android:id="@+id/ca_audio_layout"
                 style="@style/language_button"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/es_layout"
+                android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_gravity="center">
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
 
                     <TextView
                         style="@style/btn_menu_text.title"
-                        android:layout_width="316dp"
-                        android:layout_height="match_parent"
-                        android:text="@string/es_button"
-                        android:gravity="center_vertical"
-                        android:paddingStart="24dp"/>
-                    <TextView
-                        android:id="@+id/ca_audio"
-                        style="@style/btn_menu_text.subtitle"
-                        android:layout_width="316dp"
+                        android:layout_width="256dp"
                         android:layout_height="match_parent"
                         android:gravity="center_vertical"
                         android:paddingStart="24dp"
-                        android:text="CON AUDIODESCRIPCIÓN"/>
-                </LinearLayout>
+                        android:text="@string/es_button" />
 
+                    <TextView
+                        android:id="@+id/ca_audio"
+                        style="@style/btn_menu_text.subtitle"
+                        android:layout_width="256dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingStart="24dp"
+                        android:text="CON AUDIODESCRIPCIÓN" />
+                </LinearLayout>
 
 
                 <ImageView
@@ -101,15 +103,16 @@
             <LinearLayout
                 android:id="@+id/ca_layout"
                 style="@style/language_button"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/ca_audio_layout"
                 android:layout_marginTop="10dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true">
 
                 <TextView
                     style="@style/btn_menu_text.title"
-                    android:layout_width="316dp"
+                    android:layout_width="256dp"
                     android:layout_height="match_parent"
                     android:text="@string/ca_button"
                     android:gravity="center_vertical"
@@ -128,15 +131,16 @@
             <LinearLayout
                 android:id="@+id/en_layout"
                 style="@style/language_button"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/ca_layout"
                 android:layout_marginTop="10dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true">
 
                 <TextView
                     style="@style/btn_menu_text.title"
-                    android:layout_width="316dp"
+                    android:layout_width="256dp"
                     android:layout_height="match_parent"
                     android:text="@string/en_button"
                     android:gravity="center_vertical"
@@ -154,7 +158,7 @@
             <LinearLayout
                 android:id="@+id/de_layout"
                 style="@style/language_button"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/en_layout"
                 android:layout_marginTop="10dp"
@@ -162,7 +166,7 @@
 
                 <TextView
                     style="@style/btn_menu_text.title"
-                    android:layout_width="316dp"
+                    android:layout_width="256dp"
                     android:layout_height="match_parent"
                     android:text="@string/de_button"
                     android:gravity="center_vertical"
@@ -180,7 +184,7 @@
             <LinearLayout
                 android:id="@+id/fr_layout"
                 style="@style/language_button"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/de_layout"
                 android:layout_marginTop="10dp"
@@ -188,7 +192,7 @@
 
                 <TextView
                     style="@style/btn_menu_text.title"
-                    android:layout_width="316dp"
+                    android:layout_width="256dp"
                     android:layout_height="match_parent"
                     android:text="@string/fr_button"
                     android:gravity="center_vertical"
@@ -206,7 +210,7 @@
             <LinearLayout
                 android:id="@+id/it_layout"
                 style="@style/language_button"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/fr_layout"
                 android:layout_marginTop="10dp"
@@ -214,7 +218,7 @@
 
                 <TextView
                     style="@style/btn_menu_text.title"
-                    android:layout_width="316dp"
+                    android:layout_width="256dp"
                     android:layout_height="match_parent"
                     android:text="@string/it_button"
                     android:gravity="center_vertical"

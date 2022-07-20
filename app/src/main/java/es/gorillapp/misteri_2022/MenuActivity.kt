@@ -9,12 +9,14 @@ import android.graphics.Bitmap
 import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.Drawable
 import android.media.AudioManager
+import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.service.controls.actions.FloatAction
 import android.util.DisplayMetrics
 import android.view.View
 import android.view.Window
+import android.view.WindowManager
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -49,6 +51,9 @@ class MenuActivity : AppCompatActivity() {
         val config = Configuration()
         config.locale = locale
         applicationContext.applicationContext.resources.updateConfiguration(config, null)
+
+        val window = this.window
+        window.statusBarColor = this.resources.getColor(R.color.misteri_yellow_2)
 
         //Remove the title
         requestWindowFeature(Window.FEATURE_NO_TITLE)
@@ -99,12 +104,12 @@ class MenuActivity : AppCompatActivity() {
         }
 
         //Credits  Button onClick
-//        val creditsButton = findViewById<View>(R.id.infoCredits) as LinearLayout
-//        creditsButton.setOnClickListener {
-//            val intent = Intent()
-//            intent.setClass(applicationContext, CreditsActivity::class.java)
-//            startActivity(intent)
-//        }
+        val creditsButton = findViewById<View>(R.id.infoCredits) as LinearLayout
+        creditsButton.setOnClickListener {
+            val intent = Intent()
+            intent.setClass(applicationContext, CreditsActivity::class.java)
+            startActivity(intent)
+        }
 
         //Live  Button onClick
         val live = findViewById<View>(R.id.live) as LinearLayout
@@ -213,7 +218,7 @@ class MenuActivity : AppCompatActivity() {
     }
 
     fun bringButtonsToFront(menuBackground: RelativeLayout) {
-        val languageSetting = findViewById<View>(R.id.lang) as Button
+        val languageSetting = findViewById<View>(R.id.lang) as LinearLayout
         menuBackground.bringChildToFront(languageSetting)
         val live = findViewById<View>(R.id.live) as LinearLayout
         menuBackground.bringChildToFront(live)

@@ -13,9 +13,8 @@ import java.util.*
 class LangSettingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        //Remove the title
-        requestWindowFeature(Window.FEATURE_NO_TITLE)
+        val window = this.window
+        window.statusBarColor = this.resources.getColor(R.color.misteri_yellow_2)
         setContentView(R.layout.lang_settings)
 
         //Lang = ca  Button onClick
@@ -61,10 +60,12 @@ class LangSettingActivity : AppCompatActivity() {
         }
     }
 
-    fun setDefaultLang(lang: String?) {
+    private fun setDefaultLang(lang: String?) {
         // In the app context
-        val locale = Locale(lang)
-        Locale.setDefault(locale)
+        val locale = lang?.let { Locale(it) }
+        if (locale != null) {
+            Locale.setDefault(locale)
+        }
         val config = Configuration()
         config.locale = locale
         applicationContext.applicationContext.resources.updateConfiguration(config, null)
@@ -73,7 +74,7 @@ class LangSettingActivity : AppCompatActivity() {
         val accountPref = getSharedPreferences(getString(R.string.sharedPreferences), MODE_PRIVATE)
         val editor = accountPref.edit()
         editor.putString(getString(R.string.lang), lang)
-        editor.commit()
+        editor.apply()
     }
 
     fun navigateToMenu() {

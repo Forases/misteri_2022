@@ -29,19 +29,22 @@
     <string name="fr_button">Français</string>
 
     <!-- Credits activity-->
-    <string name="cred_title1">Textos explicativos:</string>
-    <string name="cred_text1">Joan Castaño García</string>
-    <string name="cred_title2">Traducciones:</string>
-    <string name="cred_text2">Gaspar Jaén i Urban, Joan Castaño García, Valeriano Venneri, Daniel McEvoy Bravo, Pedro Antonio Ródenas Caparrós, Belén García Jaramillo, Sophie Albert, Juan Carlos Romero Centurión y Nicolas Wyrwoll</string>
-    <string name="cred_title3">Fotografías:</string>
-    <string name="cred_text3">Sixto Marco Lozano, Juan Huedo Díaz, Fernando Huedo Díaz, Patronato Misteri d\'Elx</string>
-    <string name="cred_title4">Idea y concepto:</string>
-    <string name="cred_text4">José Vicente Castaño</string>
-    <string name="cred_title5">Producción:</string>
-    <string name="cred_text5">Tarsa &amp; Gorilapp</string>
-    <string name="cred_title6">Desarrollo:</string>
-    <string name="cred_text6">Gorilapp</string>
-    <string name="cred_title7">Patrocinado por:</string>
+    <string name="creditos">Créditos</string>
+    <string name="cred_title1">TEXTOS EXPLICATIVOS</string>
+    <string name="cred_text1" translatable="false">Joan Castaño García</string>
+    <string name="cred_title2">TRADUCCIONES</string>
+    <string name="cred_text2" translatable="false">Gaspar Jaén i Urban, Joan Castaño García, Valeriano Venneri, Daniel McEvoy Bravo, Pedro Antonio Ródenas Caparrós, Belén García Jaramillo, Sophie Albert, Juan Carlos Romero Centurión y Nicolas Wyrwoll</string>
+    <string name="cred_title3">FOTOGRAFÍAS</string>
+    <string name="cred_text3" translatable="false">Sixto Marco Lozano, Juan Huedo Díaz, Fernando Huedo Díaz, Patronato Misteri d\'Elx</string>
+    <string name="cred_title4">IDEA Y CONCEPTO</string>
+    <string name="cred_text4" translatable="false">José Vicente Castaño</string>
+    <string name="cred_title5">PRODUCCIÓN</string>
+    <string name="cred_text5" translatable="false">Tarsa &amp; Gorilapp</string>
+    <string name="cred_title6">DESARROLLO</string>
+    <string name="cred_text6" translatable="false">Gorilapp</string>
+    <string name="cred_title7">ACCESIBILIDAD</string>
+    <string name="cred_text7" translatable="false">Teatro Acccesible y APTENT</string>
+    <string name="cred_title8">PATROCINADO POR</string>
 
 
     <string name="sharedPreferences">es.gorillap.misteri.SETTINGS</string>
