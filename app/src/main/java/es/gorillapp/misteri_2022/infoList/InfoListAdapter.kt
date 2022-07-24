@@ -50,8 +50,8 @@ class InfoListAdapter(private val onClick: (InfoItem) -> Unit) :
 
     /* Gets current InfoItem and uses it to bind view. */
     override fun onBindViewHolder(holder: InfoItemViewHolder, position: Int) {
-        val InfoItem = getItem(position)
-        holder.bind(InfoItem)
+        val infoItem = getItem(position)
+        holder.bind(infoItem)
 
     }
 }

@@ -44,7 +44,7 @@ class InfoListActivity : AppCompatActivity() {
         }
     }
 
-    /* Opens FlowerDetailActivity when RecyclerView item is clicked. */
+    /* Opens HistoriaActivity when RecyclerView item is clicked. */
     private fun adapterOnClick(infoItem: InfoItem) {
         val intent = Intent(this, HistoriaActivity()::class.java)
         intent.putExtra("itemID", infoItem.id)

@@ -11,41 +11,37 @@ import androidx.recyclerview.widget.RecyclerView
 import es.gorillapp.misteri_2022.R
 import es.gorillapp.misteri_2022.data.SceneItem
 
-class SceneAdapter(private val onClick: (SceneItem) -> Unit) :
-    ListAdapter<SceneItem, SceneAdapter.SceneViewHolder>(SceneDiffCallback) {
+class SceneListAdapter(private val onClick: (SceneItem) -> Unit) :
+    ListAdapter<SceneItem, SceneListAdapter.SceneViewHolder>(SceneDiffCallback) {
 
-    /* ViewHolder for Flower, takes in the inflated view and the onClick behavior. */
+    /* ViewHolder for Scene, takes in the inflated view and the onClick behavior. */
     class SceneViewHolder(itemView: View, val onClick: (SceneItem) -> Unit) :
         RecyclerView.ViewHolder(itemView) {
-        private val flowerTextView: TextView = itemView.findViewById(R.id.scenelistitem_name)
-        private val flowerImageView: ImageView = itemView.findViewById(R.id.scenelistitem_image)
-        private var currentFlower: SceneItem? = null
+        private val sceneId: TextView = itemView.findViewById(R.id.sceneitem_id)
+        private val sceneImage: ImageView = itemView.findViewById(R.id.sceneitem_image)
+        private var currentScene: SceneItem? = null
 
         init {
             itemView.setOnClickListener {
-                currentFlower?.let {
+                currentScene?.let {
                     onClick(it)
                 }
             }
         }
 
-        /* Bind flower name and image. */
+        /* Bind scene name and image. */
         fun bind(sceneItem: SceneItem) {
-            currentFlower = sceneItem
+            currentScene = sceneItem
 
-            flowerTextView.text = sceneItem.name
-            if (sceneItem.thumbnail != null) {
-                flowerImageView.setImageResource(R.drawable.btn_creditos)
-            } else {
-                flowerImageView.setImageResource(R.drawable.btn_creditos)
-            }
+            sceneId.text = sceneItem.id
+            sceneImage.setImageResource(sceneItem.image!!)
         }
     }
 
     /* Creates and inflates view and return FlowerViewHolder. */
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SceneViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.scene_list_item, parent, false)
+            .inflate(R.layout.scene_item, parent, false)
         return SceneViewHolder(view, onClick)
     }
 

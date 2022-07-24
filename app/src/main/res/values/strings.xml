@@ -125,73 +125,73 @@
     <!-- Menu option 2. Scene player activities-->
     <!-- Scene menu -->
     <string name="scenes">Selección de Escenas</string>
-    <string name="scene_vespra">La Vespra</string>
-    <string name="nb_scenelist_vespra">8</string>
-    <string name="scene_vespra1">María</string>
-    <string name="scene_vespra2">Ángel</string>
-    <string name="scene_vespra3">San Juan</string>
-    <string name="scene_vespra4">San Pedro</string>
-    <string name="scene_vespra5">Ternario</string>
-    <string name="scene_vespra6">Salve</string>
-    <string name="scene_vespra7">Dormición</string>
-    <string name="scene_vespra8">Araceli</string>
-    <string name="scene_festa">La Festa</string>
-    <string name="nb_scenelist_festa">9</string>
-    <string name="scene_festa1">Invitación a las Marias</string>
-    <string name="scene_festa2">San Pedro y San Juan</string>
-    <string name="scene_festa3">Apóstoles</string>
-    <string name="scene_festa4">Judíos</string>
-    <string name="scene_festa5">Conversión y bautismo</string>
-    <string name="scene_festa6">Entierro</string>
-    <string name="scene_festa7">Asunción</string>
-    <string name="scene_festa8">Santo Tomás</string>
-    <string name="scene_festa9">Coronación</string>
+    <string name="scene_vespra" translatable="false">La Vespra</string>
+    <string name="nb_scenelist_vespra" translatable="false">8</string>
+    <string name="scene_vespra1" translatable="false">María</string>
+    <string name="scene_vespra2" translatable="false">Ángel</string>
+    <string name="scene_vespra3" translatable="false">San Juan</string>
+    <string name="scene_vespra4" translatable="false">San Pedro</string>
+    <string name="scene_vespra5" translatable="false">Ternario</string>
+    <string name="scene_vespra6" translatable="false">Salve</string>
+    <string name="scene_vespra7" translatable="false">Dormición</string>
+    <string name="scene_vespra8" translatable="false">Araceli</string>
+    <string name="scene_festa" translatable="false">La Festa</string>
+    <string name="nb_scenelist_festa" translatable="false">9</string>
+    <string name="scene_festa1" translatable="false">Invitación a las Marias</string>
+    <string name="scene_festa2" translatable="false">San Pedro y San Juan</string>
+    <string name="scene_festa3" translatable="false">Apóstoles</string>
+    <string name="scene_festa4" translatable="false">Judíos</string>
+    <string name="scene_festa5" translatable="false">Conversión y bautismo</string>
+    <string name="scene_festa6" translatable="false">Entierro</string>
+    <string name="scene_festa7" translatable="false">Asunción</string>
+    <string name="scene_festa8" translatable="false">Santo Tomás</string>
+    <string name="scene_festa9" translatable="false">Coronación</string>
 
 
-    <string name="scene_vespra1_thumbnail">escenas_maria</string>
-    <string name="scene_vespra2_thumbnail">escenas_angel</string>
-    <string name="scene_vespra3_thumbnail">escenas_sanjuan</string>
-    <string name="scene_vespra4_thumbnail">escenas_sanpedro</string>
-    <string name="scene_vespra5_thumbnail">escenas_ternario</string>
-    <string name="scene_vespra6_thumbnail">escenas_salve</string>
-    <string name="scene_vespra7_thumbnail">escenas_dormicion</string>
-    <string name="scene_vespra8_thumbnail">escenas_araceli</string>
-    <string name="scene_festa1_thumbnail">escenas_invitacion</string>
-    <string name="scene_festa2_thumbnail">escenas_sanpedrosanjuan</string>
-    <string name="scene_festa3_thumbnail">escenas_apostoles</string>
-    <string name="scene_festa4_thumbnail">escenas_judios</string>
-    <string name="scene_festa5_thumbnail">escenas_conversion</string>
-    <string name="scene_festa6_thumbnail">escenas_entierro</string>
-    <string name="scene_festa7_thumbnail">escenas_asuncion</string>
-    <string name="scene_festa8_thumbnail">escenas_santomas</string>
-    <string name="scene_festa9_thumbnail">escenas_coronacion</string>
+    <string name="scene_vespra1_thumbnail" translatable="false">escenas_maria</string>
+    <string name="scene_vespra2_thumbnail" translatable="false">escenas_angel</string>
+    <string name="scene_vespra3_thumbnail" translatable="false">escenas_sanjuan</string>
+    <string name="scene_vespra4_thumbnail" translatable="false">escenas_sanpedro</string>
+    <string name="scene_vespra5_thumbnail" translatable="false">escenas_ternario</string>
+    <string name="scene_vespra6_thumbnail" translatable="false">escenas_salve</string>
+    <string name="scene_vespra7_thumbnail" translatable="false">escenas_dormicion</string>
+    <string name="scene_vespra8_thumbnail" translatable="false">escenas_araceli</string>
+    <string name="scene_festa1_thumbnail" translatable="false">escenas_invitacion</string>
+    <string name="scene_festa2_thumbnail" translatable="false">escenas_sanpedrosanjuan</string>
+    <string name="scene_festa3_thumbnail" translatable="false">escenas_apostoles</string>
+    <string name="scene_festa4_thumbnail" translatable="false">escenas_judios</string>
+    <string name="scene_festa5_thumbnail" translatable="false">escenas_conversion</string>
+    <string name="scene_festa6_thumbnail" translatable="false">escenas_entierro</string>
+    <string name="scene_festa7_thumbnail" translatable="false">escenas_asuncion</string>
+    <string name="scene_festa8_thumbnail" translatable="false">escenas_santomas</string>
+    <string name="scene_festa9_thumbnail" translatable="false">escenas_coronacion</string>
 
-    <string name="nb_total_slides">62</string>
-    <string name="scene_vespra1_first_slide">1</string>
-    <string name="scene_vespra2_first_slide">8</string>
-    <string name="scene_vespra3_first_slide">12</string>
-    <string name="scene_vespra4_first_slide">19</string>
-    <string name="scene_vespra5_first_slide">20</string>
-    <string name="scene_vespra6_first_slide">24</string>
-    <string name="scene_vespra7_first_slide">28</string>
-    <string name="scene_vespra8_first_slide">30</string>
-    <string name="scene_festa1_first_slide">31</string>
-    <string name="scene_festa2_first_slide">35</string>
-    <string name="scene_festa3_first_slide">37</string>
-    <string name="scene_festa4_first_slide">40</string>
-    <string name="scene_festa5_first_slide">46</string>
-    <string name="scene_festa6_first_slide">52</string>
-    <string name="scene_festa7_first_slide">58</string>
-    <string name="scene_festa8_first_slide">59</string>
-    <string name="scene_festa9_first_slide">61</string>
+    <string name="nb_total_slides" translatable="false">62</string>
+    <string name="scene_vespra1_first_slide" translatable="false">1</string>
+    <string name="scene_vespra2_first_slide" translatable="false">8</string>
+    <string name="scene_vespra3_first_slide" translatable="false">12</string>
+    <string name="scene_vespra4_first_slide" translatable="false">19</string>
+    <string name="scene_vespra5_first_slide" translatable="false">20</string>
+    <string name="scene_vespra6_first_slide" translatable="false">24</string>
+    <string name="scene_vespra7_first_slide" translatable="false">28</string>
+    <string name="scene_vespra8_first_slide" translatable="false">30</string>
+    <string name="scene_festa1_first_slide" translatable="false">31</string>
+    <string name="scene_festa2_first_slide" translatable="false">35</string>
+    <string name="scene_festa3_first_slide" translatable="false">37</string>
+    <string name="scene_festa4_first_slide" translatable="false">40</string>
+    <string name="scene_festa5_first_slide" translatable="false">46</string>
+    <string name="scene_festa6_first_slide" translatable="false">52</string>
+    <string name="scene_festa7_first_slide" translatable="false">58</string>
+    <string name="scene_festa8_first_slide" translatable="false">59</string>
+    <string name="scene_festa9_first_slide" translatable="false">61</string>
 
-    <string name="dummy_sceneplayer_mp3">prueba</string>
-    <string name="dummy_sceneplayer_act">La Vespra</string>
-    <string name="dummy_sceneplayer_scene">María contesta a San Juan</string>
-    <string name="dummy_sceneplayer_image">imagen7</string>
-    <string name="dummy_sceneplayer_originalText">"<span style="color:red">Ai fill Joan e amic meu conforte‐us lo ver Fill de Déu car lo meu cor és molt plaent del vostre bon adveniment.</span>"</string>
-    <string name="dummy_sceneplayer_translationText">"Ay Juan, hijo y amigo mío, conforteos el verdadero Dios Hijo pues mi corazón está muy contento de vuestro buen advenimiento."</string>
-    <string name="dummy_sceneplayer_infoText">"María informa a San Juan de su inminente muerte y le entrega la palma para que la lleve en su entierro"</string>
+    <string name="dummy_sceneplayer_mp3" translatable="false">prueba</string>
+    <string name="dummy_sceneplayer_act" translatable="false">La Vespra</string>
+    <string name="dummy_sceneplayer_scene" translatable="false">María contesta a San Juan</string>
+    <string name="dummy_sceneplayer_image" translatable="false">imagen7</string>
+    <string name="dummy_sceneplayer_originalText" translatable="false">"<span style="color:red">Ai fill Joan e amic meu conforte‐us lo ver Fill de Déu car lo meu cor és molt plaent del vostre bon adveniment.</span>"</string>
+    <string name="dummy_sceneplayer_translationText" translatable="false">"Ay Juan, hijo y amigo mío, conforteos el verdadero Dios Hijo pues mi corazón está muy contento de vuestro buen advenimiento."</string>
+    <string name="dummy_sceneplayer_infoText" translatable="false">"María informa a San Juan de su inminente muerte y le entrega la palma para que la lleve en su entierro"</string>
 
 
     <!-- Menu option 3. Information and history activities-->
