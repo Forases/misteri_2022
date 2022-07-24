@@ -1,9 +1,14 @@
 package es.gorillapp.misteri_2022.infoList
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.ImageView
 import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.RecyclerView
+import es.gorillapp.misteri_2022.HistoriaActivity
+import es.gorillapp.misteri_2022.MenuActivity
 import es.gorillapp.misteri_2022.R
 import es.gorillapp.misteri_2022.data.InfoItem
 import es.gorillapp.misteri_2022.data.infoList
@@ -30,12 +35,19 @@ class InfoListActivity : AppCompatActivity() {
                 infoListAdapter.submitList(it as MutableList<InfoItem>)
             }
         }
+
+        val backButton = findViewById<View>(R.id.back_info) as ImageView
+        backButton.setOnClickListener {
+            val intent = Intent()
+            intent.setClass(applicationContext, MenuActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     /* Opens FlowerDetailActivity when RecyclerView item is clicked. */
     private fun adapterOnClick(infoItem: InfoItem) {
-//        val intent = Intent(this, FlowerDetailActivity()::class.java)
-//        intent.putExtra(FLOWER_ID, flower.id)
-//        startActivity(intent)
+        val intent = Intent(this, HistoriaActivity()::class.java)
+        intent.putExtra("itemID", infoItem.id)
+        startActivity(intent)
     }
 }

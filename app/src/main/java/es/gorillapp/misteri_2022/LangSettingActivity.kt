@@ -4,9 +4,7 @@ import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
 import android.view.View
-import android.view.Window
 import android.widget.ImageView
-import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import java.util.*
 
@@ -62,13 +60,13 @@ class LangSettingActivity : AppCompatActivity() {
 
     private fun setDefaultLang(lang: String?) {
         // In the app context
+        val config = resources.configuration
         val locale = lang?.let { Locale(it) }
         if (locale != null) {
             Locale.setDefault(locale)
         }
-        val config = Configuration()
         config.locale = locale
-        applicationContext.applicationContext.resources.updateConfiguration(config, null)
+        resources.updateConfiguration(config, resources.displayMetrics)
 
         // In the preferences for future times
         val accountPref = getSharedPreferences(getString(R.string.sharedPreferences), MODE_PRIVATE)

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EscenaFragment"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/direct_texto_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/playfairdisplay_black"
+        android:padding="24dp"
+        android:text="@string/dummy_sceneplayer_infoText"
+        android:textColor="@color/misteri_black"
+        android:textSize="20sp"/>
+
+</LinearLayout>

@@ -33,7 +33,7 @@
     <string name="cred_title1">TEXTOS EXPLICATIVOS</string>
     <string name="cred_text1" translatable="false">Joan Castaño García</string>
     <string name="cred_title2">TRADUCCIONES</string>
-    <string name="cred_text2" translatable="false">Gaspar Jaén i Urban, Joan Castaño García, Valeriano Venneri, Daniel McEvoy Bravo, Pedro Antonio Ródenas Caparrós, Belén García Jaramillo, Sophie Albert, Juan Carlos Romero Centurión y Nicolas Wyrwoll</string>
+    <string name="cred_text2" translatable="false">Gaspar Jaén i Urban, Joan Castaño García, Daniel McEvoy Bravo, Pedro Antonio Ródenas Caparrós, Belén García Jaramillo, Sophie Albert, Juan Carlos Romero Centurión, Nicolas Wyrwoll, Valeriano Venneri</string>
     <string name="cred_title3">FOTOGRAFÍAS</string>
     <string name="cred_text3" translatable="false">Sixto Marco Lozano, Juan Huedo Díaz, Fernando Huedo Díaz, Patronato Misteri d\'Elx</string>
     <string name="cred_title4">IDEA Y CONCEPTO</string>
@@ -202,6 +202,8 @@
     <string name="info_history_thumbnail">historia_thumb</string>
     <string name="info_history_header_img">historia_01</string>
     <string name="info_history_footer_img">historia_02</string>
+    <string name="info_history_longtext_1">El origen del Misterio de Elche no se ha podido determinar todavía con exactitud por falta de documentación. Sobre su nacimiento existen dos tradiciones locales. Una de ellas vincula la creación de la Festa con la conquista del Elche musulmán por las tropas aragonesas de Jaume I de Aragón, en 1265, es decir al nacimiento de la villa a la civilización cristiana. Otra tradición legendaria intenta dar al nacimiento del Misterio un origen milagroso y lo relaciona con la aparición o "Venida" de la imagen de la Virgen ilicitana el 29 de diciembre de 1370. De esta manera, el consueta de la Festa se habría hallado, junto a la figura mariana que la protagoniza, en el interior de una arca de madera que flotaba sobre las aguas del mar Mediterráneo, en la cercana playa del Tamarit (hoy, de Santa Pola), y que fue encontrado por el soldado guardacostas Francesc Cantó.</string>
+    <string name="info_history_longtext_2">Sin embargo, las investigaciones desarrolladas en los últimos tiempos, tanto sobre la obra ilicitana, como sobre el teatro medieval europeo en general, proponen la segunda mitad del siglo XV -etapa en que se detecta un auge en el teatro de temática asuncionista- como la época más probable para datar el Misterio de Elche.\n\n Si realizamos un breve recorrido a través de la documentación histórica de la obra, veremos como en sus comienzos estuvo organizada por algunas familias de la pequeña nobleza local, como los Perpinyà o los Caro. La referencia documental más antigua de la Festa conocida hasta ahora, se halla en el testamento de la ilicitana Isabel Caro, de 1523, en donde legaba algunos fondos para continuar una "grandísima fiesta y solemnidad" que los religiosos de la villa realizaban en la iglesia de Santa María durante la festividad de la Asunción de la Madre de Dios, en honor a una imagen de la Virgen que la testadora poseía en su casa y que, tras su muerte, debía pasar a la ermita de San Sebastián.\n\n Tenemos noticias de la existencia en la villa en 1530 de una Cofradía de Nuestra Señora de la Asunción que, con sede en la citada ermita de San Sebastián, era la encargada de preparar la festividad. Esta cofradía se hallaba presidida por unos clavarios y mayordomos y, además de las aportaciones de los cofrades y de las limosnas recogidas, contaba con ayudas anuales del Consejo municipal.</string>
     <string name="info_history_longtext">La tradición vincula el nacimiento del Misterio de Elche a la conquista del Elche musulmán por las tropas aragonesas de Jaime I de Aragón, en 1265. Otros relatos lo relacionan con la milagrosa aparición o "Venida" de la imagen de la Virgen ilicitana el 29 de diciembre de 1370. Las últimas investigaciones proponen la segunda mitad del siglo XV como la época más probable para datar el origen de la celebración. \n\n
         En sus comienzos estuvo organizada por algunas familias de la pequeña nobleza local, como los Perpiñán o los Caro. La referencia documental más antigua se halla en el testamento de la ilicitana Isabel Caro, de 1523. En 1530 ya se documenta una Cofradía de Nuestra Señora de la Asunción que, con sede en la ermita de San Sebastián (hoy Museo Municipal de la Festa), era la encargada de preparar la festividad. \n\n
 		En 1609, ante la falta de recursos económicos de dicha Cofradía, el Consejo de la villa tomó el acuerdo de hacerse cargo de la organización y financiación de la Festa, para lo que estableció una serie de impuestos municipales. \n\n
@@ -289,4 +291,6 @@
 
     <!-- TitleBars-->
     <string name="seleccion_idioma">Selección de idioma</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

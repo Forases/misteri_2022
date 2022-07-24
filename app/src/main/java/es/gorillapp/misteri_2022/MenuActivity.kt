@@ -44,13 +44,14 @@ class MenuActivity : AppCompatActivity() {
         //Retrieve default lang
         val accountPrefs = getSharedPreferences(getString(R.string.sharedPreferences), MODE_PRIVATE)
         val defaultLang = accountPrefs.getString(getString(R.string.lang), "es")
-
+        val config = resources.configuration
         //Set default lang at the app context
-        val locale = Locale(defaultLang)
-        Locale.setDefault(locale)
-        val config = Configuration()
+        val locale = defaultLang?.let { Locale(it) }
+        if (locale != null) {
+            Locale.setDefault(locale)
+        }
         config.locale = locale
-        applicationContext.applicationContext.resources.updateConfiguration(config, null)
+        resources.updateConfiguration(config, resources.displayMetrics)
 
         val window = this.window
         window.statusBarColor = this.resources.getColor(R.color.misteri_yellow_2)

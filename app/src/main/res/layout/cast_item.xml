@@ -17,7 +17,7 @@
         android:id="@+id/cast_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
+        android:layout_margin="5dp"
         android:layout_weight="1"
         android:gravity="left"
         android:paddingBottom="5dp" />

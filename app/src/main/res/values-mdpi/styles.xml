@@ -55,6 +55,13 @@
         <item name="android:textColor">@color/misteri_black</item>
         <item name="android:fontFamily">@font/raleway_semibold</item>
     </style>
+
+    <style name="info_text">
+        <item name="android:textSize">14sp</item>
+        <item name="fontFamily">@font/raleway_light</item>
+        <item name="android:textColor">@color/misteri_black</item>
+    </style>
+
     <style name="titlebar">
         <item name="android:background">@color/misteri_yellow</item>
         <item name="android:textColor">@color/misteri_black</item>
