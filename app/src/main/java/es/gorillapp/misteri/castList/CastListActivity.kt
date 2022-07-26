@@ -64,7 +64,6 @@ class CastListActivity : AppCompatActivity() {
                     id ++
                 }
 
-
                 val recyclerView: RecyclerView = findViewById(R.id.cast_recycler_view)
                 val castLiveData = MutableLiveData(castList)
                 val castListAdapter = CastListAdapter {}
