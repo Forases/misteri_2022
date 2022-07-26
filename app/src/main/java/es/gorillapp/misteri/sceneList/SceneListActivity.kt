@@ -9,6 +9,7 @@ import es.gorillapp.misteri.ListenActivity
 import es.gorillapp.misteri.data.SceneItem
 import es.gorillapp.misteri.data.sceneFestaList
 import es.gorillapp.misteri.data.sceneVespraList
+import es.gorillapp.misteri.R
 
 class SceneListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -17,6 +17,7 @@ import es.gorillapp.misteri.DirectoActivity
 import es.gorillapp.misteri.data.CastItem
 import es.gorillapp.misteri.getVolleyError
 import org.json.JSONArray
+import es.gorillapp.misteri.R
 
 
 private const val TAG = "CastActivity"
