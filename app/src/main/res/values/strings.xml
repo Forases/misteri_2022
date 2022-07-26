@@ -1,15 +1,15 @@
 <resources>
     <!-- Application-->
-    <string name="app_name">Misteri d\'Elx 2022</string>
-    <string name="content_description_dummy">dummy</string>
+    <string name="app_name" translatable="false">Misteri d\'Elx 2022</string>
+    <string name="content_description_dummy" translatable="false">dummy</string>
 
     <!-- DB configuration  -->
-    <string name="db_path">/data/data/es.gorilapp.misteri/databases/</string>
+    <string name="db_path" translatable="false">/data/data/es.gorilapp.misteri/databases/</string>
     <!-- string name="db_name">diapositivas.sqlite</string-->
 
 
-    <string name="prueba_dummy">iNvitación a las mraias y pacos</string>
-    <string name="prueba_nbslide_dummy">99/99</string>
+    <string name="prueba_dummy" translatable="false">iNvitación a las mraias y pacos</string>
+    <string name="prueba_nbslide_dummy" translatable="false">99/99</string>
 
     <!-- Misteri dates -->
     <string-array name="misteri_dates">
