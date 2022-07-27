@@ -4,7 +4,7 @@
     <string name="content_description_dummy" translatable="false">dummy</string>
 
     <!-- DB configuration  -->
-    <string name="db_path" translatable="false">/data/data/es.gorilapp.misteri/databases/</string>
+    <string name="db_path" translatable="false">/data/data/es.gorillapp.misteri/databases/</string>
     <!-- string name="db_name">diapositivas.sqlite</string-->
 
 

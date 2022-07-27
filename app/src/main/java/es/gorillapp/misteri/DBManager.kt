@@ -1,19 +1,35 @@
 package es.gorillapp.misteri
 
 import android.content.Context
+import android.database.Cursor
 import android.database.SQLException
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteException
 import android.database.sqlite.SQLiteOpenHelper
+import android.util.Log
+import es.gorillapp.misteri.data.Slide
 import java.io.*
 
 class DBManager(context: Context): SQLiteOpenHelper(
-    context, "Slides.db", null, 1) {
+    context, "Slides.sqlite", null, 1) {
+
+    val DB_TABLE_NAME = "slides"
+    val COL_EVENT = "evento"
+    val COL_NB = "numDiapositiva"
+    val COL_IMAGE = "nombreImagen"
+    val COL_ORIGINALTEXT = "textoOriginal"
+    val COL_TRANSLATE_PARTIAL = "traduccion_"
+    val COL_TITLE_PARTIAL = "titulo_"
+    val COL_INFO_PARTIAL = "info_"
+    val COL_NB_SCENE = "numEscena"
+    val COL_STARTS_ON_SECOND = "segundoQueEmpieza"
+    val EQUAL_STATEMENT = " = "
+    val AND_STATEMENT = " AND "
 
     private val myContext: Context = context
     private val DB_EVENT = "Misteri"
     private val DB_PATH = myContext.resources.getString(R.string.db_path)
-    private val DB_NAME = "Slides.db"
+    private val DB_NAME = "Slides.sqlite"
     private var myDataBase: SQLiteDatabase? = null
 
 
@@ -102,6 +118,54 @@ class DBManager(context: Context): SQLiteOpenHelper(
         myOutput.flush()
         myOutput.close()
         myInput.close()
+    }
+
+    fun getNumberSlide(context: Context, defaultLang: String?, slideNumber: Int): Slide {
+        this.open()
+
+        var slide: Slide? = null
+        val col_translate: String = COL_TRANSLATE_PARTIAL + defaultLang
+        val col_title: String = COL_TITLE_PARTIAL + defaultLang
+        val col_info: String = COL_INFO_PARTIAL + defaultLang
+
+        val columns = arrayOf(
+            COL_IMAGE,
+            COL_ORIGINALTEXT,
+            col_translate,
+            col_title,
+            col_info
+        )
+
+        val args =
+            "$COL_EVENT$EQUAL_STATEMENT'$DB_EVENT'$AND_STATEMENT$COL_NB$EQUAL_STATEMENT'$slideNumber'"
+
+        val result: Cursor? = myDataBase?.query(
+            true,
+            "slides",
+            columns,
+            args,
+            null,
+            null,
+            null,
+            null,
+            null
+        )
+
+        if (result != null) {
+            if(result.moveToFirst()){
+
+                var nombreImagen = result.getString(result.getColumnIndexOrThrow(COL_IMAGE))
+                var textoOriginal = result.getString(result.getColumnIndexOrThrow(COL_ORIGINALTEXT))
+                var traduccion = result.getString(result.getColumnIndexOrThrow(col_translate))
+                var titulo = result.getString(result.getColumnIndexOrThrow(col_title))
+                var info = result.getString(result.getColumnIndexOrThrow(col_info))
+
+                slide = Slide(slideNumber, textoOriginal, traduccion, nombreImagen, titulo, info)
+            }
+        }else{
+            Log.e("database", "Database ERROR. This row doesn�t exists in the DB")
+        }
+        return slide!!
     }
 
 

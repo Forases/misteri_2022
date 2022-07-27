@@ -1,12 +1,15 @@
 package es.gorillapp.misteri
 
 import android.content.Context
+import android.database.Cursor
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.widget.ImageButton
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import es.gorillapp.misteri.data.Slide
 import java.io.*
 
 
@@ -17,34 +20,59 @@ class ListenActivity : AppCompatActivity() {
     private lateinit var imageView: ImageView
     private lateinit var mediaPlayer: MediaPlayer
 
+    //Titulo
+    private lateinit var title: TextView
+    //Texto original en valenciano
+    private lateinit var textoOriginal: TextView
+    //Traducción al castellamo
+    private lateinit var traduccion: TextView
     private lateinit var slidesDBHelper: DBManager
-
     private var audioNum: Int = 0
+    val dialogFragment = DialogoFragment()
+
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         slidesDBHelper = DBManager(this)
-        getSlide(this)
 
         val bundle: Bundle? = intent.extras
         if (bundle != null) {
             audioNum = bundle.getInt("audioNum")
         }
+
+        val fragmentManager = supportFragmentManager
+        val fragmentTransaction1 = fragmentManager.beginTransaction()
+        fragmentTransaction1.add(R.id.directo_fragment, dialogFragment)
+        fragmentTransaction1.commit()
+
+
+        val accountPrefs = getSharedPreferences(getString(R.string.sharedPreferences), MODE_PRIVATE)
+        val defaultLang = accountPrefs.getString(getString(R.string.lang), "es")
+
+        val slide = slidesDBHelper.getNumberSlide(this, defaultLang, audioNum)
+        setContentView(R.layout.activity_listen)
+        //Titulo
+        title = findViewById(R.id.listen_title)
+        title.text = slide!!.titulo
+
+
+
         val url = "https://resources.gorilapp.com/misteri/audio/audio_$audioNum.mp3"
 
 
-
-        setContentView(R.layout.activity_listen)
-
         mediaPlayer = MediaPlayer()
+
         buttonRewind = findViewById(R.id.button_rewind)
         buttonPause = findViewById(R.id.button_pause)
         buttonForward = findViewById(R.id.button_forward)
         imageView = findViewById(R.id.listen_image)
 
-        checkNumAudio(audioNum)
-        playAudio(mediaPlayer)
+        mediaPlayer.setDataSource(url)
+        mediaPlayer.prepare()
+        mediaPlayer.start()
+
         setOnClickListeners(this)
 
 
@@ -114,57 +142,11 @@ class ListenActivity : AppCompatActivity() {
         imageView.setImageResource( resources.getIdentifier("drawable/image$audioNum", null, this.packageName))
     }
 
-    fun getSlide(context: Context){
+    private fun getSlide(context: Context){
         //slidesDBHelper.open()
-        copyDataBaseFromAssets(context)
-    }
 
+        slidesDBHelper.getNumberSlide(context, "es", 2)
 
-
-    private fun copyDataBaseFromAssets(context: Context) {
-
-        val DB_PATH = "/data/data/es.gorilapp.es.gorillap.es.gorillap.misteri/databases/"
-        val DB_NAME = "Slides.db"
-
-        var myInput: InputStream? = null
-        var myOutput: OutputStream? = null
-        try {
-
-            val folder = context.getDatabasePath("databases")
-
-            if (!folder.exists())
-                if (folder.mkdirs()) folder.delete()
-
-            myInput = context.assets.open(DB_NAME)
-
-            val outFileName = DB_PATH + DB_NAME
-
-            val f = File(outFileName)
-
-            if (f.exists())
-                return
-
-            myOutput = FileOutputStream(outFileName)
-
-            //transfer bytes from the inputfile to the outputfile
-            val buffer = ByteArray(1024)
-            var length: Int = myInput.read(buffer)
-
-            while (length > 0) {
-                myOutput.write(buffer, 0, length)
-                length = myInput.read(buffer)
-            }
-
-            //Close the streams
-            myOutput.flush()
-            myOutput.close()
-            myInput.close()
-
-
-        } catch (e: IOException) {
-            e.printStackTrace()
-        }
 
     }
-
 }
