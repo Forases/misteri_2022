@@ -142,7 +142,7 @@
                     android:layout_height="5dp"
                     android:progressTint="@color/misteri_yellow"
                     android:layout_marginTop="16dp"
-                    android:layout_marginBottom="24dp"/>
+                    android:layout_marginBottom="20dp"/>
 
                 <ToggleButton
                     android:id="@+id/toggleListenButton"
@@ -150,7 +150,8 @@
                     android:layout_height="36dp"
                     android:background="@drawable/toggle_selector"
                     android:textOff=""
-                    android:textOn=""/>
+                    android:textOn=""
+                    android:layout_marginBottom="4dp"/>
             </LinearLayout>
 
             <TextView
@@ -184,7 +185,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/misteri_bone"
         android:orientation="vertical">
         <ScrollView
             android:layout_width="match_parent"

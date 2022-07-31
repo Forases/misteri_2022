@@ -203,12 +203,17 @@ class ListenActivity : AppCompatActivity() {
     }
 
     private fun playAudio(mediaPlayer: MediaPlayer){
+
         currentSlide.value = slidesDBHelper.getNumberSlide(defaultLang, audioNum)
 
         if(mediaPlayer.isPlaying){
             mediaPlayer.pause()
             mediaPlayer.stop()
             mediaPlayer.reset()
+        }else{
+            mediaPlayer.reset()
+            buttonPlay.visibility = GONE
+            buttonPause.visibility = VISIBLE
         }
 
         val url = "https://resources.gorilapp.com/misteri/audio/audio_$audioNum.mp3"

@@ -10,7 +10,7 @@
         android:id="@+id/escena_texto_info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/playfairdisplay_black"
+        android:fontFamily="@font/raleway_light"
         android:padding="24dp"
         android:text="@string/dummy_sceneplayer_infoText"
         android:textColor="@color/misteri_black"
