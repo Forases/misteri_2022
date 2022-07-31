@@ -2,14 +2,17 @@ package es.gorillapp.misteri
 
 import android.content.SharedPreferences
 import android.media.MediaPlayer
-import android.os.AsyncTask
 import android.os.Bundle
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
+import androidx.lifecycle.lifecycleScope
 import es.gorillapp.misteri.data.Slide
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 
 class ListenActivity : AppCompatActivity() {
@@ -199,20 +202,28 @@ class ListenActivity : AppCompatActivity() {
 
     private fun updateProgressBar(mediaPlayer: MediaPlayer){
         // task is run on a thread
-        Thread {
-            listenProgressBar.max = mediaPlayer.duration
-            // dummy thread mimicking some operation whose progress can be tracked
-            while (progressBarStatus < listenProgressBar.max) {
-                // performing some dummy operation
-                try {
-                    Thread.sleep(200)
-                } catch (e: InterruptedException) {
-                    e.printStackTrace()
+        this.lifecycleScope.launch {
+            withContext(Dispatchers.Default){
+                listenProgressBar.max = mediaPlayer.duration
+                // dummy thread mimicking some operation whose progress can be tracked
+                while (progressBarStatus < listenProgressBar.max) {
+                    // performing some dummy operation
+                    try {
+                        Thread.sleep(200)
+                    } catch (e: InterruptedException) {
+                        e.printStackTrace()
+                    }
                 }
-                // Updating the progress bar
-                listenProgressBar.progress = mediaPlayer.currentPosition
             }
-        }.start()
+            // Updating the progress bar
+            try{
+                listenProgressBar.progress = mediaPlayer.currentPosition
+            }catch (e: IllegalStateException){
+                e.printStackTrace()
+            }
+
+        }
+
 
     }
 }
