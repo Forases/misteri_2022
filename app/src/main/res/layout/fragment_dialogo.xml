@@ -11,8 +11,7 @@
         android:layout_height="wrap_content"
         android:background="@color/misteri_black"
         android:fontFamily="@font/playfairdisplay_black"
-        android:paddingStart="24dp"
-        android:paddingEnd="24dp"
+        android:padding="24dp"
         android:textColor="@color/misteri_bone"
         android:textSize="20sp"/>
 

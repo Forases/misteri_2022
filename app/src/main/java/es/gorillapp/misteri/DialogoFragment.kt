@@ -34,6 +34,7 @@ class DialogoFragment : Fragment() {
             param2 = it.getString(ARG_PARAM2)
         }
 
+
         //downloadDialogoTask(param1)
     }
 
@@ -41,9 +42,21 @@ class DialogoFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        //downloadDialogoTask(param1)
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_dialogo, container, false)
+
+
+    }
+
+    @Deprecated("Deprecated in Java")
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
+        val originalTextView = view?.findViewById<View>(R.id.dialogo_texto_original) as TextView
+        val translateTextView = view?.findViewById<View>(R.id.dialogo_traduccion) as TextView
+        originalTextView.text = param1
+        translateTextView.text = param2
+
 
 
     }

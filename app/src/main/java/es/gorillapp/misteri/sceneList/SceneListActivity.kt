@@ -47,7 +47,6 @@ class SceneListActivity : AppCompatActivity() {
         }
     }
 
-    /* Opens FlowerDetailActivity when RecyclerView item is clicked. */
     private fun adapterOnClick(sceneItem: SceneItem) {
         val intent = Intent(this, ListenActivity()::class.java)
         intent.putExtra("audioNum", sceneItem.numero)

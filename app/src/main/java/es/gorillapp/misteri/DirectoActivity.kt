@@ -99,7 +99,7 @@ class DirectoActivity : AppCompatActivity() {
                 title.text = jsonData.getString("titulo")
 
                 //Información de la escena
-                val textoInfo: TextView = findViewById(R.id.direct_texto_info)
+                val textoInfo: TextView = findViewById(R.id.escena_texto_info)
                 textoInfo.text = jsonData.getString("info")
 
             },

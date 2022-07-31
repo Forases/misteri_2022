@@ -18,7 +18,7 @@
         android:indeterminateTint="@color/misteri_yellow"/>
 
     <RelativeLayout
-        android:id="@+id/title_info_text"
+        android:id="@+id/sceneCabecera"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
@@ -58,7 +58,7 @@
         android:textAllCaps="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_info_text" />
+        app:layout_constraintTop_toBottomOf="@+id/sceneCabecera" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/cast_recycler_view"

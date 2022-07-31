@@ -8,7 +8,7 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/title_info_text"
+        android:id="@+id/sceneCabecera"
         style="@style/titlebar"
         android:layout_width="fill_parent"
         android:layout_height="80dp"

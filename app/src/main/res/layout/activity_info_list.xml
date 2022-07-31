@@ -41,7 +41,7 @@
         app:layoutManager="LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_info_text"
+        app:layout_constraintTop_toBottomOf="@+id/sceneCabecera"
         app:layout_constraintVertical_bias="0.0" />
 
 </LinearLayout>

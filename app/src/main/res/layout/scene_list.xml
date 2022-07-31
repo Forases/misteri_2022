@@ -8,7 +8,7 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/title_info_text"
+        android:id="@+id/sceneCabecera"
         style="@style/titlebar"
         android:layout_width="fill_parent"
         android:layout_height="80dp"
@@ -39,15 +39,17 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="24dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:layout_margin="24dp"
+                android:fontFamily="@font/playfairdisplay_black"
+                android:textSize="24sp"
                 android:gravity="center"
                 style="@style/creditText"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:text="La Vespra"/>
+                android:text="Parte I. La Vespra"/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/vespra_recyclerview"
@@ -57,11 +59,14 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="24dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:layout_margin="24dp"
+                android:fontFamily="@font/playfairdisplay_black"
+                android:textSize="24sp"
+                android:textColor="@color/misteri_black"
                 android:gravity="center"
-                android:text="La Festa"
+                android:text="Parte II. La Festa"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

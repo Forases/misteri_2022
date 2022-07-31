@@ -7,7 +7,7 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/direct_texto_info"
+        android:id="@+id/escena_texto_info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/playfairdisplay_black"

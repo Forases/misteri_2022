@@ -8,7 +8,7 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/title_info_text"
+        android:id="@+id/sceneCabecera"
         style="@style/titlebar"
         android:layout_width="fill_parent"
         android:layout_height="80dp"
@@ -78,7 +78,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <androidx.fragment.app.FragmentContainerView android:name="misteri.DialogoFragment"
+                <androidx.fragment.app.FragmentContainerView android:name="es.gorillapp.misteri.DialogoFragment"
                     android:id="@+id/directo_fragment"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"/>

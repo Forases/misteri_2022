@@ -163,7 +163,7 @@ class DBManager(context: Context): SQLiteOpenHelper(
                 var titulo = result.getString(result.getColumnIndexOrThrow(colTitle))
                 var info = result.getString(result.getColumnIndexOrThrow(colInfo))
 
-                slide = Slide(currentSlideNumber, textoOriginal, traduccion, nombreImagen, titulo, info)
+                slide = Slide(slideNumber, textoOriginal, traduccion, nombreImagen, titulo, info)
             }
         }else{
             Log.e("database", "Database ERROR. This row doesn�t exists in the DB")

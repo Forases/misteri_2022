@@ -1,16 +1,21 @@
 package es.gorillapp.misteri
 
+import android.content.Intent
 import android.content.SharedPreferences
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.View
+import android.view.View.GONE
+import android.view.View.VISIBLE
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.lifecycleScope
 import es.gorillapp.misteri.data.Slide
+import es.gorillapp.misteri.sceneList.SceneListActivity
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
@@ -18,13 +23,16 @@ import kotlinx.coroutines.withContext
 class ListenActivity : AppCompatActivity() {
     private lateinit var buttonRewind: ImageButton
     private lateinit var buttonPause: ImageButton
+    private lateinit var buttonPlay: ImageButton
     private lateinit var buttonForward: ImageButton
     private lateinit var imageView: ImageView
     private lateinit var mediaPlayer: MediaPlayer
 
+    private lateinit var cabecera: TextView
     private lateinit var title: TextView
     private lateinit var textoOriginal: TextView
     private lateinit var traduccion: TextView
+    private lateinit var numDiapositiva: TextView
     private lateinit var info: TextView
 
     private lateinit var listenProgressBar: ProgressBar
@@ -33,8 +41,8 @@ class ListenActivity : AppCompatActivity() {
 
     private var audioNum: Int = 0
     private val dialogFragment = DialogoFragment()
-    private val escenaFragment = EscenaFragment()
 
+    private lateinit var slide: Slide
     private val currentSlide: MutableLiveData<Slide> by lazy {
         MutableLiveData<Slide>()
     }
@@ -43,7 +51,6 @@ class ListenActivity : AppCompatActivity() {
     private var defaultLang: String? = null
 
     private var progressBarStatus = 0F
-    var dummy:Float = 0F
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,74 +62,82 @@ class ListenActivity : AppCompatActivity() {
             audioNum = bundle.getInt("audioNum")
         }
 
-
-
         //We retrieve the language settings
         accountPrefs = getSharedPreferences(getString(R.string.sharedPreferences), MODE_PRIVATE)
         defaultLang = accountPrefs.getString(getString(R.string.lang), "es")
 
-
-
         setContentView(R.layout.activity_listen)
 
         val fragmentManager = supportFragmentManager
-        val fragmentTransaction1 = fragmentManager.beginTransaction()
-        fragmentTransaction1.add(R.id.directo_fragment, dialogFragment)
-        fragmentTransaction1.commit()
-        //Titulo
-
-        //imageView.setImageResource( resources.getIdentifier("drawable/image${slide.nombreImagen!!.toInt()}", null, this.packageName))
 
         val nameObserver = Observer<Slide> { newSlide ->
+            //slide = newSlide
+            cabecera = findViewById(R.id.sceneCabecera)
             title = findViewById(R.id.listen_title)
-            textoOriginal = findViewById(R.id.dialogo_texto_original)
-            traduccion = findViewById(R.id.dialogo_traduccion)
+
             imageView = findViewById(R.id.listen_image)
-            //info = findViewById(R.id.direct_texto_info)
+
+            numDiapositiva = findViewById(R.id.listenNumSlide)
             // Update the UI with the slide info
             title.text = newSlide.titulo
-            textoOriginal.text = newSlide.textoOriginal
-            traduccion.text = newSlide.traduccion
-            imageView.setImageResource( resources.getIdentifier("drawable/image${newSlide.nombreImagen!!.toInt()}", null, this.packageName))
+
+            imageView.setImageResource( resources.getIdentifier(
+                "drawable/image${newSlide.nombreImagen!!.toInt()}",
+                null,
+                this.packageName))
+            numDiapositiva.text = newSlide.numDiapositiva.toString() + " de 62"
+
+            val currentFragment = supportFragmentManager.findFragmentById(R.id.directo_fragment)
+            if(currentFragment is DialogoFragment){
+                textoOriginal = findViewById(R.id.dialogo_texto_original)
+                traduccion = findViewById(R.id.dialogo_traduccion)
+                textoOriginal.text = newSlide.textoOriginal
+                traduccion.text = newSlide.traduccion
+            }else{
+                info = findViewById(R.id.escena_texto_info)
+                info.text = newSlide.info
+            }
+
+            if(newSlide.numDiapositiva < 31){
+                cabecera.text = resources.getString(R.string.scene_vespra)
+            }else{
+                cabecera.text = resources.getString(R.string.scene_festa)
+            }
         }
 
         currentSlide.observe(this, nameObserver)
 
         currentSlide.value = slidesDBHelper.getNumberSlide(defaultLang, audioNum)
 
-        val url = "https://resources.gorilapp.com/misteri/audio/audio_$audioNum.mp3"
-
-
         mediaPlayer = MediaPlayer()
 
         buttonRewind = findViewById(R.id.button_rewind)
         buttonPause = findViewById(R.id.button_pause)
+        buttonPlay = findViewById(R.id.button_play)
         buttonForward = findViewById(R.id.button_forward)
         listenProgressBar = findViewById(R.id.listenProgressBar)
 
-
         playAudio(mediaPlayer)
-
-
-
-
-
+        updateProgressBar(mediaPlayer)
 
         setOnClickListeners()
 
-        val toggleButton = findViewById<View>(R.id.toggleButton) as ToggleButton
+        val toggleButton = findViewById<View>(R.id.toggleListenButton) as ToggleButton
+
         toggleButton.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
                 val sceneFragment = EscenaFragment()
-                // The toggle is enabled
                 val fragmentTransaction1 = fragmentManager.beginTransaction()
+                val mBundle = Bundle()
+                mBundle.putString("infoText", currentSlide.value!!.info)
+                sceneFragment.arguments = mBundle
                 fragmentTransaction1.replace(R.id.directo_fragment, sceneFragment)
                 fragmentTransaction1.commit()
-
-
-
             } else {
-                val dialogFragment = DialogoFragment()
+
+                val dialogFragment = DialogoFragment.newInstance(
+                    currentSlide.value!!.textoOriginal.toString(),
+                    currentSlide.value!!.traduccion.toString())
                 // The toggle is disabled
                 val fragmentTransaction2 = fragmentManager.beginTransaction()
                 fragmentTransaction2.replace(R.id.directo_fragment, dialogFragment)
@@ -130,11 +145,20 @@ class ListenActivity : AppCompatActivity() {
             }
         }
 
+        val backButton = findViewById<View>(R.id.back_listen) as ImageView
+        backButton.setOnClickListener {
+            val intent = Intent()
+            intent.setClass(applicationContext, SceneListActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     override fun onPause() {
         super.onPause()
         mediaPlayer.pause()
+        buttonPause.visibility = GONE
+        buttonPlay.visibility = VISIBLE
     }
 
     override fun onDestroy() {
@@ -144,6 +168,7 @@ class ListenActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
+        if(buttonPause.visibility == VISIBLE)
         mediaPlayer.start()
     }
 
@@ -152,18 +177,28 @@ class ListenActivity : AppCompatActivity() {
             audioNum--
             currentSlide.value = slidesDBHelper.getNumberSlide(defaultLang, audioNum)
             playAudio(mediaPlayer)
-            //Toast.makeText(context, "Reproduciendo...", Toast.LENGTH_SHORT).show()
         }
 
         buttonPause.setOnClickListener {
-            mediaPlayer.pause()
+            if(buttonPause.visibility == VISIBLE){
+                mediaPlayer.pause()
+                buttonPause.visibility = GONE
+                buttonPlay.visibility = VISIBLE
+            }
+        }
+
+        buttonPlay.setOnClickListener {
+            if(buttonPlay.visibility == VISIBLE){
+                mediaPlayer.start()
+                buttonPause.visibility = VISIBLE
+                buttonPlay.visibility = GONE
+            }
         }
 
         buttonForward.setOnClickListener {
             audioNum++
             currentSlide.value = slidesDBHelper.getNumberSlide(defaultLang, audioNum)
             playAudio(mediaPlayer)
-            //Toast.makeText(context, "Parando...", Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -182,9 +217,7 @@ class ListenActivity : AppCompatActivity() {
 
         mediaPlayer.setOnPreparedListener {
             mediaPlayer.start()
-            if(mediaPlayer.isPlaying){
-                updateProgressBar(mediaPlayer)
-            }
+
         }
         checkNumAudio(audioNum)
     }
@@ -205,7 +238,7 @@ class ListenActivity : AppCompatActivity() {
         this.lifecycleScope.launch {
             withContext(Dispatchers.Default){
                 listenProgressBar.max = mediaPlayer.duration
-                // dummy thread mimicking some operation whose progress can be tracked
+
                 while (progressBarStatus < listenProgressBar.max) {
                     // performing some dummy operation
                     try {
@@ -213,17 +246,17 @@ class ListenActivity : AppCompatActivity() {
                     } catch (e: InterruptedException) {
                         e.printStackTrace()
                     }
+
+                    if(this.isActive){
+                        // Updating the progress bar
+                        try{
+                            listenProgressBar.progress = mediaPlayer.currentPosition
+                        }catch (e: IllegalStateException){
+                            e.printStackTrace()
+                        }
+                    }
                 }
             }
-            // Updating the progress bar
-            try{
-                listenProgressBar.progress = mediaPlayer.currentPosition
-            }catch (e: IllegalStateException){
-                e.printStackTrace()
-            }
-
         }
-
-
     }
 }
