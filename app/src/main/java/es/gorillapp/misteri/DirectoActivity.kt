@@ -45,8 +45,6 @@ class DirectoActivity : AppCompatActivity() {
                 fragmentTransaction2.replace(R.id.directo_fragment, dialogFragment)
                 fragmentTransaction2.commit()
             }
-
-
         }
 
     }
@@ -69,11 +67,11 @@ class DirectoActivity : AppCompatActivity() {
                 title.text = jsonData.getString("titulo")
 
                 //Texto original en valenciano
-                val textoOriginal: TextView = findViewById(R.id.direct_texto_original)
+                val textoOriginal: TextView = findViewById(R.id.dialogo_texto_original)
                 textoOriginal.text = jsonData.getString("textoOriginal")
 
                 //Traducción al castellamo
-                val traduccion: TextView = findViewById(R.id.direct_traduccion)
+                val traduccion: TextView = findViewById(R.id.dialogo_traduccion)
                 traduccion.text = jsonData.getString("traduccion")
 
             },

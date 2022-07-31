@@ -14,7 +14,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/cast_recycler_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/today_cast_text" />
+        app:layout_constraintTop_toBottomOf="@+id/today_cast_text"
+        android:indeterminateTint="@color/misteri_yellow"/>
 
     <RelativeLayout
         android:id="@+id/title_info_text"

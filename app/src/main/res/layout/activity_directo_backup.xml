@@ -74,7 +74,7 @@
             app:layout_constraintStart_toStartOf="@+id/imageGradient" />
 
         <TextView
-            android:id="@+id/direct_texto_original"
+            android:id="@+id/dialogo_texto_original"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/misteri_black"
@@ -88,7 +88,7 @@
             app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
         <TextView
-            android:id="@+id/direct_traduccion"
+            android:id="@+id/dialogo_traduccion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="24dp"
@@ -98,7 +98,7 @@
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/direct_texto_original" />
+            app:layout_constraintTop_toBottomOf="@+id/dialogo_texto_original" />
 
 
 

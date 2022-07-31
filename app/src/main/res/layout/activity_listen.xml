@@ -90,15 +90,18 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <SeekBar
+            <ProgressBar
+                android:id="@+id/listenProgressBar"
+                style="@android:style/Widget.ProgressBar.Horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="5dp"
+                android:progressTint="@color/misteri_yellow"
+                android:layout_marginBottom="24dp"/>
 
             <ToggleButton
                 android:id="@+id/toggleButton"
                 android:layout_width="150dp"
                 android:layout_height="36dp"
-                android:text="ToggleButton"
                 android:background="@drawable/toggle_selector"
                 android:textOff=""
                 android:textOn=""/>
@@ -126,8 +129,6 @@
                     android:layout_height="wrap_content" />
 
             </ScrollView>
-
-
         </RelativeLayout>
 
         <TextView

@@ -120,24 +120,27 @@ class DBManager(context: Context): SQLiteOpenHelper(
         myInput.close()
     }
 
-    fun getNumberSlide(context: Context, defaultLang: String?, slideNumber: Int): Slide {
+    fun getNumberSlide(defaultLang: String?, slideNumber: Int): Slide {
+        var currentSlideNumber = slideNumber
+        //Move DDBB from assets to device internal Storage if first time
         this.open()
 
+        if(currentSlideNumber > 30) currentSlideNumber += 2
         var slide: Slide? = null
-        val col_translate: String = COL_TRANSLATE_PARTIAL + defaultLang
-        val col_title: String = COL_TITLE_PARTIAL + defaultLang
-        val col_info: String = COL_INFO_PARTIAL + defaultLang
+        val colTranslate: String = COL_TRANSLATE_PARTIAL + defaultLang
+        val colTitle: String = COL_TITLE_PARTIAL + defaultLang
+        val colInfo: String = COL_INFO_PARTIAL + defaultLang
 
         val columns = arrayOf(
             COL_IMAGE,
             COL_ORIGINALTEXT,
-            col_translate,
-            col_title,
-            col_info
+            colTranslate,
+            colTitle,
+            colInfo
         )
 
         val args =
-            "$COL_EVENT$EQUAL_STATEMENT'$DB_EVENT'$AND_STATEMENT$COL_NB$EQUAL_STATEMENT'$slideNumber'"
+            "$COL_EVENT$EQUAL_STATEMENT'$DB_EVENT'$AND_STATEMENT$COL_NB$EQUAL_STATEMENT'$currentSlideNumber'"
 
         val result: Cursor? = myDataBase?.query(
             true,
@@ -156,11 +159,11 @@ class DBManager(context: Context): SQLiteOpenHelper(
 
                 var nombreImagen = result.getString(result.getColumnIndexOrThrow(COL_IMAGE))
                 var textoOriginal = result.getString(result.getColumnIndexOrThrow(COL_ORIGINALTEXT))
-                var traduccion = result.getString(result.getColumnIndexOrThrow(col_translate))
-                var titulo = result.getString(result.getColumnIndexOrThrow(col_title))
-                var info = result.getString(result.getColumnIndexOrThrow(col_info))
+                var traduccion = result.getString(result.getColumnIndexOrThrow(colTranslate))
+                var titulo = result.getString(result.getColumnIndexOrThrow(colTitle))
+                var info = result.getString(result.getColumnIndexOrThrow(colInfo))
 
-                slide = Slide(slideNumber, textoOriginal, traduccion, nombreImagen, titulo, info)
+                slide = Slide(currentSlideNumber, textoOriginal, traduccion, nombreImagen, titulo, info)
             }
         }else{
             Log.e("database", "Database ERROR. This row doesn�t exists in the DB")
@@ -173,6 +176,5 @@ class DBManager(context: Context): SQLiteOpenHelper(
         // If you change the database schema, you must increment the database version.
         const val DATABASE_VERSION = 1
         const val DATABASE_NAME = "Slides.db"
-
     }
 }
