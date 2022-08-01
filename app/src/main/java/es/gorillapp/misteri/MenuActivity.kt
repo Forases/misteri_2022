@@ -35,6 +35,10 @@ class MenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        //set statusBarColor
+        val window = this.window
+        window.statusBarColor = this.resources.getColor(R.color.misteri_yellow_2)
+
         // Languages //
         //Retrieve default lang
         val accountPrefs = getSharedPreferences(getString(R.string.sharedPreferences), MODE_PRIVATE)
@@ -47,9 +51,6 @@ class MenuActivity : AppCompatActivity() {
         }
         config.locale = locale
         resources.updateConfiguration(config, resources.displayMetrics)
-
-        val window = this.window
-        window.statusBarColor = this.resources.getColor(R.color.misteri_yellow_2)
 
         //Remove the title
         requestWindowFeature(Window.FEATURE_NO_TITLE)

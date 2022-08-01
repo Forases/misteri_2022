@@ -2,14 +2,18 @@ package es.gorillapp.misteri.sceneList
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.RecyclerView
 import es.gorillapp.misteri.ListenActivity
+import es.gorillapp.misteri.MenuActivity
 import es.gorillapp.misteri.data.SceneItem
 import es.gorillapp.misteri.data.sceneFestaList
 import es.gorillapp.misteri.data.sceneVespraList
 import es.gorillapp.misteri.R
+import es.gorillapp.misteri.infoList.InfoListActivity
 
 class SceneListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,6 +48,13 @@ class SceneListActivity : AppCompatActivity() {
             it?.let {
                 festaListAdapter.submitList(it as MutableList<SceneItem>)
             }
+        }
+
+        val backButton = findViewById<View>(R.id.back_scene_list) as ImageView
+        backButton.setOnClickListener {
+            val intent = Intent()
+            intent.setClass(applicationContext, MenuActivity::class.java)
+            startActivity(intent)
         }
     }
 

@@ -207,7 +207,7 @@
                     style="@style/btn_menu_text.title"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:text="Créditos" />
+                    android:text="@string/creditos" />
             </LinearLayout>
 
         </LinearLayout>

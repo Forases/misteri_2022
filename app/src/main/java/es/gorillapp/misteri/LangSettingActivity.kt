@@ -10,8 +10,11 @@ import java.util.*
 class LangSettingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        //set statusBarColor
         val window = this.window
         window.statusBarColor = this.resources.getColor(R.color.misteri_yellow_2)
+
         setContentView(R.layout.lang_settings)
 
         //Lang = ca  Button onClick

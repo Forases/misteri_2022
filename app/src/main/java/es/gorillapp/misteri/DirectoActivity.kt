@@ -1,5 +1,6 @@
 package es.gorillapp.misteri
 
+import android.content.Intent
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.View
@@ -14,6 +15,7 @@ import androidx.lifecycle.lifecycleScope
 import com.android.volley.Request
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
+import es.gorillapp.misteri.castList.CastListActivity
 import es.gorillapp.misteri.data.DirectItem
 import es.gorillapp.misteri.data.Slide
 import kotlinx.coroutines.Dispatchers
@@ -37,6 +39,10 @@ class DirectoActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        //set statusBarColor
+        val window = this.window
+        window.statusBarColor = this.resources.getColor(R.color.misteri_yellow_2)
 
         val accountPrefs = getSharedPreferences(getString(R.string.sharedPreferences), MODE_PRIVATE)
         val defaultLang = accountPrefs.getString(getString(R.string.lang), "es")
@@ -95,6 +101,13 @@ class DirectoActivity : AppCompatActivity() {
                 fragmentTransaction2.replace(R.id.directo_fragment, dialogFragment)
                 fragmentTransaction2.commit()
             }
+        }
+
+        val backButton = findViewById<View>(R.id.back_directo) as ImageView
+        backButton.setOnClickListener {
+            val intent = Intent()
+            intent.setClass(applicationContext, CastListActivity::class.java)
+            startActivity(intent)
         }
 
     }

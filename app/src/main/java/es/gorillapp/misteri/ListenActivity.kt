@@ -40,7 +40,6 @@ class ListenActivity : AppCompatActivity() {
     private lateinit var slidesDBHelper: DBManager
 
     private var audioNum: Int = 0
-    private val dialogFragment = DialogoFragment()
 
     private lateinit var slide: Slide
     private val currentSlide: MutableLiveData<Slide> by lazy {
@@ -54,6 +53,11 @@ class ListenActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        //set statusBarColor
+        val window = this.window
+        window.statusBarColor = this.resources.getColor(R.color.misteri_yellow_2)
+
         slidesDBHelper = DBManager(this)
 
 
@@ -229,7 +233,9 @@ class ListenActivity : AppCompatActivity() {
 
     private fun checkNumAudio(numAudio: Int){
         if(numAudio == 1){
+            //buttonRewind.background = resources.getDrawable(R.drawable.rounded_button_disabled)
             buttonRewind.isEnabled = false
+
         }else if(numAudio == 62){
             buttonForward.isEnabled = false
         }else{

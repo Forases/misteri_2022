@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.view.View.GONE
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.ProgressBar
 import android.widget.Toast
@@ -14,10 +15,12 @@ import com.android.volley.*
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import es.gorillapp.misteri.DirectoActivity
+import es.gorillapp.misteri.MenuActivity
 import es.gorillapp.misteri.data.CastItem
 import es.gorillapp.misteri.getVolleyError
 import org.json.JSONArray
 import es.gorillapp.misteri.R
+import es.gorillapp.misteri.infoList.InfoListActivity
 
 
 private const val TAG = "CastActivity"
@@ -28,6 +31,11 @@ class CastListActivity : AppCompatActivity() {
     var castList = ArrayList<CastItem>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        //set statusBarColor
+        val window = this.window
+        window.statusBarColor = this.resources.getColor(R.color.misteri_yellow_2)
+
         setContentView(R.layout.activity_cast_list)
 
         castList = downloadTask()
@@ -36,6 +44,13 @@ class CastListActivity : AppCompatActivity() {
         btnStart.setOnClickListener {
             val intent = Intent()
             intent.setClass(applicationContext, DirectoActivity::class.java)
+            startActivity(intent)
+        }
+
+        val backButton = findViewById<View>(R.id.back_cast) as ImageView
+        backButton.setOnClickListener {
+            val intent = Intent()
+            intent.setClass(applicationContext, MenuActivity::class.java)
             startActivity(intent)
         }
     }

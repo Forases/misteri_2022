@@ -98,4 +98,15 @@
    
    	<!-- Menu option 4. buy tickets activities-->
    	<string name="buytickets">Buy tickets</string>
+
+    <!-- Menu option 5. credits activities-->
+    <string name="cred_title1">EXPLANATORY TEXTS</string>
+    <string name="cred_title2">TRANSLATIONS</string>
+    <string name="cred_title3">PHOTOGRAPHS</string>
+    <string name="cred_title4">IDEA AND CONCEPT</string>
+    <string name="cred_title5">PRODUCTION</string>
+    <string name="cred_title6">DEVELOPMENT</string>
+    <string name="cred_title7">ACCESSIBILITY</string>
+    <string name="cred_title8">HOSTED BY</string>
+    <string name="creditos">Credits</string>
 </resources>

@@ -15,6 +15,11 @@ class Splash : AppCompatActivity() {
     /** Called when the activity is first created.  */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        //set statusBarColor
+        val window = this.window
+        window.statusBarColor = this.resources.getColor(R.color.misteri_yellow_2)
+
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         requestWindowFeature(Window.FEATURE_NO_TITLE)
         this.window.setFlags(

@@ -36,7 +36,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/back_credits"
+            android:id="@+id/back_cast"
             android:layout_width="wrap_content"
             android:layout_height="80dp"
             android:layout_alignParentStart="true"

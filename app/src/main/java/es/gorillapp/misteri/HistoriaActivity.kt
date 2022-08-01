@@ -11,6 +11,10 @@ class HistoriaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        //set statusBarColor
+        val window = this.window
+        window.statusBarColor = this.resources.getColor(R.color.misteri_yellow_2)
+
         var currentItemId: String? = null
         val bundle: Bundle? = intent.extras
         if (bundle != null) {

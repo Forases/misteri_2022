@@ -109,4 +109,15 @@
    
    	<!-- Menu option 4. buy tickets activities-->
    	<string name="buytickets">Tickets kaufen</string>
+
+    <!-- Menu option 5. credits activities-->
+    <string name="cred_title1">ERLÄUTERNDE TEXTE</string>
+    <string name="cred_title2">ÜBERSETZUNGEN</string>
+    <string name="cred_title3">FOTOS</string>
+    <string name="cred_title4">IDEE UND KONZEPT</string>
+    <string name="cred_title5">PRODUKTION</string>
+    <string name="cred_title6">ENTWICKLUNG</string>
+    <string name="cred_title7">BARRIEREFREIHEIT</string>
+    <string name="cred_title8">VERANSTALTET VON</string>
+    <string name="creditos">Kredite</string>
 </resources>

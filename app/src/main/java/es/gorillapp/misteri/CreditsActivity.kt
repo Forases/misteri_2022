@@ -9,6 +9,8 @@ import android.widget.ImageView
 class CreditsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        //set statusBarColor
         val window = this.window
         window.statusBarColor = this.resources.getColor(R.color.misteri_yellow_2)
 

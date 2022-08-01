@@ -21,12 +21,12 @@
     </string-array>
 
     <!-- Language setting activity-->
-    <string name="ca_button">Valencià</string>
-    <string name="es_button">Español</string>
-    <string name="en_button">English</string>
-    <string name="de_button">Deutsch</string>
-    <string name="it_button">Italiano</string>
-    <string name="fr_button">Français</string>
+    <string name="ca_button" translatable="false">Valencià</string>
+    <string name="es_button" translatable="false">Español</string>
+    <string name="en_button" translatable="false">English</string>
+    <string name="de_button" translatable="false">Deutsch</string>
+    <string name="it_button" translatable="false">Italiano</string>
+    <string name="fr_button" translatable="false">Français</string>
 
     <!-- Credits activity-->
     <string name="creditos">Créditos</string>
@@ -47,10 +47,10 @@
     <string name="cred_title8">PATROCINADO POR</string>
 
 
-    <string name="sharedPreferences">es.gorillap.misteri.SETTINGS</string>
-    <string name="lang">lang</string>
-    <string name="user_ringmode">user_ringmode</string>
-    <string name="are_audios_downloaded">are_audios_downloaded</string>
+    <string name="sharedPreferences" translatable="false">es.gorillap.misteri.SETTINGS</string>
+    <string name="lang" translatable="false">lang</string>
+    <string name="user_ringmode" translatable="false">user_ringmode</string>
+    <string name="are_audios_downloaded" translatable="false">are_audios_downloaded</string>
 
     <!-- string name="lang_es">es</string>
     <string name="lang_en">en</string>
@@ -93,23 +93,23 @@
     <string name="cast">Reparto</string>
     <string name="today_cast">Hoy intervienen en la representación:</string>
     <string name="cast1" translatable="false">Apostolat</string>
-    <string name="cast2">Sant Joan</string>
-    <string name="cast3">Sant Tomás</string>
-    <string name="cast4">Sant Pere</string>
-    <string name="cast5">Ternari</string>
-    <string name="cast6">Tenors 1</string>
-    <string name="cast7">Gran rabí</string>
-    <string name="cast8">Tenors 2</string>
-    <string name="cast9">Baritons</string>
-    <string name="cast10">Baixos</string>
-    <string name="cast11">María Major</string>
-    <string name="cast12">María Salomé</string>
-    <string name="cast13">María Iacobe</string>
-    <string name="cast14">Àngels coixí</string>
-    <string name="cast15">Àngels Mantell</string>
-    <string name="cast16">Àngel</string>
-    <string name="cast17">Araceli</string>
-    <string name="cast18">Coronació</string>
+    <string name="cast2" translatable="false">Sant Joan</string>
+    <string name="cast3" translatable="false">Sant Tomás</string>
+    <string name="cast4" translatable="false">Sant Pere</string>
+    <string name="cast5" translatable="false">Ternari</string>
+    <string name="cast6" translatable="false">Tenors 1</string>
+    <string name="cast7" translatable="false">Gran rabí</string>
+    <string name="cast8" translatable="false">Tenors 2</string>
+    <string name="cast9" translatable="false">Baritons</string>
+    <string name="cast10" translatable="false">Baixos</string>
+    <string name="cast11" translatable="false">María Major</string>
+    <string name="cast12" translatable="false">María Salomé</string>
+    <string name="cast13" translatable="false">María Iacobe</string>
+    <string name="cast14" translatable="false">Àngels coixí</string>
+    <string name="cast15" translatable="false">Àngels Mantell</string>
+    <string name="cast16" translatable="false">Àngel</string>
+    <string name="cast17" translatable="false">Araceli</string>
+    <string name="cast18" translatable="false">Coronació</string>
     <string name="live">En directo</string>
     <string name="cast_response_keys">apostolat-joan-tomas-pere-ternari-tenors1-granrabi-tenors2-baritons-baixos-mariamajor-mariasalome-mariaiacobe-angelsdecoixi-angelsdemantell-angel-araceli-coronacio</string>
     <string name="live_originalText_key">textoOriginal</string>
@@ -199,9 +199,9 @@
     <string name="info_history_id">history</string>
     <string name="info_history_title">Historia</string>
     <string name="info_history_subtitle">El origen del Misteri d\'Elx</string>
-    <string name="info_history_thumbnail">historia_thumb</string>
-    <string name="info_history_header_img">historia_01</string>
-    <string name="info_history_footer_img">historia_02</string>
+    <string name="info_history_thumbnail" translatable="false">historia_thumb</string>
+    <string name="info_history_header_img" translatable="false">historia_01</string>
+    <string name="info_history_footer_img" translatable="false">historia_02</string>
     <string name="info_history_longtext_1">El origen del Misterio de Elche no se ha podido determinar todavía con exactitud por falta de documentación. Sobre su nacimiento existen dos tradiciones locales. Una de ellas vincula la creación de la Festa con la conquista del Elche musulmán por las tropas aragonesas de Jaume I de Aragón, en 1265, es decir al nacimiento de la villa a la civilización cristiana. Otra tradición legendaria intenta dar al nacimiento del Misterio un origen milagroso y lo relaciona con la aparición o "Venida" de la imagen de la Virgen ilicitana el 29 de diciembre de 1370. De esta manera, el consueta de la Festa se habría hallado, junto a la figura mariana que la protagoniza, en el interior de una arca de madera que flotaba sobre las aguas del mar Mediterráneo, en la cercana playa del Tamarit (hoy, de Santa Pola), y que fue encontrado por el soldado guardacostas Francesc Cantó.</string>
     <string name="info_history_longtext_2">Sin embargo, las investigaciones desarrolladas en los últimos tiempos, tanto sobre la obra ilicitana, como sobre el teatro medieval europeo en general, proponen la segunda mitad del siglo XV -etapa en que se detecta un auge en el teatro de temática asuncionista- como la época más probable para datar el Misterio de Elche.\n\n Si realizamos un breve recorrido a través de la documentación histórica de la obra, veremos como en sus comienzos estuvo organizada por algunas familias de la pequeña nobleza local, como los Perpinyà o los Caro. La referencia documental más antigua de la Festa conocida hasta ahora, se halla en el testamento de la ilicitana Isabel Caro, de 1523, en donde legaba algunos fondos para continuar una "grandísima fiesta y solemnidad" que los religiosos de la villa realizaban en la iglesia de Santa María durante la festividad de la Asunción de la Madre de Dios, en honor a una imagen de la Virgen que la testadora poseía en su casa y que, tras su muerte, debía pasar a la ermita de San Sebastián.\n\n Tenemos noticias de la existencia en la villa en 1530 de una Cofradía de Nuestra Señora de la Asunción que, con sede en la citada ermita de San Sebastián, era la encargada de preparar la festividad. Esta cofradía se hallaba presidida por unos clavarios y mayordomos y, además de las aportaciones de los cofrades y de las limosnas recogidas, contaba con ayudas anuales del Consejo municipal.</string>
     <string name="info_history_longtext">La tradición vincula el nacimiento del Misterio de Elche a la conquista del Elche musulmán por las tropas aragonesas de Jaime I de Aragón, en 1265. Otros relatos lo relacionan con la milagrosa aparición o "Venida" de la imagen de la Virgen ilicitana el 29 de diciembre de 1370. Las últimas investigaciones proponen la segunda mitad del siglo XV como la época más probable para datar el origen de la celebración. \n\n
@@ -242,9 +242,9 @@
     <string name="info_tramoya_id">tramoya</string>
     <string name="info_tramoya_title">Escenarios</string>
     <string name="info_tramoya_subtitle">La basílica de Santa María</string>
-    <string name="info_tramoya_thumbnail">tramoya_thumb</string>
-    <string name="info_tramoya_header_img">tramoya_02</string>
-    <string name="info_tramoya_footer_img"></string>
+    <string name="info_tramoya_thumbnail" translatable="false">tramoya_thumb</string>
+    <string name="info_tramoya_header_img" translatable="false">tramoya_02</string>
+    <string name="info_tramoya_footer_img" translatable="false"></string>
     <string name="info_tramoya_longtext">El gran escenario del Misterio de Elche es la Basílica de Santa María, un templo barroco cuya construcción se inició en 1673 y concluyó en 1784. La escena propiamente dicha se divide en dos partes bien diferenciadas: la horizontal o "terrestre" y la vertical o "aérea". \n\n
 		La primera está formado por un tablado o “cadafal” que se levanta en el crucero del templo. Su disposición permite que los espectadores, según la costumbre medieval, puedan situarse por sus cuatro lados. A este tablado se accede desde la puerta Mayor del templo mediante un plano inclinado denominado andador. A lo largo de este corredor se hallan colocados tres pequeños altares que representan el huerto de Getsemaní, el monte Calvario y el Santo Sepulcro. \n\n
 		El escenario aéreo o vertical se instala en la cúpula de la iglesia que simboliza el cielo. Por encima de la lona de cubre la cúpula, oculto a la vista de los espectadores, se instala en voladizo un pequeño tablado de madera que permite a los tramoyistas realizar todas las operaciones y trabajos necesarios para bajar y subir los aparatos aéreos con los personajes del mundo celestial. \n\n

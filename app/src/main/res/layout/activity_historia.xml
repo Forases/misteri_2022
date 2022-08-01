@@ -63,7 +63,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/info_history_longtext_1"
+                android:text="@string/info_history_longtext"
                 style="@style/info_text"/>
 
             <ImageView
@@ -72,14 +72,6 @@
                 android:layout_marginTop="16dp"
                 android:adjustViewBounds="true"
                 android:src="@drawable/historia_01"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="24dp"
-                android:text="@string/info_history_longtext_2"
-                style="@style/info_text"/>
         </LinearLayout>
     </ScrollView>
 

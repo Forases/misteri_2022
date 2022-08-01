@@ -7,16 +7,36 @@
     tools:context=".DirectoActivity"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/directoCabecera"
-        style="@style/titlebar"
-        android:layout_width="fill_parent"
-        android:layout_height="80dp"
-        android:gravity="center"
-        android:text="En Directo"
+    <RelativeLayout
+        android:id="@+id/sceneCabecera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/title_text"
+            style="@style/titlebar"
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:text="En Directo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/back_directo"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:src="@drawable/ic_back_button" />
+    </RelativeLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

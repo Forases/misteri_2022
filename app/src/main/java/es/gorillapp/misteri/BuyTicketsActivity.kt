@@ -15,8 +15,11 @@ import androidx.appcompat.app.AppCompatActivity
 class BuyTicketsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        //set statusBarColor
         val window = this.window
-        window.statusBarColor = this.resources.getColor(R.color.misteri_black)
+        window.statusBarColor = this.resources.getColor(R.color.misteri_yellow_2)
+
         setContentView(R.layout.buy_tickets)
 
         val webView = findViewById<View>(R.id.webView) as WebView
