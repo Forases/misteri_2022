@@ -4,7 +4,7 @@ import android.content.res.Resources
 import es.gorillapp.misteri.R
 
 /* Returns initial list of flowers. */
-fun infoList(resources: Resources): List<InfoItem> {
+fun firstColumnList(resources: Resources): List<InfoItem> {
     return listOf(
         InfoItem(
             id = resources.getString(R.string.info_history_id),
@@ -23,7 +23,12 @@ fun infoList(resources: Resources): List<InfoItem> {
             image = R.drawable.musica_thumb,
             title = resources.getString(R.string.info_music_title),
             subtitle = resources.getString(R.string.info_music_subtitle)
-        ),
+        )
+    )
+}
+
+fun secondColumnList(resources: Resources): List<InfoItem> {
+    return listOf(
         InfoItem(
             id = resources.getString(R.string.info_tramoya_id),
             image = R.drawable.tramoya_thumb,

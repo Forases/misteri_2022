@@ -11,7 +11,8 @@ import es.gorillapp.misteri.HistoriaActivity
 import es.gorillapp.misteri.MenuActivity
 import es.gorillapp.misteri.R
 import es.gorillapp.misteri.data.InfoItem
-import es.gorillapp.misteri.data.infoList
+import es.gorillapp.misteri.data.firstColumnList
+import es.gorillapp.misteri.data.secondColumnList
 
 class InfoListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,19 +24,32 @@ class InfoListActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_info_list)
 
-        val infoItemsList = infoList(this.resources)
-        val infoLiveData = MutableLiveData(infoItemsList)
+        val firstItemsList = firstColumnList(this.resources)
+        val secondItemsList = secondColumnList(this.resources)
+        val firstLiveData = MutableLiveData(firstItemsList)
+        val secondLiveData = MutableLiveData(secondItemsList)
 
         /* Instantiates headerAdapter and flowersAdapter. Both adapters are added to concatAdapter.
         which displays the contents sequentially */
-        val infoListAdapter = InfoListAdapter { infoItem -> adapterOnClick(infoItem) }
+        val firstListAdapter = InfoListAdapter { infoItem -> adapterOnClick(infoItem) }
+        val secondListAdapter = InfoListAdapter { infoItem -> adapterOnClick(infoItem) }
 
-        val recyclerView: RecyclerView = findViewById(R.id.info_recycler_view)
-        recyclerView.adapter = infoListAdapter
 
-        infoLiveData.observe(this) {
+        val firstRecyclerView: RecyclerView = findViewById(R.id.first_info_recycler_view)
+        val secondRecyclerView: RecyclerView = findViewById(R.id.second_info_recycler_view)
+        firstRecyclerView.adapter = firstListAdapter
+        secondRecyclerView.adapter = secondListAdapter
+
+
+        firstLiveData.observe(this) {
             it?.let {
-                infoListAdapter.submitList(it as MutableList<InfoItem>)
+                firstListAdapter.submitList(it as MutableList<InfoItem>)
+            }
+        }
+
+        secondLiveData.observe(this) {
+            it?.let {
+                secondListAdapter.submitList(it as MutableList<InfoItem>)
             }
         }
 
