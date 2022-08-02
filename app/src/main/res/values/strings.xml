@@ -92,6 +92,9 @@
     <!-- Menu option 1. Live activities-->
     <string name="cast">Reparto</string>
     <string name="today_cast">Hoy intervienen en la representación:</string>
+    <string name="apostolatTitle" translatable="false">Apostolat</string>
+    <string name="jueusTitle" translatable="false">Jueus</string>
+    <string name="escolanosTitle" translatable="false">Escolanos</string>
     <string name="cast1" translatable="false">Apostolat</string>
     <string name="cast2" translatable="false">Sant Joan</string>
     <string name="cast3" translatable="false">Sant Tomás</string>

@@ -28,7 +28,9 @@ private const val TAG = "CastActivity"
 class CastListActivity : AppCompatActivity() {
 
     private val url = "https://resources.gorilapp.com/misteri/cast.php"
-    var castList = ArrayList<CastItem>()
+    var apostolsList = ArrayList<CastItem>()
+    var jueusList = ArrayList<CastItem>()
+    var escolanosList = ArrayList<CastItem>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -38,7 +40,7 @@ class CastListActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_cast_list)
 
-        castList = downloadTask()
+        downloadTask()
 
         val btnStart = findViewById<View>(R.id.comienzo) as LinearLayout
         btnStart.setOnClickListener {
@@ -55,9 +57,10 @@ class CastListActivity : AppCompatActivity() {
         }
     }
 
-    private fun downloadTask(): ArrayList<CastItem>{
+    private fun downloadTask(){
 
         val queue = Volley.newRequestQueue(this)
+        val progressBar: ProgressBar = findViewById(R.id.cast_progress)
 
         val request = StringRequest(
             Request.Method.GET, url,
@@ -76,30 +79,53 @@ class CastListActivity : AppCompatActivity() {
                     val character = getString(resources.getIdentifier(
                         "cast$id", "string", this.packageName))
                     val actor = jsonData.getString(i)
-                    castList.add(CastItem(id,character, actor))
+
+                    when(id){
+                        in 1..5 -> apostolsList.add(CastItem(id,character, actor))
+                        in 6..10 -> jueusList.add(CastItem(id,character, actor))
+                        in 11..18 -> escolanosList.add(CastItem(id,character, actor))
+                    }
                     id ++
                 }
 
-                val recyclerView: RecyclerView = findViewById(R.id.cast_recycler_view)
-                val castLiveData = MutableLiveData(castList)
-                val castListAdapter = CastListAdapter {}
+                val apostolsRecyclerView: RecyclerView = findViewById(R.id.apostols_recycler_view)
+                val jueusRecyclerView: RecyclerView = findViewById(R.id.jueus_recycler_view)
+                val escolanosRecyclerView: RecyclerView = findViewById(R.id.escolanos_recycler_view)
 
-                recyclerView.adapter = castListAdapter
+                val apostolsLiveData = MutableLiveData(apostolsList)
+                val jueusLiveData = MutableLiveData(jueusList)
+                val escolanosLiveData = MutableLiveData(escolanosList)
 
-                castLiveData.observe(this) {
+                val apostolsListAdapter = CastListAdapter {}
+                val jueusListAdapter = CastListAdapter {}
+                val escolanosListAdapter = CastListAdapter {}
+
+                apostolsRecyclerView.adapter = apostolsListAdapter
+                jueusRecyclerView.adapter = jueusListAdapter
+                escolanosRecyclerView.adapter = escolanosListAdapter
+
+                apostolsLiveData.observe(this) {
                     it?.let {
-                        castListAdapter.submitList(it as MutableList<CastItem>)
+                        apostolsListAdapter.submitList(it as MutableList<CastItem>)
                     }
                 }
 
-                val progressBar: ProgressBar = findViewById(R.id.cast_progress)
-                progressBar.visibility = GONE
+                jueusLiveData.observe(this) {
+                    it?.let {
+                        jueusListAdapter.submitList(it as MutableList<CastItem>)
+                    }
+                }
 
+                escolanosLiveData.observe(this) {
+                    it?.let {
+                        escolanosListAdapter.submitList(it as MutableList<CastItem>)
+                    }
+                }
+                progressBar.visibility = GONE
             },
             {error->
+                progressBar.visibility = GONE
                 Toast.makeText(this, getVolleyError(error), Toast.LENGTH_LONG).show()})
         queue.add(request)
-
-        return castList
     }
 }
