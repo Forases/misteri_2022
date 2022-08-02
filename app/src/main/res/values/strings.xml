@@ -229,9 +229,9 @@
     <string name="info_music_id">music</string>
     <string name="info_music_title">Música</string>
     <string name="info_music_subtitle">Sobre los canticos del Misteri</string>
-    <string name="info_music_thumbnail">musica_thumb</string>
-    <string name="info_music_header_img">musica_01</string>
-    <string name="info_music_footer_img">musica_02</string>
+    <string name="info_music_thumbnail" translatable="false">musica_thumb</string>
+    <string name="info_music_header_img" translatable="false">musica_01</string>
+    <string name="info_music_footer_img" translatable="false">musica_02</string>
     <string name="info_music_longtext">El Misterio de Elche es totalmente cantado y contiene melodías de origen medieval,  renacentista y añadidos barroco y aún posteriores. Sin embargo, su unidad musical es extraordinaria. \n\n
 		Algunos de sus cantos monódicos, más abundantes en la primera parte de la obra, presentan claras influencias del gregoriano medieval. La técnica de adaptar textos literarios nuevos a músicas preexistentes, conocida como “contrafactum”, era muy común en las representaciones de este tipo. \n\n
 		También se han hallado en algunos de sus cantos polifónicos del siglo XVI puntos de concordancia con villancicos y otras obras recopiladas en el Cancionero Musical de Palacio. \n\n
@@ -239,7 +239,7 @@
 		Hasta 1835 contó la iglesia de Santa María con una capilla de músicos y cantores profesionales que tenían entre sus funciones interpretar cada año el drama asuncionista. Tras la Desamortización se hicieron cargo de la Festa cantores aficionados de la ciudad.  Actualmente, son los miembros de la Capilla y Escolanía, dirigidos por su Maestro de Capilla, quienes interpretan el Misterio de Elche. Y aunque salvo muy contadas excepciones ninguno de ellos es profesional del canto, la conjunción de voces alcanzada y el buen hacer de tales cantores queda patente en las celebraciones anuales y en los conciertos que suelen ofrecer de manera extraordinaria. \n\n      
     </string>
 
-    <string name="info_tramoya_id">tramoya</string>
+    <string name="info_tramoya_id" translatable="false">tramoya</string>
     <string name="info_tramoya_title">Escenarios</string>
     <string name="info_tramoya_subtitle">La basílica de Santa María</string>
     <string name="info_tramoya_thumbnail" translatable="false">tramoya_thumb</string>
@@ -252,24 +252,24 @@
 		Los cantores que no descienden del cielo se caracterizan fuera del templo, primitivamente en la ermita de San Sebastián y actualmente en la Casa de la Festa contigua. Desde esta ermita parten cantores y autoridades al inicio de la obra en un pequeño cortejo festivo con lo que también las calles de la ciudad se convierten en escenario de la Festa. Escenario que se amplia a todo el antiguo núcleo medieval cuando, en la mañana del 15 de agosto, se realiza la procesión-entierro de María. \n\n
 	</string>
 
-    <string name="info_celebration_id">celebration</string>
+    <string name="info_celebration_id" translatable="false">celebration</string>
     <string name="info_celebration_title">Festividad</string>
     <string name="info_celebration_subtitle">El Misteri vivido por la ciudad</string>
-    <string name="info_celebration_thumbnail">festividad_thumb</string>
-    <string name="info_celebration_header_img">festividad_01</string>
-    <string name="info_celebration_footer_img">festividad_02</string>
+    <string name="info_celebration_thumbnail" translatable="false">festividad_thumb</string>
+    <string name="info_celebration_header_img" translatable="false">festividad_01</string>
+    <string name="info_celebration_footer_img" translatable="false">festividad_02</string>
     <string name="info_celebration_longtext">El Misterio de Elche es la única muestra viva de las grandes celebraciones dedicadas a la Asunción de la Virgen que desde la Edad Media se extendieron por las tierras de la antigua Corona de Aragón. El Misterio es una celebración festiva, una manifestación de fe, una catequesis dramatizada, y, sobre todo, es la fiesta comunitaria más importante de la ciudad, la Festa por antonomasia. \n\n
 		La celebración está formada por un ciclo de diferentes actos. En los primeros días de agosto tienen lugar algunos actos preparatorios como la Prueba de Voces en donde se escogen las voces infantiles de la obra, o la Prueba del Ángel en la que se comprueba el buen funcionamiento de la tramoya aérea y la serenidad de los pequeños cantores. La festividad tradicional se inicia en la noche del 13 de agosto, con la llamada Nit de l\'Albà. Se trata de un acto comunitario que congrega en las azoteas de la ciudad a todos los ilicitanos que durante una hora lanzan constantemente cohetes y fuegos artificiales, en una ofrenda de luz y sonido a su patrona. \n\n
 		Entre las dos jornadas tradicionales del Misterio, es decir, en la noche y madrugada que va del 14 al 15 de agosto, se desarrolla otro acto popular y festivo: la Roà. Miles de ilicitanos recorren con un cirio encendido las calles de la ciudad por las que, a la mañana siguiente, pasará la procesión de la Virgen. Y, acabada la fiesta, entre el 16 y el 22 de agosto, se desarrolla su octava. Ante la imagen de la Virgen, de nuevo yacente, se celebran las Salves de la Madre de Dios, con una predicación solemne y el canto de unos gozos asuncionistas, posiblemente del siglo XVII. \n\n
 		La devoción popular hacia la Patrona de la ciudad se manifiesta también en diversos detalles, especialmente la numerosa asistencia a las celebraciones, incluidas las misas que, desde las cuatro de la madrugada del día 15 de agosto, se celebran en el mismo cadafal de Santa María. También en el interés manifiesto de recoger fragmentos de oropel caídos del cielo de Santa María o alguna de la hojas de la palma dorada que baja el ángel de la Granada, objetos de devoción que son guardados como verdaderas reliquias. \n\n
     </string>
 
-    <string name="info_recognition_id">recognition</string>
+    <string name="info_recognition_id" translatable="false">recognition</string>
     <string name="info_recognition_title">Reconocimientos</string>
     <string name="info_recognition_subtitle"></string>
-    <string name="info_recognition_thumbnail">reconocimientos_thumb</string>
-    <string name="info_recognition_header_img">reconocimientos_01</string>
-    <string name="info_recognition_footer_img"></string>
+    <string name="info_recognition_thumbnail" translatable="false">reconocimientos_thumb</string>
+    <string name="info_recognition_header_img" translatable="false">reconocimientos_01</string>
+    <string name="info_recognition_footer_img" translatable="false"></string>
     <string name="info_recognition_longtext">En los últimos años, los valores artísticos y tradicionales contenidos en el Misterio de Elche y su carácter único y excepcional, han sido objeto de diferentes reconocimientos y distinciones. Los más destacados son los siguientes:\n\n 
         · 1931: Declaración de Monumento Nacional por el Gobierno de la II República española\n 
         · 1965: Declaración de Fiesta de Interés Turístico Nacional por el Ministerio de Información y Turismo\n 
@@ -291,6 +291,4 @@
 
     <!-- TitleBars-->
     <string name="seleccion_idioma">Selección de idioma</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -20,47 +20,54 @@ class LangSettingActivity : AppCompatActivity() {
         //Lang = ca  Button onClick
         val btn_ca = findViewById<View>(R.id.ca) as ImageView
         btn_ca.setOnClickListener {
-            setDefaultLang(Language.CA.langCode)
+            setDefaultLang(Language.CA.langCode, false)
             navigateToMenu()
         }
 
         //Lang = es  Button onClick
         val btn_es = findViewById<View>(R.id.es) as ImageView
         btn_es.setOnClickListener {
-            setDefaultLang(Language.ES.langCode)
+            setDefaultLang(Language.ES.langCode, false)
+            navigateToMenu()
+        }
+
+        //Lang = es_audio  Button onClick
+        val btn_es_audio = findViewById<View>(R.id.es_audio) as ImageView
+        btn_es_audio.setOnClickListener {
+            setDefaultLang(Language.ES.langCode, true)
             navigateToMenu()
         }
 
         //Lang = en  Button onClick
         val btn_en = findViewById<View>(R.id.en) as ImageView
         btn_en.setOnClickListener {
-            setDefaultLang(Language.EN.langCode)
+            setDefaultLang(Language.EN.langCode, false)
             navigateToMenu()
         }
 
         //Lang = de  Button onClick
         val btn_de = findViewById<View>(R.id.de) as ImageView
         btn_de.setOnClickListener {
-            setDefaultLang(Language.DE.langCode)
+            setDefaultLang(Language.DE.langCode, false)
             navigateToMenu()
         }
 
         //Lang = fr  Button onClick
         val btn_fr = findViewById<View>(R.id.fr) as ImageView
         btn_fr.setOnClickListener {
-            setDefaultLang(Language.FR.langCode)
+            setDefaultLang(Language.FR.langCode, false)
             navigateToMenu()
         }
 
         //Lang = it  Button onClick
         val btn_it = findViewById<View>(R.id.it) as ImageView
         btn_it.setOnClickListener {
-            setDefaultLang(Language.IT.langCode)
+            setDefaultLang(Language.IT.langCode, false)
             navigateToMenu()
         }
     }
 
-    private fun setDefaultLang(lang: String?) {
+    private fun setDefaultLang(lang: String?, audio: Boolean) {
         // In the app context
         val config = resources.configuration
         val locale = lang?.let { Locale(it) }
@@ -74,10 +81,11 @@ class LangSettingActivity : AppCompatActivity() {
         val accountPref = getSharedPreferences(getString(R.string.sharedPreferences), MODE_PRIVATE)
         val editor = accountPref.edit()
         editor.putString(getString(R.string.lang), lang)
+        editor.putBoolean("audioDescription",audio)
         editor.apply()
     }
 
-    fun navigateToMenu() {
+    private fun navigateToMenu() {
         val intent = Intent()
         intent.setClass(applicationContext, MenuActivity::class.java)
         startActivity(intent)

@@ -4,6 +4,8 @@ import android.content.Intent
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.View
+import android.view.View.GONE
+import android.view.View.VISIBLE
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
@@ -17,7 +19,6 @@ import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import es.gorillapp.misteri.castList.CastListActivity
 import es.gorillapp.misteri.data.DirectItem
-import es.gorillapp.misteri.data.Slide
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
@@ -31,11 +32,16 @@ class DirectoActivity : AppCompatActivity() {
     }
 
     private lateinit var directoImageView: ImageView
+    private lateinit var gradientImageView: ImageView
     private lateinit var directoTitle: TextView
     private lateinit var directoTextoOriginal: TextView
     private lateinit var directoTraduccion: TextView
     private lateinit var numDiapositiva: TextView
     private lateinit var directoInfo: TextView
+
+    private lateinit var mediaPlayer: MediaPlayer
+
+    private var currentAudio: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,8 +52,11 @@ class DirectoActivity : AppCompatActivity() {
 
         val accountPrefs = getSharedPreferences(getString(R.string.sharedPreferences), MODE_PRIVATE)
         val defaultLang = accountPrefs.getString(getString(R.string.lang), "es")
+        val isAudiodescrption = accountPrefs.getBoolean("audioDescription", false)
         val url = "https://resources.gorilapp.com/misteri/misteriVivo.php?lang=$defaultLang"
         setContentView(R.layout.activity_directo)
+
+        mediaPlayer = MediaPlayer()
 
         val nameObserver = Observer<DirectItem> { newDirectItem ->
             directoTitle = findViewById(R.id.direct_title)
@@ -55,9 +64,18 @@ class DirectoActivity : AppCompatActivity() {
 
             directoTitle.text = newDirectItem.titulo
             directoImageView.setImageResource( resources.getIdentifier(
-                "drawable/image${newDirectItem.nombreImagen!!.toInt()}",
+                "drawable/image${newDirectItem.nombreImagen!!}",
                 null,
                 this.packageName))
+
+            gradientImageView = findViewById(R.id.imageGradient)
+
+            if(newDirectItem.nombreImagen!! == "interludio"){
+                gradientImageView.visibility = GONE
+            }else{
+                gradientImageView.visibility = VISIBLE
+            }
+
 
             val currentFragment = supportFragmentManager.findFragmentById(R.id.directo_fragment)
             if(currentFragment is DialogoFragment){
@@ -69,18 +87,25 @@ class DirectoActivity : AppCompatActivity() {
                 directoInfo = findViewById(R.id.escena_texto_info)
                 directoInfo.text = newDirectItem.textoInfo
             }
+
+            if(isAudiodescrption){
+                playAudio(mediaPlayer, itemDirecto.value!!.audio)
+            }
+
         }
 
         itemDirecto.observe(this, nameObserver)
 
-        downloadDialogoTask(url)
+        updateItemDirecto(url)
+
+
 
         val fragmentManager = supportFragmentManager
         val toggleButton = findViewById<View>(R.id.toggleButton) as ToggleButton
 
         toggleButton.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
-                updateProgressBar(url)
+                updateItemDirecto(url)
                 val sceneFragment = EscenaFragment()
                 val fragmentTransaction1 = fragmentManager.beginTransaction()
                 val mBundle = Bundle()
@@ -92,7 +117,7 @@ class DirectoActivity : AppCompatActivity() {
 
 
             } else {
-                updateProgressBar(url)
+                updateItemDirecto(url)
                 val dialogFragment = DialogoFragment.newInstance(
                     itemDirecto.value!!.textoOriginal.toString(),
                     itemDirecto.value!!.traduccion.toString())
@@ -112,7 +137,22 @@ class DirectoActivity : AppCompatActivity() {
 
     }
 
-    private fun downloadDialogoTask(url: String){
+    override fun onPause() {
+        super.onPause()
+        mediaPlayer.pause()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        mediaPlayer.release()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        mediaPlayer.start()
+    }
+
+    private fun downloadItemDirecto(url: String){
 
         val queue = Volley.newRequestQueue(this)
 
@@ -130,7 +170,7 @@ class DirectoActivity : AppCompatActivity() {
                     jsonData.getString("info"),
                     jsonData.getString("titulo"),
                     jsonData.getString("nombreImagen"),
-                    jsonData.getString("audio")
+                    jsonData.getInt("audio")
                 )
 
                 itemDirecto.value = newItemDirecto
@@ -141,14 +181,14 @@ class DirectoActivity : AppCompatActivity() {
 
     }
 
-    private fun updateProgressBar(url: String){
+    private fun updateItemDirecto(url: String){
         // task is run on a thread
         this.lifecycleScope.launch {
-            withContext(Dispatchers.Default){
-                while (true) {
+            withContext(Dispatchers.IO){
+                while (this.isActive) {
                     // performing some dummy operation
                     try {
-                        downloadDialogoTask(url)
+                        downloadItemDirecto(url)
                         Thread.sleep(2000)
                     } catch (e: InterruptedException) {
                         e.printStackTrace()
@@ -157,6 +197,34 @@ class DirectoActivity : AppCompatActivity() {
 
                 }
             }
+        }
+    }
+
+    private fun playAudio(mediaPlayer: MediaPlayer, audio: Int){
+        if(currentAudio != audio){
+            if(mediaPlayer.isPlaying){
+                mediaPlayer.pause()
+                mediaPlayer.stop()
+                mediaPlayer.reset()
+            }else if(itemDirecto.value?.nombreImagen == "interludio"){
+                mediaPlayer.reset()
+            }
+            val url = "https://resources.gorilapp.com/misteri/audiodirect/audio_direct_$audio.mp3"
+
+            try{
+                mediaPlayer.setDataSource(url)
+                mediaPlayer.prepare()
+
+                mediaPlayer.setOnPreparedListener {
+                    mediaPlayer.start()
+                }
+            }catch(e: Exception){
+                e.printStackTrace()
+            }finally{
+                currentAudio = audio
+            }
+
+
         }
     }
 }

@@ -6,5 +6,5 @@ class DirectItem (
     var textoInfo: String?,
     var titulo: String?,
     var nombreImagen: String?,
-    var audio: String?,
+    var audio: Int,
 )
