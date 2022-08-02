@@ -1,6 +1,7 @@
 package es.gorillapp.misteri.sceneList
 
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
@@ -14,10 +15,19 @@ import es.gorillapp.misteri.data.sceneFestaList
 import es.gorillapp.misteri.data.sceneVespraList
 import es.gorillapp.misteri.R
 import es.gorillapp.misteri.infoList.InfoListActivity
+import es.gorillapp.misteri.isTablet
 
 class SceneListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        //Set orientation of layout  based on if is tablet or smartphone
+        requestedOrientation = if(isTablet(this)){
+            ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
+        }else{
+            ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+        }
+
         val window = this.window
         window.statusBarColor = this.resources.getColor(R.color.misteri_yellow_2)
         setContentView(R.layout.scene_list)

@@ -56,9 +56,6 @@ class DialogoFragment : Fragment() {
         val translateTextView = view?.findViewById<View>(R.id.dialogo_traduccion) as TextView
         originalTextView.text = param1
         translateTextView.text = param2
-
-
-
     }
 
     private fun downloadDialogoTask(url: String?){

@@ -2,6 +2,7 @@ package es.gorillapp.misteri
 
 import android.app.Activity
 import android.content.Context
+import android.content.res.Configuration
 import android.net.ConnectivityManager
 import android.net.NetworkInfo
 import com.android.volley.*
@@ -45,4 +46,11 @@ fun Activity.getVolleyError(error: VolleyError): String {
         errorMsg = "An unknown error occurred during the operation, please try again"
     }
     return errorMsg
+}
+
+fun isTablet(context: Context): Boolean {
+    val xlarge = context.resources.configuration.screenLayout and Configuration.SCREENLAYOUT_SIZE_MASK === Configuration.SCREENLAYOUT_SIZE_XLARGE
+    val large =
+        context.resources.configuration.screenLayout and Configuration.SCREENLAYOUT_SIZE_MASK === Configuration.SCREENLAYOUT_SIZE_LARGE
+    return xlarge || large
 }

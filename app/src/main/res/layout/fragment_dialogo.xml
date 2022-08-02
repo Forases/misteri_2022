@@ -22,5 +22,6 @@
         android:fontFamily="@font/playfairdisplay_black"
         android:padding="24dp"
         android:textColor="@color/misteri_black"
+        android:background="@color/misteri_bone"
         android:textSize="20sp"/>
 </LinearLayout>

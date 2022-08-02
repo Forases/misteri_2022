@@ -1,6 +1,7 @@
 package es.gorillapp.misteri.castList
 
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.view.View
 import android.view.View.GONE
@@ -14,12 +15,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.android.volley.*
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
-import es.gorillapp.misteri.DirectoActivity
-import es.gorillapp.misteri.MenuActivity
-import es.gorillapp.misteri.data.CastItem
-import es.gorillapp.misteri.getVolleyError
-import org.json.JSONArray
+import es.gorillapp.misteri.*
 import es.gorillapp.misteri.R
+import es.gorillapp.misteri.data.CastItem
+import org.json.JSONArray
 import es.gorillapp.misteri.infoList.InfoListActivity
 
 
@@ -33,6 +32,13 @@ class CastListActivity : AppCompatActivity() {
     var escolanosList = ArrayList<CastItem>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        //Set orientation of layout  based on if is tablet or smartphone
+        requestedOrientation = if(isTablet(this)){
+            ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
+        }else{
+            ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+        }
 
         //set statusBarColor
         val window = this.window

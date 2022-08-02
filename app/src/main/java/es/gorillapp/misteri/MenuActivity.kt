@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.app.ActivityOptions
 import android.app.AlertDialog
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.graphics.Bitmap
 import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.Drawable
@@ -34,6 +35,13 @@ class MenuActivity : AppCompatActivity() {
     //	BroadcastReceiver downloadCompleteReceiver = null;
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        //Set orientation of layout  based on if is tablet or smartphone
+        requestedOrientation = if(isTablet(this)){
+            ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
+        }else{
+            ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+        }
 
         //set statusBarColor
         val window = this.window

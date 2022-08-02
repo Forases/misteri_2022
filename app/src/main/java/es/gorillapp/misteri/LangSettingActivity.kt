@@ -1,6 +1,7 @@
 package es.gorillapp.misteri
 
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
@@ -10,6 +11,13 @@ import java.util.*
 class LangSettingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        //Set orientation of layout  based on if is tablet or smartphone
+        requestedOrientation = if(isTablet(this)){
+            ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
+        }else{
+            ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+        }
 
         //set statusBarColor
         val window = this.window

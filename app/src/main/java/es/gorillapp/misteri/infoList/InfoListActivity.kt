@@ -1,6 +1,7 @@
 package es.gorillapp.misteri.infoList
 
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -13,10 +14,18 @@ import es.gorillapp.misteri.R
 import es.gorillapp.misteri.data.InfoItem
 import es.gorillapp.misteri.data.firstColumnList
 import es.gorillapp.misteri.data.secondColumnList
+import es.gorillapp.misteri.isTablet
 
 class InfoListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        //Set orientation of layout  based on if is tablet or smartphone
+        requestedOrientation = if(isTablet(this)){
+            ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
+        }else{
+            ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+        }
 
         //set statusBarColor
         val window = this.window

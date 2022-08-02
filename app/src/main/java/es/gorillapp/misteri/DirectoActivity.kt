@@ -1,6 +1,8 @@
 package es.gorillapp.misteri
 
 import android.content.Intent
+import android.content.pm.ActivityInfo
+import android.content.res.Configuration
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.View
@@ -46,6 +48,13 @@ class DirectoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        //Set orientation of layout  based on if is tablet or smartphone
+        requestedOrientation = if(isTablet(this)){
+            ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
+        }else{
+            ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+        }
+
         //set statusBarColor
         val window = this.window
         window.statusBarColor = this.resources.getColor(R.color.misteri_yellow_2)
@@ -57,6 +66,8 @@ class DirectoActivity : AppCompatActivity() {
         setContentView(R.layout.activity_directo)
 
         mediaPlayer = MediaPlayer()
+
+        val fragmentManager = supportFragmentManager
 
         val nameObserver = Observer<DirectItem> { newDirectItem ->
             directoTitle = findViewById(R.id.direct_title)
@@ -88,46 +99,45 @@ class DirectoActivity : AppCompatActivity() {
                 directoInfo.text = newDirectItem.textoInfo
             }
 
+            if(resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE){
+                directoInfo = findViewById(R.id.escena_texto_info)
+                directoInfo.text = newDirectItem.textoInfo
+            }
+
             if(isAudiodescrption){
                 playAudio(mediaPlayer, itemDirecto.value!!.audio)
             }
-
         }
 
         itemDirecto.observe(this, nameObserver)
 
         updateItemDirecto(url)
 
+        if(resources.configuration.orientation != Configuration.ORIENTATION_LANDSCAPE){
+            val toggleButton = findViewById<View>(R.id.toggleButton) as ToggleButton
 
+            toggleButton.setOnCheckedChangeListener { _, isChecked ->
+                if (isChecked) {
+                    updateItemDirecto(url)
+                    val sceneFragment = EscenaFragment.newInstance(itemDirecto.value!!.textoInfo.toString())
+                    val fragmentTransaction1 = fragmentManager.beginTransaction()
+                    fragmentTransaction1.replace(R.id.directo_fragment, sceneFragment)
+                    fragmentTransaction1.commit()
 
-        val fragmentManager = supportFragmentManager
-        val toggleButton = findViewById<View>(R.id.toggleButton) as ToggleButton
-
-        toggleButton.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) {
-                updateItemDirecto(url)
-                val sceneFragment = EscenaFragment()
-                val fragmentTransaction1 = fragmentManager.beginTransaction()
-                val mBundle = Bundle()
-                mBundle.putString("infoText", itemDirecto.value!!.textoInfo)
-                sceneFragment.arguments = mBundle
-                fragmentTransaction1.replace(R.id.directo_fragment, sceneFragment)
-                fragmentTransaction1.commit()
-
-
-
-            } else {
-                updateItemDirecto(url)
-                val dialogFragment = DialogoFragment.newInstance(
-                    itemDirecto.value!!.textoOriginal.toString(),
-                    itemDirecto.value!!.traduccion.toString())
-                // The toggle is disabled
-                val fragmentTransaction2 = fragmentManager.beginTransaction()
-                fragmentTransaction2.replace(R.id.directo_fragment, dialogFragment)
-                fragmentTransaction2.commit()
+                } else {
+                    updateItemDirecto(url)
+                    val dialogFragment = DialogoFragment.newInstance(
+                        itemDirecto.value!!.textoOriginal.toString(),
+                        itemDirecto.value!!.traduccion.toString())
+                    // The toggle is disabled
+                    val fragmentTransaction2 = fragmentManager.beginTransaction()
+                    fragmentTransaction2.replace(R.id.directo_fragment, dialogFragment)
+                    fragmentTransaction2.commit()
+                }
             }
-        }
+        }else{
 
+        }
         val backButton = findViewById<View>(R.id.back_directo) as ImageView
         backButton.setOnClickListener {
             val intent = Intent()
