@@ -16,6 +16,7 @@
         <entry key="..\:/MISTERI/Misteri_2022/app/src/main/res/drawable/rounded_button.xml" value="0.318" />
         <entry key="..\:/MISTERI/Misteri_2022/app/src/main/res/drawable/shape.xml" value="0.1295" />
         <entry key="..\:/MISTERI/Misteri_2022/app/src/main/res/drawable/toggle_selector.xml" value="0.495" />
+        <entry key="..\:/MISTERI/Misteri_2022/app/src/main/res/layout-sw600dp/menu.xml" value="0.33" />
         <entry key="..\:/MISTERI/Misteri_2022/app/src/main/res/layout/activity_audio.xml" value="0.33" />
         <entry key="..\:/MISTERI/Misteri_2022/app/src/main/res/layout/activity_cast.xml" value="0.31354166666666666" />
         <entry key="..\:/MISTERI/Misteri_2022/app/src/main/res/layout/activity_cast_list.xml" value="0.22" />
@@ -41,7 +42,7 @@
         <entry key="..\:/MISTERI/Misteri_2022/app/src/main/res/layout/info_item.xml" value="0.33" />
         <entry key="..\:/MISTERI/Misteri_2022/app/src/main/res/layout/lang_setting.xml" value="0.1661600810536981" />
         <entry key="..\:/MISTERI/Misteri_2022/app/src/main/res/layout/lang_settings.xml" value="0.27808988764044945" />
-        <entry key="..\:/MISTERI/Misteri_2022/app/src/main/res/layout/menu.xml" value="0.5" />
+        <entry key="..\:/MISTERI/Misteri_2022/app/src/main/res/layout/menu.xml" value="0.354424967935015" />
         <entry key="..\:/MISTERI/Misteri_2022/app/src/main/res/layout/scene_item.xml" value="0.4548952543822146" />
         <entry key="..\:/MISTERI/Misteri_2022/app/src/main/res/layout/scene_list.xml" value="0.33" />
         <entry key="..\:/MISTERI/Misteri_2022/app/src/main/res/layout/scene_list_item.xml" value="0.33" />
