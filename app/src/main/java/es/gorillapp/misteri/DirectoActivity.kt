@@ -36,9 +36,9 @@ class DirectoActivity : AppCompatActivity() {
     private lateinit var directoImageView: ImageView
     private lateinit var gradientImageView: ImageView
     private lateinit var directoTitle: TextView
+    private lateinit var actoTitulo: TextView
     private lateinit var directoTextoOriginal: TextView
     private lateinit var directoTraduccion: TextView
-    private lateinit var numDiapositiva: TextView
     private lateinit var directoInfo: TextView
 
     private lateinit var mediaPlayer: MediaPlayer
@@ -68,8 +68,14 @@ class DirectoActivity : AppCompatActivity() {
 
         val nameObserver = Observer<DirectItem> { newDirectItem ->
             directoTitle = findViewById(R.id.direct_title)
+            actoTitulo = findViewById(R.id.actoTitulo)
             directoImageView = findViewById(R.id.directo_image)
 
+            if(newDirectItem.audio > 30){
+                actoTitulo.text = resources.getString(R.string.segundo_acto)
+            }else{
+                actoTitulo.text = resources.getString(R.string.primer_acto)
+            }
             directoTitle.text = newDirectItem.titulo
             directoImageView.setImageResource( resources.getIdentifier(
                 "drawable/image${newDirectItem.nombreImagen!!}",
@@ -79,8 +85,12 @@ class DirectoActivity : AppCompatActivity() {
             gradientImageView = findViewById(R.id.imageGradient)
 
             if(newDirectItem.nombreImagen!! == "interludio"){
+                actoTitulo.visibility = GONE
+                directoTitle.visibility = GONE
                 gradientImageView.visibility = GONE
             }else{
+                actoTitulo.visibility = VISIBLE
+                directoTitle.visibility = VISIBLE
                 gradientImageView.visibility = VISIBLE
             }
 

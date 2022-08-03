@@ -115,6 +115,8 @@
     <string name="cast17" translatable="false">Araceli</string>
     <string name="cast18" translatable="false">Coronació</string>
     <string name="live">En directo</string>
+    <string name="primer_acto">PRIMER ACTO</string>
+    <string name="segundo_acto">SEGUNDO ACTO</string>
     <string name="cast_response_keys" translatable="false">apostolat-joan-tomas-pere-ternari-tenors1-granrabi-tenors2-baritons-baixos-mariamajor-mariasalome-mariaiacobe-angelsdecoixi-angelsdemantell-angel-araceli-coronacio</string>
     <string name="live_originalText_key" translatable="false">textoOriginal</string>
     <string name="live_translationText_key" translatable="false">traduccion</string>

@@ -74,4 +74,6 @@
     <string name="cred_title8">OSPITATO DA</string>
     <string name="creditos">Informazioni e Crediti</string>
     <string name="seleccion_idioma">Selezione della lingua</string>
+    <string name="primer_acto">ATTO PRIMO</string>
+    <string name="segundo_acto">ATTO SECONDO</string>
 </resources>

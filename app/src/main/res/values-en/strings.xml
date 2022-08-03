@@ -111,4 +111,6 @@
     <string name="creditos">Information and Credits</string>
     <string name="seleccion_idioma">Language selection</string>
     <string name="live">Live</string>
+    <string name="primer_acto">FIRST ACT</string>
+    <string name="segundo_acto">SECOND ACT</string>
 </resources>

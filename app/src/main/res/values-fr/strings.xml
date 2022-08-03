@@ -122,4 +122,6 @@
     <string name="creditos">Informations et Crédits</string>
     <string name="seleccion_idioma">Sélection de la langue</string>
     <string name="live">En direct</string>
+    <string name="primer_acto">PREMIER ACTE</string>
+    <string name="segundo_acto">DEUXIÈME ACTE</string>
 </resources>

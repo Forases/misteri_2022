@@ -24,10 +24,6 @@ class Splash : AppCompatActivity() {
 
         downloadTask(this)
 
-        //Set orientation of layout  based on if is tablet or smartphone
-        if(isTablet(this))
-            requestedOrientation =  ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
-
         //set statusBarColor
         val window = this.window
         window.statusBarColor = this.resources.getColor(R.color.misteri_yellow_2)

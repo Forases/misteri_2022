@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import es.gorillapp.misteri.castList.CastListActivity
 import java.util.*
 
 class LangSettingActivity : AppCompatActivity() {
@@ -69,6 +70,13 @@ class LangSettingActivity : AppCompatActivity() {
         btn_it.setOnClickListener {
             setDefaultLang(Language.IT.langCode, false)
             navigateToMenu()
+        }
+
+        val backButton = findViewById<View>(R.id.back_language) as ImageView
+        backButton.setOnClickListener {
+            val intent = Intent()
+            intent.setClass(applicationContext, MenuActivity::class.java)
+            startActivity(intent)
         }
     }
 

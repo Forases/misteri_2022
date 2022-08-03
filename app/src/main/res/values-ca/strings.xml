@@ -118,4 +118,6 @@
     <string name="creditos">Informació i Crèdits</string>
     <string name="seleccion_idioma">Selecció d´idioma</string>
     <string name="live">En directe</string>
+    <string name="primer_acto">PRIMER ACTE</string>
+    <string name="segundo_acto">SEGON ACTE</string>
 </resources>
