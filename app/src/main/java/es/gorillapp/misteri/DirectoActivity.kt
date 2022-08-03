@@ -49,11 +49,8 @@ class DirectoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         //Set orientation of layout  based on if is tablet or smartphone
-        requestedOrientation = if(isTablet(this)){
-            ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
-        }else{
-            ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
-        }
+        if(isTablet(this))
+            requestedOrientation =  ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
 
         //set statusBarColor
         val window = this.window
@@ -99,7 +96,7 @@ class DirectoActivity : AppCompatActivity() {
                 directoInfo.text = newDirectItem.textoInfo
             }
 
-            if(resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE){
+            if(isTablet(this)){
                 directoInfo = findViewById(R.id.escena_texto_info)
                 directoInfo.text = newDirectItem.textoInfo
             }
@@ -113,7 +110,7 @@ class DirectoActivity : AppCompatActivity() {
 
         updateItemDirecto(url)
 
-        if(resources.configuration.orientation != Configuration.ORIENTATION_LANDSCAPE){
+        if(!isTablet(this)){
             val toggleButton = findViewById<View>(R.id.toggleButton) as ToggleButton
 
             toggleButton.setOnCheckedChangeListener { _, isChecked ->

@@ -18,11 +18,8 @@ class Splash : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         //Set orientation of layout  based on if is tablet or smartphone
-        requestedOrientation = if(isTablet(this)){
-            ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
-        }else{
-            ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
-        }
+        if(isTablet(this))
+            requestedOrientation =  ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
 
         //set statusBarColor
         val window = this.window

@@ -56,11 +56,8 @@ class ListenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         //Set orientation of layout  based on if is tablet or smartphone
-        requestedOrientation = if(isTablet(this)){
-            ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
-        }else{
-            ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
-        }
+        if(isTablet(this))
+            requestedOrientation =  ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
 
         //set statusBarColor
         val window = this.window
@@ -138,11 +135,8 @@ class ListenActivity : AppCompatActivity() {
 
         toggleButton.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
-                val sceneFragment = EscenaFragment()
+                val sceneFragment = EscenaFragment.newInstance(currentSlide.value!!.info.toString())
                 val fragmentTransaction1 = fragmentManager.beginTransaction()
-                val mBundle = Bundle()
-                mBundle.putString("infoText", currentSlide.value!!.info)
-                sceneFragment.arguments = mBundle
                 fragmentTransaction1.replace(R.id.directo_fragment, sceneFragment)
                 fragmentTransaction1.commit()
             } else {

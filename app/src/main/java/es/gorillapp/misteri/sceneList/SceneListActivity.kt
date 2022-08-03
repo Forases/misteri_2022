@@ -22,11 +22,8 @@ class SceneListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         //Set orientation of layout  based on if is tablet or smartphone
-        requestedOrientation = if(isTablet(this)){
-            ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
-        }else{
-            ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
-        }
+        if(isTablet(this))
+            requestedOrientation =  ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
 
         val window = this.window
         window.statusBarColor = this.resources.getColor(R.color.misteri_yellow_2)
