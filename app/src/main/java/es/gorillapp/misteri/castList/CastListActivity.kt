@@ -46,7 +46,7 @@ class CastListActivity : AppCompatActivity() {
         val accountPrefs = getSharedPreferences(getString(R.string.sharedPreferences), MODE_PRIVATE)
         val isRepresentationDay = accountPrefs.getBoolean(getString(R.string.isRepresentationDay), false)
 
-        if(!isRepresentationDay) muteDeviceAdvice(this)
+        if(isRepresentationDay) muteDeviceAdvice(this)
 
         downloadTask()
 
