@@ -107,6 +107,11 @@ class ListenActivity : AppCompatActivity() {
                 info.text = newSlide.info
             }
 
+            if(isTablet(this)){
+                info = findViewById(R.id.escena_texto_info)
+                info.text = newSlide.info
+            }
+
             if(newSlide.numDiapositiva < 31){
                 cabecera.text = resources.getString(R.string.scene_vespra)
             }else{
@@ -131,25 +136,28 @@ class ListenActivity : AppCompatActivity() {
 
         setOnClickListeners()
 
-        val toggleButton = findViewById<View>(R.id.toggleListenButton) as ToggleButton
+        if(!isTablet(this)){
+            val toggleButton = findViewById<View>(R.id.toggleListenButton) as ToggleButton
 
-        toggleButton.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) {
-                val sceneFragment = EscenaFragment.newInstance(currentSlide.value!!.info.toString())
-                val fragmentTransaction1 = fragmentManager.beginTransaction()
-                fragmentTransaction1.replace(R.id.directo_fragment, sceneFragment)
-                fragmentTransaction1.commit()
-            } else {
+            toggleButton.setOnCheckedChangeListener { _, isChecked ->
+                if (isChecked) {
+                    val sceneFragment = EscenaFragment.newInstance(currentSlide.value!!.info.toString())
+                    val fragmentTransaction1 = fragmentManager.beginTransaction()
+                    fragmentTransaction1.replace(R.id.directo_fragment, sceneFragment)
+                    fragmentTransaction1.commit()
+                } else {
 
-                val dialogFragment = DialogoFragment.newInstance(
-                    currentSlide.value!!.textoOriginal.toString(),
-                    currentSlide.value!!.traduccion.toString())
-                // The toggle is disabled
-                val fragmentTransaction2 = fragmentManager.beginTransaction()
-                fragmentTransaction2.replace(R.id.directo_fragment, dialogFragment)
-                fragmentTransaction2.commit()
+                    val dialogFragment = DialogoFragment.newInstance(
+                        currentSlide.value!!.textoOriginal.toString(),
+                        currentSlide.value!!.traduccion.toString())
+                    // The toggle is disabled
+                    val fragmentTransaction2 = fragmentManager.beginTransaction()
+                    fragmentTransaction2.replace(R.id.directo_fragment, dialogFragment)
+                    fragmentTransaction2.commit()
+                }
             }
         }
+
 
         val backButton = findViewById<View>(R.id.back_listen) as ImageView
         backButton.setOnClickListener {

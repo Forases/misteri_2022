@@ -49,6 +49,7 @@
 
     <string name="sharedPreferences" translatable="false">es.gorillap.misteri.SETTINGS</string>
     <string name="lang" translatable="false">lang</string>
+    <string name="isRepresentationDay" translatable="false">isRepresentationDay</string>
     <string name="user_ringmode" translatable="false">user_ringmode</string>
     <string name="are_audios_downloaded" translatable="false">are_audios_downloaded</string>
 
@@ -61,7 +62,7 @@
     <string name="dialog_btn_accept">Aceptar</string>
     <string name="dialog_btn_cancel">Cancelar</string>
     <string name="warning_live_mute_title">¡Atención!</string>
-    <string name="warning_live_mute_msg">Su dispositivo ha sido silenciado.\n El dispositivo debe de permanecer en silencio durante la representación. Muchas gracias por su colaboración.</string>
+    <string name="warning_live_mute_msg">SILENCIE SU DISPOSITIVO.\n El dispositivo debe de permanecer en silencio durante la representación. Muchas gracias por su colaboración.</string>
     <string name="warning_no_listen_title">¡Atención!</string>
     <string name="warning_no_listen_msg">Opción no disponible en días de representación. Disculpe las molestias.</string>
     <string name="dialog_download_title">Información importante</string>
@@ -114,15 +115,15 @@
     <string name="cast17" translatable="false">Araceli</string>
     <string name="cast18" translatable="false">Coronació</string>
     <string name="live">En directo</string>
-    <string name="cast_response_keys">apostolat-joan-tomas-pere-ternari-tenors1-granrabi-tenors2-baritons-baixos-mariamajor-mariasalome-mariaiacobe-angelsdecoixi-angelsdemantell-angel-araceli-coronacio</string>
-    <string name="live_originalText_key">textoOriginal</string>
-    <string name="live_translationText_key">traduccion</string>
-    <string name="live_info_key">info</string>
-    <string name="live_title_key">titulo</string>
-    <string name="live_imageName_key">nombreImagen</string>
-    <string name="liveinfo_infotext">info</string>
-    <string name="liveinfo_titletext">title</string>
-    <string name="liveinfo_image_id">imageId</string>
+    <string name="cast_response_keys" translatable="false">apostolat-joan-tomas-pere-ternari-tenors1-granrabi-tenors2-baritons-baixos-mariamajor-mariasalome-mariaiacobe-angelsdecoixi-angelsdemantell-angel-araceli-coronacio</string>
+    <string name="live_originalText_key" translatable="false">textoOriginal</string>
+    <string name="live_translationText_key" translatable="false">traduccion</string>
+    <string name="live_info_key" translatable="false">info</string>
+    <string name="live_title_key" translatable="false">titulo</string>
+    <string name="live_imageName_key" translatable="false">nombreImagen</string>
+    <string name="liveinfo_infotext" translatable="false">info</string>
+    <string name="liveinfo_titletext" translatable="false">title</string>
+    <string name="liveinfo_image_id" translatable="false">imageId</string>
 
 
     <!-- Menu option 2. Scene player activities-->
@@ -199,28 +200,22 @@
 
     <!-- Menu option 3. Information and history activities-->
     <string name="info">Información</string>
-    <string name="info_history_id">history</string>
+    <string name="info_history_id" translatable="false">history</string>
     <string name="info_history_title">Historia</string>
     <string name="info_history_subtitle">El origen del Misteri d\'Elx</string>
     <string name="info_history_thumbnail" translatable="false">historia_thumb</string>
     <string name="info_history_header_img" translatable="false">historia_01</string>
     <string name="info_history_footer_img" translatable="false">historia_02</string>
-    <string name="info_history_longtext_1">El origen del Misterio de Elche no se ha podido determinar todavía con exactitud por falta de documentación. Sobre su nacimiento existen dos tradiciones locales. Una de ellas vincula la creación de la Festa con la conquista del Elche musulmán por las tropas aragonesas de Jaume I de Aragón, en 1265, es decir al nacimiento de la villa a la civilización cristiana. Otra tradición legendaria intenta dar al nacimiento del Misterio un origen milagroso y lo relaciona con la aparición o "Venida" de la imagen de la Virgen ilicitana el 29 de diciembre de 1370. De esta manera, el consueta de la Festa se habría hallado, junto a la figura mariana que la protagoniza, en el interior de una arca de madera que flotaba sobre las aguas del mar Mediterráneo, en la cercana playa del Tamarit (hoy, de Santa Pola), y que fue encontrado por el soldado guardacostas Francesc Cantó.</string>
-    <string name="info_history_longtext_2">Sin embargo, las investigaciones desarrolladas en los últimos tiempos, tanto sobre la obra ilicitana, como sobre el teatro medieval europeo en general, proponen la segunda mitad del siglo XV -etapa en que se detecta un auge en el teatro de temática asuncionista- como la época más probable para datar el Misterio de Elche.\n\n Si realizamos un breve recorrido a través de la documentación histórica de la obra, veremos como en sus comienzos estuvo organizada por algunas familias de la pequeña nobleza local, como los Perpinyà o los Caro. La referencia documental más antigua de la Festa conocida hasta ahora, se halla en el testamento de la ilicitana Isabel Caro, de 1523, en donde legaba algunos fondos para continuar una "grandísima fiesta y solemnidad" que los religiosos de la villa realizaban en la iglesia de Santa María durante la festividad de la Asunción de la Madre de Dios, en honor a una imagen de la Virgen que la testadora poseía en su casa y que, tras su muerte, debía pasar a la ermita de San Sebastián.\n\n Tenemos noticias de la existencia en la villa en 1530 de una Cofradía de Nuestra Señora de la Asunción que, con sede en la citada ermita de San Sebastián, era la encargada de preparar la festividad. Esta cofradía se hallaba presidida por unos clavarios y mayordomos y, además de las aportaciones de los cofrades y de las limosnas recogidas, contaba con ayudas anuales del Consejo municipal.</string>
-    <string name="info_history_longtext">La tradición vincula el nacimiento del Misterio de Elche a la conquista del Elche musulmán por las tropas aragonesas de Jaime I de Aragón, en 1265. Otros relatos lo relacionan con la milagrosa aparición o "Venida" de la imagen de la Virgen ilicitana el 29 de diciembre de 1370. Las últimas investigaciones proponen la segunda mitad del siglo XV como la época más probable para datar el origen de la celebración. \n\n
-        En sus comienzos estuvo organizada por algunas familias de la pequeña nobleza local, como los Perpiñán o los Caro. La referencia documental más antigua se halla en el testamento de la ilicitana Isabel Caro, de 1523. En 1530 ya se documenta una Cofradía de Nuestra Señora de la Asunción que, con sede en la ermita de San Sebastián (hoy Museo Municipal de la Festa), era la encargada de preparar la festividad. \n\n
-		En 1609, ante la falta de recursos económicos de dicha Cofradía, el Consejo de la villa tomó el acuerdo de hacerse cargo de la organización y financiación de la Festa, para lo que estableció una serie de impuestos municipales. \n\n
-		Las directrices del Concilio de Trento, que prohibían representaciones en el interior de las iglesias, hicieron buscar la protección papal: Urbano VIII remitió un privilegio fechado en 1632 que aseguró la continuidad de la Festa. \n\n
-		Ante la decadencia experimentada por la obra en el siglo XIX, en 1924 se llevó a cabo una revisión escénica y musical. La partitura fue depurada por el músico alicantino Oscar Esplá. En 1931 el Misterio fue declarado Monumento Nacional por el Gobierno de la II República. \n\n
-		En 1940 se organizó la llamada Junta Nacional Restauradora del Misterio de Elche y de sus Templos, con la misión de restaurar la iglesia de Santa María y recuperar  el Misterio, suspendido durante la Guerra Civil. En 1948 esta Junta fue transformada en el Patronato Nacional del Misterio de Elche y, a partir de la aprobación de la Ley del Misteri d’Elx por las Cortes Valencianas, en diciembre de 2005, en el actual Patronat del Misteri d’Elx, con el soporte institucional del Ayuntamiento de Elche, la Generalitat Valenciana y el Obispado de Orihuela-Alicante.
-	</string>
+    <string name="info_history_longtext_1" translatable="false">El origen del Misterio de Elche no se ha podido determinar todavía con exactitud por falta de documentación. Sobre su nacimiento existen dos tradiciones locales. Una de ellas vincula la creación de la Festa con la conquista del Elche musulmán por las tropas aragonesas de Jaume I de Aragón, en 1265, es decir al nacimiento de la villa a la civilización cristiana. Otra tradición legendaria intenta dar al nacimiento del Misterio un origen milagroso y lo relaciona con la aparición o "Venida" de la imagen de la Virgen ilicitana el 29 de diciembre de 1370. De esta manera, el consueta de la Festa se habría hallado, junto a la figura mariana que la protagoniza, en el interior de una arca de madera que flotaba sobre las aguas del mar Mediterráneo, en la cercana playa del Tamarit (hoy, de Santa Pola), y que fue encontrado por el soldado guardacostas Francesc Cantó.</string>
+    <string name="info_history_longtext_2" translatable="false">Sin embargo, las investigaciones desarrolladas en los últimos tiempos, tanto sobre la obra ilicitana, como sobre el teatro medieval europeo en general, proponen la segunda mitad del siglo XV -etapa en que se detecta un auge en el teatro de temática asuncionista- como la época más probable para datar el Misterio de Elche.\n\n Si realizamos un breve recorrido a través de la documentación histórica de la obra, veremos como en sus comienzos estuvo organizada por algunas familias de la pequeña nobleza local, como los Perpinyà o los Caro. La referencia documental más antigua de la Festa conocida hasta ahora, se halla en el testamento de la ilicitana Isabel Caro, de 1523, en donde legaba algunos fondos para continuar una "grandísima fiesta y solemnidad" que los religiosos de la villa realizaban en la iglesia de Santa María durante la festividad de la Asunción de la Madre de Dios, en honor a una imagen de la Virgen que la testadora poseía en su casa y que, tras su muerte, debía pasar a la ermita de San Sebastián.\n\n Tenemos noticias de la existencia en la villa en 1530 de una Cofradía de Nuestra Señora de la Asunción que, con sede en la citada ermita de San Sebastián, era la encargada de preparar la festividad. Esta cofradía se hallaba presidida por unos clavarios y mayordomos y, además de las aportaciones de los cofrades y de las limosnas recogidas, contaba con ayudas anuales del Consejo municipal.</string>
+    <string name="info_history_longtext">La tradición vincula el nacimiento del Misterio de Elche a la conquista del Elche musulmán por las tropas aragonesas de Jaime I de Aragón, en 1265. Otros relatos lo relacionan con la milagrosa aparición o Venida de la imagen de la Virgen ilicitana el 29 de diciembre de 1370. Las últimas investigaciones proponen la segunda mitad del siglo XV como la época más probable para datar el origen de la celebración.            En sus comienzos estuvo organizada por algunas familias de la pequeña nobleza local, como los Perpiñán o los Caro. La referencia documental más antigua se halla en el testamento de la ilicitana Isabel Caro, de 1523. En 1530 ya se documenta una Cofradía de Nuestra Señora de la Asunción que, con sede en la ermita de San Sebastián (hoy Museo Municipal de la Festa), era la encargada de preparar la festividad.    \t\tEn 1609, ante la falta de recursos económicos de dicha Cofradía, el Consejo de la villa tomó el acuerdo de hacerse cargo de la organización y financiación de la Festa, para lo que estableció una serie de impuestos municipales.    \t\tLas directrices del Concilio de Trento, que prohibían representaciones en el interior de las iglesias, hicieron buscar la protección papal: Urbano VIII remitió un privilegio fechado en 1632 que aseguró la continuidad de la Festa.    \t\tAnte la decadencia experimentada por la obra en el siglo XIX, en 1924 se llevó a cabo una revisión escénica y musical. La partitura fue depurada por el músico alicantino Oscar Esplá. En 1931 el Misterio fue declarado Monumento Nacional por el Gobierno de la II República.    \t\tEn 1940 se organizó la llamada Junta Nacional Restauradora del Misterio de Elche y de sus Templos, con la misión de restaurar la iglesia de Santa María y recuperar  el Misterio, suspendido durante la Guerra Civil. En 1948 esta Junta fue transformada en el Patronato Nacional del Misterio de Elche y, a partir de la aprobación de la Ley del Misteri d’Elx por las Cortes Valencianas, en diciembre de 2005, en el actual Patronat del Misteri d’Elx, con el soporte institucional del Ayuntamiento de Elche, la Generalitat Valenciana y el Obispado de Orihuela-Alicante. \t</string>
 
-    <string name="info_text_id">text</string>
+    <string name="info_text_id" translatable="false">text</string>
     <string name="info_text_title">Texto</string>
     <string name="info_text_subtitle">El texto literario del Misterio</string>
-    <string name="info_text_thumbnail">texto_thumb</string>
-    <string name="info_text_header_img">texto_01</string>
-    <string name="info_text_footer_img"></string>
+    <string name="info_text_thumbnail" translatable="false">texto_thumb</string>
+    <string name="info_text_header_img" translatable="false">texto_01</string>
+    <string name="info_text_footer_img" translatable="false"></string>
     <string name="info_text_longtext">El texto literario del Misterio de Elche, escrito en valenciano y con un salmo y algunos versos latinos, consta de doscientos cincuenta y nueve versos que aparecen distribuidos en estrofas de diversos tipos. \n\n
 		Los textos literario y musical, así como las acotaciones escénicas, se han conservado en unos manuscritos denominados consuetas. El primero está fechada en 1625 y es una copia del original que guardaba el Consejo de la villa realizada por Gaspar Soler Chacón. Ni el original ni esta copia se conservan actualmente, pero nos son conocidos por la edición realizada por el que fuera cronista de Elche, Pedro Ibarra i Ruiz (1858-1934). \n\n
 		En el año 1639, "un devoto" realizó una nueva copia del manuscrito oficial. Incluyó anotaciones con los nombres de los compositores que participaron en la reforma polifónica del Misterio, en el siglo XVI. Esta copia del consueta también nos es conocida únicamente a través de una edición parcial realizada por el publicista murciano Javier Fuentes y Ponte (1830-1903). \n\n
@@ -229,7 +224,7 @@
 		El último de los consuetas históricos está fechada en 1751 y se trata de una copia realizada por Carlos Tàrrega i Caro del texto de 1625 ya mencionado. Se conserva en la biblioteca de los herederos del cronista ilicitano José M. Ruiz de Lope y Pérez (1831-1900). \n\n
     </string>
 
-    <string name="info_music_id">music</string>
+    <string name="info_music_id" translatable="false">music</string>
     <string name="info_music_title">Música</string>
     <string name="info_music_subtitle">Sobre los canticos del Misteri</string>
     <string name="info_music_thumbnail" translatable="false">musica_thumb</string>
@@ -269,7 +264,7 @@
 
     <string name="info_recognition_id" translatable="false">recognition</string>
     <string name="info_recognition_title">Reconocimientos</string>
-    <string name="info_recognition_subtitle"></string>
+    <string name="info_recognition_subtitle" translatable="false"></string>
     <string name="info_recognition_thumbnail" translatable="false">reconocimientos_thumb</string>
     <string name="info_recognition_header_img" translatable="false">reconocimientos_01</string>
     <string name="info_recognition_footer_img" translatable="false"></string>

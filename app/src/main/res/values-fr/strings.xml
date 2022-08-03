@@ -3,7 +3,7 @@
     <string name="dialog_btn_accept">Valider</string>
     <string name="dialog_btn_cancel">Annuler</string>
     <string name="warning_live_mute_title">¡Attention!</string>
-    <string name="warning_live_mute_msg">Le dispositif a été mis en mode silencieux. Il doit le rester tout le long de la représentation. Merci pour votre collaboration</string>
+    <string name="warning_live_mute_msg">MUET VOTRE APPAREIL. Il doit le rester tout le long de la représentation. Merci pour votre collaboration</string>
     <string name="warning_no_listen_title">¡Attention!</string>
     <string name="warning_no_listen_msg">Option indisponible les jours de représentation. Veuillez excuser la gêne occasionnée.</string>
     <string name="dialog_download_title">Information importante</string>
@@ -120,4 +120,6 @@
     <string name="cred_title7">ACCESSIBILITÉ</string>
     <string name="cred_title8">SPONSORISÉ</string>
     <string name="creditos">Informations et Crédits</string>
+    <string name="seleccion_idioma">Sélection de la langue</string>
+    <string name="live">En direct</string>
 </resources>

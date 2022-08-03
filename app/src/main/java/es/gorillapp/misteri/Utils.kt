@@ -1,12 +1,26 @@
 package es.gorillapp.misteri
 
 import android.app.Activity
+import android.app.AlertDialog
 import android.content.Context
+import android.content.DialogInterface
+import android.content.SharedPreferences
 import android.content.res.Configuration
+import android.media.AudioManager
 import android.net.ConnectivityManager
 import android.net.NetworkInfo
+import android.view.View
+import android.widget.ProgressBar
+import android.widget.Toast
+import androidx.lifecycle.MutableLiveData
+import androidx.recyclerview.widget.RecyclerView
 import com.android.volley.*
+import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
+import es.gorillapp.misteri.castList.CastListAdapter
+import es.gorillapp.misteri.data.CastItem
 import org.apache.http.conn.ConnectTimeoutException
+import org.json.JSONArray
 import org.json.JSONException
 import org.xmlpull.v1.XmlPullParserException
 import java.net.ConnectException
@@ -54,3 +68,16 @@ fun isTablet(context: Context): Boolean {
         context.resources.configuration.screenLayout and Configuration.SCREENLAYOUT_SIZE_MASK === Configuration.SCREENLAYOUT_SIZE_LARGE
     return xlarge || large
 }
+
+fun muteDeviceAdvice(context: Context) {
+    // User alert about mutting
+    val alertDialog = AlertDialog.Builder(context)
+    alertDialog.setTitle(context.resources.getString(R.string.warning_live_mute_title))
+    alertDialog.setMessage(context.resources.getString(R.string.warning_live_mute_msg))
+    alertDialog.setIcon(android.R.drawable.ic_dialog_alert)
+    alertDialog.setPositiveButton(context.resources.getString(R.string.dialog_btn_accept)
+    ) { dialog, _ -> dialog.cancel() }
+    alertDialog.show()
+}
+
+

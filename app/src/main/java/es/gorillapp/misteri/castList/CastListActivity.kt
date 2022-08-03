@@ -43,6 +43,11 @@ class CastListActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_cast_list)
 
+        val accountPrefs = getSharedPreferences(getString(R.string.sharedPreferences), MODE_PRIVATE)
+        val isRepresentationDay = accountPrefs.getBoolean(getString(R.string.isRepresentationDay), false)
+
+        if(!isRepresentationDay) muteDeviceAdvice(this)
+
         downloadTask()
 
         val btnStart = findViewById<View>(R.id.comienzo) as LinearLayout

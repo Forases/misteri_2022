@@ -21,7 +21,7 @@
             android:layout_width="fill_parent"
             android:layout_height="80dp"
             android:gravity="center"
-            android:text="En Directo"
+            android:text="@string/live"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 

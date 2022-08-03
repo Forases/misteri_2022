@@ -3,7 +3,7 @@
     <string name="dialog_btn_accept">Acceptar</string>
     <string name="dialog_btn_cancel">Cancel·lar</string>
     <string name="warning_live_mute_title">¡Atenció!</string>
-    <string name="warning_live_mute_msg">El seu dispositiu ha sigut silenciat. El dispositiu deu romandre en silenci durant la representació. Moltes gràcies per la seua col·laboració.</string>
+    <string name="warning_live_mute_msg">SILENCIE EL SEU DISPOSITIU. El dispositiu deu romandre en silenci durant la representació. Moltes gràcies per la seua col·laboració.</string>
     <string name="warning_no_listen_title">¡Atenció!</string>
     <string name="warning_no_listen_msg">Opció no disponible en dies de representació. Disculpe les molèsties.</string>
     <string name="dialog_download_title">Informació important</string>
@@ -116,4 +116,6 @@
     <string name="cred_title7">ACCESSIBILITAT</string>
     <string name="cred_title8">PATROCINAT PER</string>
     <string name="creditos">Informació i Crèdits</string>
+    <string name="seleccion_idioma">Selecció d´idioma</string>
+    <string name="live">En directe</string>
 </resources>

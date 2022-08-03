@@ -49,6 +49,7 @@ class MenuActivity : AppCompatActivity() {
         //Retrieve default lang
         val accountPrefs = getSharedPreferences(getString(R.string.sharedPreferences), MODE_PRIVATE)
         val defaultLang = accountPrefs.getString(getString(R.string.lang), "es")
+        val isRepresentationDay = accountPrefs.getBoolean(getString(R.string.isRepresentationDay), false)
         val config = resources.configuration
         //Set default lang at the app context
         val locale = defaultLang?.let { Locale(it) }
@@ -125,30 +126,8 @@ class MenuActivity : AppCompatActivity() {
         //Listen  Button onClick
         val listen = findViewById<View>(R.id.listen) as LinearLayout
         listen.setOnClickListener {
-            // 		        SharedPreferences accountPrefs = getSharedPreferences(getString(R.string.sharedPreferences), Context.MODE_PRIVATE);
-// 				boolean areAudiosDownloaded = accountPrefs.getBoolean(getString(R.string.are_audios_downloaded), false);
-//
-// 				if(!areAudiosDownloaded) {
-//
-//	 		        Builder alertDialog = new AlertDialog.Builder(MenuActivity.this);
-//	 		        alertDialog.setTitle(getString(R.string.dialog_download_title));
-//	 		        alertDialog.setMessage(getString(R.string.dialog_download_msg));
-//	 		        alertDialog.setIcon(android.R.drawable.ic_dialog_alert);
-//	 		        alertDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-//	 		        public void onClick(final DialogInterface dialogInterface, final int which) {
-//	 		        	dialog = ProgressDialog.show(MenuActivity.this, getString(R.string.progressdialog_download_title), getString(R.string.progressdialog_download_msg), true);
-//	 		        	dialog.show();
-//	 		        	downloadAudios();
-//	 		        }});
-//
-//	 		        alertDialog.setNegativeButton(getString(R.string.dialog_btn_cancel), new DialogInterface.OnClickListener() {
-//	 		          public void onClick(DialogInterface dialog, int which) {
-//	 		        	 dialog.cancel();
-//	 		        } });
-//	 		        alertDialog.show();
-// 				}else{
             // Navigate to the next activity
-            if (!isMisteriDay()) {
+            if (!isRepresentationDay) {
                 val newIntent = Intent()
                 newIntent.setClass(applicationContext, SceneListActivity::class.java)
                 startActivity(newIntent)
@@ -159,10 +138,9 @@ class MenuActivity : AppCompatActivity() {
                 alertDialog.setIcon(android.R.drawable.ic_dialog_alert)
                 alertDialog.setPositiveButton(
                     getString(R.string.dialog_btn_accept)
-                ) { dialog, which -> dialog.cancel() }
+                ) { dialog, _ -> dialog.cancel() }
                 alertDialog.show()
             }
-            // 				}
         }
 
         //Info history  Button onClick
