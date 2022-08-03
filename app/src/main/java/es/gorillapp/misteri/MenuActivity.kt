@@ -3,6 +3,7 @@ package es.gorillapp.misteri
 import android.annotation.SuppressLint
 import android.app.ActivityOptions
 import android.app.AlertDialog
+import android.content.Context
 import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.graphics.Bitmap
@@ -17,7 +18,11 @@ import android.view.Window
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.android.volley.Request
+import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
 import es.gorillapp.misteri.castList.CastListActivity
 import es.gorillapp.misteri.infoList.InfoListActivity
 import es.gorillapp.misteri.sceneList.SceneListActivity
@@ -40,10 +45,11 @@ class MenuActivity : AppCompatActivity() {
         if(isTablet(this))
         requestedOrientation =  ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
 
-
         //set statusBarColor
         val window = this.window
         window.statusBarColor = this.resources.getColor(R.color.misteri_yellow_2)
+
+        getDiaMisteri(this)
 
         // Languages //
         //Retrieve default lang
@@ -215,5 +221,29 @@ class MenuActivity : AppCompatActivity() {
         override fun run() {
             mHandler.postDelayed(this, oropelRainINTERVAL.toLong())
         }
+    }
+
+    fun getDiaMisteri(context: Context){
+        val url = "http://resources.gorilapp.com/misteri/representation_dates.php"
+        var isRepresentacionDay: Boolean
+        val queue = Volley.newRequestQueue(context)
+
+        val request = StringRequest(
+            Request.Method.GET, url,
+            { response ->
+                val data = response.toBoolean()
+                isRepresentacionDay = data
+
+                // In the preferences for future times
+                if(isRepresentacionDay){
+                    val accountPref = getSharedPreferences(getString(R.string.sharedPreferences), MODE_PRIVATE)
+                    val editor = accountPref.edit()
+                    editor.putBoolean(getString(R.string.isRepresentationDay), isRepresentacionDay)
+                    editor.apply()
+                }
+            },
+            {error->
+                Toast.makeText(context, getVolleyError(error), Toast.LENGTH_LONG).show()})
+        queue.add(request)
     }
 }

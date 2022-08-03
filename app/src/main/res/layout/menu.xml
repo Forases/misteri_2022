@@ -181,6 +181,8 @@
             <LinearLayout
                 android:id="@+id/buyTickets"
                 style="@style/btn_menu.main"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="11dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -197,6 +199,34 @@
             </LinearLayout>
 
             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_rectangle"
+                    android:layout_weight="0.5"/>
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_magrana" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_rectangle"
+                    android:layout_weight="0.5" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:id="@+id/infoCredits"
                 style="@style/btn_menu.main"
                 android:layout_width="fill_parent"
@@ -209,7 +239,6 @@
                     android:layout_height="wrap_content"
                     android:text="@string/creditos" />
             </LinearLayout>
-
         </LinearLayout>
     </ScrollView>
 

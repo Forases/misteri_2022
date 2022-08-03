@@ -78,6 +78,14 @@ class LangSettingActivity : AppCompatActivity() {
             intent.setClass(applicationContext, MenuActivity::class.java)
             startActivity(intent)
         }
+
+        val accountPrefs =
+            getSharedPreferences(getString(R.string.sharedPreferences), MODE_PRIVATE)
+        val defaultLang = accountPrefs.getString(getString(R.string.lang), null)
+        if (defaultLang == null) {
+            val backButton = findViewById<ImageView>(R.id.back_language)
+            backButton.isEnabled = false
+        }
     }
 
     private fun setDefaultLang(lang: String?, audio: Boolean) {

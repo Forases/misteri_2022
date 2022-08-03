@@ -2,7 +2,6 @@ package es.gorillapp.misteri
 
 import android.content.Context
 import android.content.Intent
-import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.view.Window
 import android.view.WindowManager
@@ -21,8 +20,6 @@ class Splash : AppCompatActivity() {
     /** Called when the activity is first created.  */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        downloadTask(this)
 
         //set statusBarColor
         val window = this.window
@@ -66,29 +63,5 @@ class Splash : AppCompatActivity() {
             }
         }
         splashTread.start()
-    }
-
-    fun downloadTask(context: Context){
-        val url = "http://resources.gorilapp.com/misteri/representation_dates.php"
-        var isRepresentacionDay: Boolean
-        val queue = Volley.newRequestQueue(context)
-
-        val request = StringRequest(
-            Request.Method.GET, url,
-            { response ->
-                val data = response.toBoolean()
-                isRepresentacionDay = data
-
-                // In the preferences for future times
-                if(isRepresentacionDay){
-                    val accountPref = getSharedPreferences(getString(R.string.sharedPreferences), MODE_PRIVATE)
-                    val editor = accountPref.edit()
-                    editor.putBoolean(getString(R.string.isRepresentationDay), isRepresentacionDay)
-                    editor.apply()
-                }
-            },
-            {error->
-                Toast.makeText(context, getVolleyError(error), Toast.LENGTH_LONG).show()})
-        queue.add(request)
     }
 }
