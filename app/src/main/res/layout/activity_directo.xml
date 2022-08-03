@@ -7,16 +7,36 @@
     tools:context=".DirectoActivity"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/title_info_text"
-        style="@style/titlebar"
-        android:layout_width="fill_parent"
-        android:layout_height="80dp"
-        android:gravity="center"
-        android:text="En Directo"
+    <RelativeLayout
+        android:id="@+id/sceneCabecera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/title_text"
+            style="@style/titlebar"
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:text="@string/live"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/back_directo"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:src="@drawable/ic_back_button" />
+    </RelativeLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -24,7 +44,7 @@
 
 
         <ImageView
-            android:id="@+id/direct_image"
+            android:id="@+id/directo_image"
             android:layout_width="match_parent"
             android:layout_height="222dp"
             android:scaleType="centerCrop"
@@ -38,7 +58,7 @@
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:background="@drawable/gradient_background"
-            app:layout_constraintBottom_toBottomOf="@+id/direct_image"
+            app:layout_constraintBottom_toBottomOf="@+id/directo_image"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -48,7 +68,7 @@
             android:layout_height="40dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/direct_image"
+            app:layout_constraintTop_toBottomOf="@+id/directo_image"
             android:orientation="horizontal"
             android:background="@color/misteri_black"
             android:gravity="center_horizontal">
@@ -78,7 +98,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <androidx.fragment.app.FragmentContainerView android:name="es.gorillapp.misteri_2022.DialogoFragment"
+                <androidx.fragment.app.FragmentContainerView
+                    android:name="es.gorillapp.misteri.DialogoFragment"
                     android:id="@+id/directo_fragment"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"/>
@@ -90,6 +111,19 @@
         </RelativeLayout>
 
         <TextView
+            android:id="@+id/actoTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway_light"
+            android:text="PRIMER ACTO"
+            android:textColor="@color/misteri_bone"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/direct_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="@+id/imageGradient" />
+
+        <TextView
             android:id="@+id/direct_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -98,7 +132,7 @@
             android:text="La Vespra"
             android:textColor="@color/misteri_bone"
             android:textSize="24sp"
-            app:layout_constraintBottom_toBottomOf="@+id/direct_image"
+            app:layout_constraintBottom_toBottomOf="@+id/directo_image"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/imageGradient" />
 

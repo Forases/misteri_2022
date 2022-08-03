@@ -3,7 +3,7 @@
     <string name="dialog_btn_accept">Annehmen</string>
     <string name="dialog_btn_cancel">Stornieren</string>
     <string name="warning_live_mute_title">¡Achtung!</string>
-    <string name="warning_live_mute_msg">Das Gerät wurde zum Schweigen gebracht. Vielen Dank für ihre Mitarbeit.</string>
+    <string name="warning_live_mute_msg">SCHALTEN SIE IHR GERÄT STUMM. Vielen Dank für ihre Mitarbeit.</string>
     <string name="warning_no_listen_title">¡Achtung!</string>
     <string name="warning_no_listen_msg">Option an Darstellung Tagen nicht zur Verfügung. Entschuldigung für die Unannehmlichkeiten.</string>
     <string name="dialog_download_title">Wichtige Informationen</string>
@@ -109,4 +109,19 @@
    
    	<!-- Menu option 4. buy tickets activities-->
    	<string name="buytickets">Tickets kaufen</string>
+
+    <!-- Menu option 5. credits activities-->
+    <string name="cred_title1">ERLÄUTERNDE TEXTE</string>
+    <string name="cred_title2">ÜBERSETZUNGEN</string>
+    <string name="cred_title3">FOTOS</string>
+    <string name="cred_title4">IDEE UND KONZEPT</string>
+    <string name="cred_title5">PRODUKTION</string>
+    <string name="cred_title6">ENTWICKLUNG</string>
+    <string name="cred_title7">BARRIEREFREIHEIT</string>
+    <string name="cred_title8">VERANSTALTET VON</string>
+    <string name="creditos">Informationen und Credits</string>
+    <string name="seleccion_idioma">Sprachauswahl</string>
+    <string name="live">Live</string>
+    <string name="primer_acto">ERSTER AKT</string>
+    <string name="segundo_acto">ZWEITER AKT</string>
 </resources>

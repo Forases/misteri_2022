@@ -6,23 +6,22 @@
     tools:context=".DialogoFragment"
     android:orientation="vertical">
     <TextView
-        android:id="@+id/direct_texto_original"
+        android:id="@+id/dialogo_texto_original"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/misteri_black"
         android:fontFamily="@font/playfairdisplay_black"
         android:padding="24dp"
-        android:text="@string/dummy_sceneplayer_originalText"
         android:textColor="@color/misteri_bone"
         android:textSize="20sp"/>
 
     <TextView
-        android:id="@+id/direct_traduccion"
+        android:id="@+id/dialogo_traduccion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/playfairdisplay_black"
         android:padding="24dp"
-        android:text="@string/dummy_sceneplayer_translationText"
         android:textColor="@color/misteri_black"
+        android:background="@color/misteri_bone"
         android:textSize="20sp"/>
 </LinearLayout>

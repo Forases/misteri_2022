@@ -4,79 +4,203 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     tools:context=".DirectoActivity"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/sceneCabecera"
+                style="@style/titlebar"
+                android:layout_width="fill_parent"
+                android:layout_height="80dp"
+                android:gravity="center"
+                android:text="@string/dummy_sceneplayer_act"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/back_listen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/ic_iconoir_cancel"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/title_info_text"
-            style="@style/titlebar"
-            android:layout_width="fill_parent"
-            android:layout_height="80dp"
-            android:gravity="center"
-            android:text="Escuchar"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="23dp"
-            android:layout_margin="24dp"
-            android:gravity="center"
-            android:text="SELECCIONE UNA ESCENA"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_height="match_parent">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/listen_image"
+                android:layout_width="match_parent"
+                android:layout_height="222dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/image1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="24dp"
-            android:layout_marginTop="12dp"
-            android:layout_margin="24dp"
-            android:gravity="center"
-            style="@style/creditText"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:text="La Vespra"/>
+            <ImageView
+                android:id="@+id/imageGradient"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/gradient_background"
+                app:layout_constraintBottom_toBottomOf="@+id/listen_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/vespra_recyclerview"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="24dp"/>
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/listen_image"
+                android:orientation="vertical"
+                android:background="@color/misteri_black"
+                android:gravity="center_horizontal">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="24dp"
-            android:layout_marginTop="12dp"
-            android:layout_margin="24dp"
-            android:gravity="center"
-            android:text="La Festa"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/festa_recyclerview"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="24dp"/>
+                    <ImageButton
+                        android:id="@+id/button_rewind"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp"
+                        android:background="@drawable/rounded_button"
+                        android:layout_marginStart="68dp"
+                        android:src="@drawable/ic_rewind_button"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
 
-        </LinearLayout>
+                    <ImageButton
+                        android:id="@+id/button_pause"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="21dp"
+                        android:src="@drawable/ic_pause_button"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/button_forward"
+                        app:layout_constraintStart_toEndOf="@+id/button_rewind"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:background="@drawable/play_pause_button"
+                        android:contentDescription="TODO" />
 
+                    <ImageButton
+                        android:id="@+id/button_play"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="21dp"
+                        android:src="@drawable/ic_play_button"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/button_forward"
+                        app:layout_constraintStart_toEndOf="@+id/button_rewind"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:background="@drawable/play_pause_button"
+                        android:visibility="gone"/>
+
+                    <ImageButton
+                        android:id="@+id/button_forward"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp"
+                        android:background="@drawable/rounded_button"
+                        android:layout_marginEnd="68dp"
+                        android:src="@drawable/ic_forward_button"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ProgressBar
+                    android:id="@+id/listenProgressBar"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:progressTint="@color/misteri_yellow"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="20dp"/>
+
+                <ToggleButton
+                    android:id="@+id/toggleListenButton"
+                    android:layout_width="150dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/toggle_selector"
+                    android:textOff=""
+                    android:textOn=""
+                    android:layout_marginBottom="4dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/listenNumSlide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway_light"
+                android:text="@string/dummy_sceneplayer_act"
+                android:textColor="@color/misteri_bone"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@+id/listen_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="@+id/imageGradient" />
+
+            <TextView
+                android:id="@+id/listen_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/playfairdisplay_black"
+                android:text="@string/dummy_sceneplayer_act"
+                android:textColor="@color/misteri_bone"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@+id/listen_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/imageGradient" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/misteri_bone"
+        android:orientation="vertical">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/directo_fragment"
+                android:name="es.gorillapp.misteri.DialogoFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </ScrollView>
+    </LinearLayout>
+
+
 
 </LinearLayout>

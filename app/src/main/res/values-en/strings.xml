@@ -3,7 +3,7 @@
     <string name="dialog_btn_accept">Accept</string>
     <string name="dialog_btn_cancel">Cancel</string>
     <string name="warning_live_mute_title">Attention!</string>
-    <string name="warning_live_mute_msg">Your device is now muted. \n The device must remain silent during the representation. Thank you very much for your consideration.</string>
+    <string name="warning_live_mute_msg">MUTE YOUR DEVICE.   The device must remain silent during the representation. Thank you very much for your consideration.</string>
     <string name="warning_no_listen_title">Attention!</string>
     <string name="warning_no_listen_msg">Option not available on representation days. We apologize for the inconvenience</string>
     <string name="dialog_download_title">Important Info</string>
@@ -86,7 +86,7 @@
 
     <string name="info_tramoya_title">Scenaries</string>
     <string name="info_tramoya_subtitle">The Basilica of Santa María</string>
-    <string name="info_tramoyalongtext">The big stage of the Mystery of Elche is the Basilica of Santa Maria, a baroque temple, whose construction began in 1673 and ended in 1784, the scene itself is divided into two parts:. Horizontal or "terrestrial" and the vertical or "air ". \n\n The first consists of a platform or "cadafal" rises in the transept of the church. Their arrangement allows the viewer, according to medieval custom, can be mounted on all four sides .. This platform is the mayor temple gate by an inclined plane called corridor accessible. Along this corridor are three small altars. Garden of Gethsemane, Calvary and the Holy grave. \n\n The air scenery or vertical is set in the dome of the church. It symbolizes the sky. Hidden on the canvas for the dome, from the perspective of the audience, there is a small wooden board. Allows stages all operations and work necessary to lower and raise the flying machine with the sign of the heavenly world. \n\n Such devices are three: the cloud or Granada in the descending angel announcing to Mary her death; the Recèlica or Araceli, occupied by five angels, three adults and two children, in the second part, the Assumption of the Virgin; similar, but smaller, by one adult and two children set out and the coronation or Trinidad, Araceli to be occupied the Holy Trinity. These three devices bound driven set up and down with thick ropes by two manual lathes on the terraces of the Church. \n\n The singers who do not descend from heaven will be marked outside the temple, originally in the hermitage of San Sebastián and currently in the adjacent Casa De La Festa. From this hermitage drive of singers and the authorities at the beginning of the presentation in a small procession, so that the streets become the stage of Festa. Scenario is extended to all the old medieval core than in the morning of August 15, with the Procesion&#8211;Burial of María.\n\n</string>
+    <string name="info_tramoya_longtext">The big stage of the Mystery of Elche is the Basilica of Santa Maria, a baroque temple, whose construction began in 1673 and ended in 1784, the scene itself is divided into two parts:. Horizontal or "terrestrial" and the vertical or "air ". \n\n The first consists of a platform or "cadafal" rises in the transept of the church. Their arrangement allows the viewer, according to medieval custom, can be mounted on all four sides .. This platform is the mayor temple gate by an inclined plane called corridor accessible. Along this corridor are three small altars. Garden of Gethsemane, Calvary and the Holy grave. \n\n The air scenery or vertical is set in the dome of the church. It symbolizes the sky. Hidden on the canvas for the dome, from the perspective of the audience, there is a small wooden board. Allows stages all operations and work necessary to lower and raise the flying machine with the sign of the heavenly world. \n\n Such devices are three: the cloud or Granada in the descending angel announcing to Mary her death; the Recèlica or Araceli, occupied by five angels, three adults and two children, in the second part, the Assumption of the Virgin; similar, but smaller, by one adult and two children set out and the coronation or Trinidad, Araceli to be occupied the Holy Trinity. These three devices bound driven set up and down with thick ropes by two manual lathes on the terraces of the Church. \n\n The singers who do not descend from heaven will be marked outside the temple, originally in the hermitage of San Sebastián and currently in the adjacent Casa De La Festa. From this hermitage drive of singers and the authorities at the beginning of the presentation in a small procession, so that the streets become the stage of Festa. Scenario is extended to all the old medieval core than in the morning of August 15, with the Procesion&#8211;Burial of María.\n\n</string>
         
     <string name="info_celebration_title">Festivity</string>
     <string name="info_celebration_subtitle">The Misteri lived by the city</string>
@@ -98,4 +98,19 @@
    
    	<!-- Menu option 4. buy tickets activities-->
    	<string name="buytickets">Buy tickets</string>
+
+    <!-- Menu option 5. credits activities-->
+    <string name="cred_title1">EXPLANATORY TEXTS</string>
+    <string name="cred_title2">TRANSLATIONS</string>
+    <string name="cred_title3">PHOTOGRAPHS</string>
+    <string name="cred_title4">IDEA AND CONCEPT</string>
+    <string name="cred_title5">PRODUCTION</string>
+    <string name="cred_title6">DEVELOPMENT</string>
+    <string name="cred_title7">ACCESSIBILITY</string>
+    <string name="cred_title8">HOSTED BY</string>
+    <string name="creditos">Information and Credits</string>
+    <string name="seleccion_idioma">Language selection</string>
+    <string name="live">Live</string>
+    <string name="primer_acto">FIRST ACT</string>
+    <string name="segundo_acto">SECOND ACT</string>
 </resources>

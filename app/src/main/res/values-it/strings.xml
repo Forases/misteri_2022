@@ -3,7 +3,7 @@
     <string name="dialog_btn_accept">Accettare</string>
     <string name="dialog_btn_cancel">Cancellare</string>
     <string name="warning_live_mute_title">¡Attenzione!</string>
-    <string name="warning_live_mute_msg">Il suo dispositivo è in silenzio. Il dispositivo dovrebbe essere in silenzio durante la rappresentazione. Molte grazie per la sua collaborazione.</string>
+    <string name="warning_live_mute_msg">MUTE IL DISPOSITIVO. Il dispositivo dovrebbe essere in silenzio durante la rappresentazione. Molte grazie per la sua collaborazione.</string>
     <string name="warning_no_listen_title">¡Attenzione!</string>
     <string name="warning_no_listen_msg">Opzione non disponibile nei giorni della rappresentazione. Siamo spiacenti per il disturbo.</string>
     <string name="dialog_download_title">Informazione importante</string>
@@ -34,7 +34,7 @@
     <!-- Menu option 1. Live activities-->
     <string name="cast">Ripartizione</string>
     <string name="today_cast">Oggi intervengono nella Rappresentazione:</string>
-    <string name="live">En directo IT</string>   
+    <string name="live">In diretta</string>
     
     <!-- Menu option 2. Scene player activities-->
     <!-- Scene menu -->
@@ -62,4 +62,18 @@
    
    	<!-- Menu option 4. buy tickets activities-->
    	<string name="buytickets">Acquisto delle entrate</string>
+
+    <!-- Menu option 5. credits activities-->
+    <string name="cred_title1">TESTI ESPLICATIVI</string>
+    <string name="cred_title2">TRADUZIONI</string>
+    <string name="cred_title3">FOTOGRAFIE</string>
+    <string name="cred_title4">IDEA E CONCETTO</string>
+    <string name="cred_title5">PRODUZIONE</string>
+    <string name="cred_title6">SVILUPPO</string>
+    <string name="cred_title7">ACCESSIBILITÀ</string>
+    <string name="cred_title8">OSPITATO DA</string>
+    <string name="creditos">Informazioni e Crediti</string>
+    <string name="seleccion_idioma">Selezione della lingua</string>
+    <string name="primer_acto">ATTO PRIMO</string>
+    <string name="segundo_acto">ATTO SECONDO</string>
 </resources>

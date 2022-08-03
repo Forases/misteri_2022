@@ -3,15 +3,21 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/title"
-    android:orientation="horizontal" >
+    android:orientation="horizontal"
+    android:layout_margin="8dp">
 
     <TextView
         android:id="@+id/cast_character"
-        style="@style/character"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:paddingEnd="10dp"
+        android:fontFamily="@font/raleway_semibold"
+        android:textSize="16sp"
+        android:textColor="@color/misteri_black"
         android:layout_weight="0.8"
-        android:gravity="right"/>
+        android:gravity="end"
+        android:text="Apostols"/>
 
     <TextView
         android:id="@+id/cast_name"
@@ -19,7 +25,10 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:layout_weight="1"
-        android:gravity="left"
-        android:paddingBottom="5dp" />
+        android:gravity="start"
+        android:fontFamily="@font/raleway_light"
+        android:textSize="16sp"
+        android:textColor="@color/misteri_black"
+        android:text="@string/dummy_sceneplayer_act"/>
 
 </LinearLayout>

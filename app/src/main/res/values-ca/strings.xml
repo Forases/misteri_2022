@@ -3,7 +3,7 @@
     <string name="dialog_btn_accept">Acceptar</string>
     <string name="dialog_btn_cancel">Cancel·lar</string>
     <string name="warning_live_mute_title">¡Atenció!</string>
-    <string name="warning_live_mute_msg">El seu dispositiu ha sigut silenciat. El dispositiu deu romandre en silenci durant la representació. Moltes gràcies per la seua col·laboració.</string>
+    <string name="warning_live_mute_msg">SILENCIE EL SEU DISPOSITIU. El dispositiu deu romandre en silenci durant la representació. Moltes gràcies per la seua col·laboració.</string>
     <string name="warning_no_listen_title">¡Atenció!</string>
     <string name="warning_no_listen_msg">Opció no disponible en dies de representació. Disculpe les molèsties.</string>
     <string name="dialog_download_title">Informació important</string>
@@ -105,4 +105,19 @@
    
    	<!-- Menu option 4. buy tickets activities-->
    	<string name="buytickets">Compra d\'entrades</string>
+
+    <!-- Menu option 5. credits activities-->
+    <string name="cred_title1">TEXTOS EXPLICATIUS</string>
+    <string name="cred_title2">TRADUCCIONS</string>
+    <string name="cred_title3">FOTOGRAFIES</string>
+    <string name="cred_title4">IDEA I CONCEPTE</string>
+    <string name="cred_title5">PRODUCCIÓ</string>
+    <string name="cred_title6">DESENVOLUPAMENT</string>
+    <string name="cred_title7">ACCESSIBILITAT</string>
+    <string name="cred_title8">PATROCINAT PER</string>
+    <string name="creditos">Informació i Crèdits</string>
+    <string name="seleccion_idioma">Selecció d´idioma</string>
+    <string name="live">En directe</string>
+    <string name="primer_acto">PRIMER ACTE</string>
+    <string name="segundo_acto">SEGON ACTE</string>
 </resources>
