@@ -49,7 +49,7 @@
 
     <string name="sharedPreferences" translatable="false">es.gorillap.misteri.SETTINGS</string>
     <string name="lang" translatable="false">lang</string>
-    <string name="isRepresentationDay" translatable="false">isRepresentationDay</string>
+    <string name="isAudioDescription" translatable="false">isAudioDescription</string>
     <string name="user_ringmode" translatable="false">user_ringmode</string>
     <string name="are_audios_downloaded" translatable="false">are_audios_downloaded</string>
 

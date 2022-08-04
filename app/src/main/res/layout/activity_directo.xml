@@ -92,15 +92,16 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:background="@color/misteri_bone">
 
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <androidx.fragment.app.FragmentContainerView
-                    android:name="es.gorillapp.misteri.DialogoFragment"
                     android:id="@+id/directo_fragment"
+                    android:name="es.gorillapp.misteri.DialogoFragment"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"/>
 

@@ -44,9 +44,15 @@ class CastListActivity : AppCompatActivity() {
         setContentView(R.layout.activity_cast_list)
 
         val accountPrefs = getSharedPreferences(getString(R.string.sharedPreferences), MODE_PRIVATE)
-        val isRepresentationDay = accountPrefs.getBoolean(getString(R.string.isRepresentationDay), false)
+        val isAudioDescription = accountPrefs.getBoolean("audioDescription", false)
 
-        if(isRepresentationDay) muteDeviceAdvice(this)
+        var showAdvice = false
+        val bundle: Bundle? = intent.extras
+        if (bundle != null) {
+            showAdvice = bundle.getBoolean("showAdvice")
+        }
+
+        if(!isAudioDescription && showAdvice) muteDeviceAdvice(this)
 
         downloadTask()
 
