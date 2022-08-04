@@ -1,9 +1,7 @@
 package es.gorillapp.misteri
 
 import android.annotation.SuppressLint
-import android.app.ActivityOptions
 import android.app.AlertDialog
-import android.content.Context
 import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.graphics.Bitmap
@@ -18,11 +16,7 @@ import android.view.Window
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.android.volley.Request
-import com.android.volley.toolbox.StringRequest
-import com.android.volley.toolbox.Volley
 import es.gorillapp.misteri.castList.CastListActivity
 import es.gorillapp.misteri.infoList.InfoListActivity
 import es.gorillapp.misteri.sceneList.SceneListActivity
@@ -49,13 +43,13 @@ class MenuActivity : AppCompatActivity() {
         val window = this.window
         window.statusBarColor = this.resources.getColor(R.color.misteri_yellow_2)
 
-        getDiaMisteri(this)
+
 
         // Languages //
         //Retrieve default lang
         val accountPrefs = getSharedPreferences(getString(R.string.sharedPreferences), MODE_PRIVATE)
         val defaultLang = accountPrefs.getString(getString(R.string.lang), "es")
-        val isRepresentationDay = accountPrefs.getBoolean(getString(R.string.isRepresentationDay), false)
+        val isAudioDescription = accountPrefs.getBoolean(getString(R.string.isAudioDescription), false)
         val config = resources.configuration
         //Set default lang at the app context
         val locale = defaultLang?.let { Locale(it) }
@@ -126,27 +120,16 @@ class MenuActivity : AppCompatActivity() {
         live.setOnClickListener {
             val intent = Intent()
             intent.setClass(applicationContext, CastListActivity::class.java)
+            intent.putExtra("showAdvice", true)
             startActivity(intent)
         }
 
         //Listen  Button onClick
         val listen = findViewById<View>(R.id.listen) as LinearLayout
         listen.setOnClickListener {
-            // Navigate to the next activity
-            if (!isRepresentationDay) {
-                val newIntent = Intent()
-                newIntent.setClass(applicationContext, SceneListActivity::class.java)
-                startActivity(newIntent)
-            } else {
-                val alertDialog = AlertDialog.Builder(this@MenuActivity)
-                alertDialog.setTitle(getString(R.string.warning_no_listen_title))
-                alertDialog.setMessage(getString(R.string.warning_no_listen_msg))
-                alertDialog.setIcon(android.R.drawable.ic_dialog_alert)
-                alertDialog.setPositiveButton(
-                    getString(R.string.dialog_btn_accept)
-                ) { dialog, _ -> dialog.cancel() }
-                alertDialog.show()
-            }
+            val newIntent = Intent()
+            newIntent.setClass(applicationContext, SceneListActivity::class.java)
+            startActivity(newIntent)
         }
 
         //Info history  Button onClick
@@ -154,8 +137,7 @@ class MenuActivity : AppCompatActivity() {
         infohistory.setOnClickListener {
             val intent = Intent()
             intent.setClass(applicationContext, InfoListActivity::class.java)
-            val b = ActivityOptions.makeSceneTransitionAnimation(this).toBundle()
-            startActivity(intent, b)
+            startActivity(intent)
         }
 
         //Buy tickets  Button onClick
@@ -197,53 +179,10 @@ class MenuActivity : AppCompatActivity() {
     }
 
 
-    fun getScreenDimensions() {
+    private fun getScreenDimensions() {
         val dm = DisplayMetrics()
         windowManager.defaultDisplay.getMetrics(dm)
         screenWidth = dm.widthPixels
         screenHeight = dm.heightPixels
-    }
-
-    fun bringButtonsToFront(menuBackground: RelativeLayout) {
-        val languageSetting = findViewById<View>(R.id.lang) as LinearLayout
-        menuBackground.bringChildToFront(languageSetting)
-        val live = findViewById<View>(R.id.live) as LinearLayout
-        menuBackground.bringChildToFront(live)
-        val listen = findViewById<View>(R.id.listen) as LinearLayout
-        menuBackground.bringChildToFront(listen)
-        val infoHistory = findViewById<View>(R.id.infoHistory) as LinearLayout
-        menuBackground.bringChildToFront(infoHistory)
-        val buyTickets = findViewById<View>(R.id.buyTickets) as LinearLayout
-        menuBackground.bringChildToFront(buyTickets)
-    }
-
-    var mHandlerTask: Runnable = object : Runnable {
-        override fun run() {
-            mHandler.postDelayed(this, oropelRainINTERVAL.toLong())
-        }
-    }
-
-    fun getDiaMisteri(context: Context){
-        val url = "http://resources.gorilapp.com/misteri/representation_dates.php"
-        var isRepresentacionDay: Boolean
-        val queue = Volley.newRequestQueue(context)
-
-        val request = StringRequest(
-            Request.Method.GET, url,
-            { response ->
-                val data = response.toBoolean()
-                isRepresentacionDay = data
-
-                // In the preferences for future times
-                if(isRepresentacionDay){
-                    val accountPref = getSharedPreferences(getString(R.string.sharedPreferences), MODE_PRIVATE)
-                    val editor = accountPref.edit()
-                    editor.putBoolean(getString(R.string.isRepresentationDay), isRepresentacionDay)
-                    editor.apply()
-                }
-            },
-            {error->
-                Toast.makeText(context, getVolleyError(error), Toast.LENGTH_LONG).show()})
-        queue.add(request)
     }
 }

@@ -69,8 +69,8 @@
         <item name="android:textSize">24sp</item>
     </style>
     <style name="ticketsbar">
-        <item name="android:background">@color/misteri_black</item>
-        <item name="android:textColor">@color/misteri_yellow</item>
+        <item name="android:background">@color/misteri_yellow</item>
+        <item name="android:textColor">@color/misteri_black</item>
         <item name="fontFamily">@font/playfairdisplay_black</item>
         <item name="android:textSize">24sp</item>
     </style>

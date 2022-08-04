@@ -5,6 +5,7 @@ import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
+import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import es.gorillapp.misteri.castList.CastListActivity
 import java.util.*
@@ -24,49 +25,49 @@ class LangSettingActivity : AppCompatActivity() {
         setContentView(R.layout.lang_settings)
 
         //Lang = ca  Button onClick
-        val btn_ca = findViewById<View>(R.id.ca) as ImageView
+        val btn_ca = findViewById<View>(R.id.ca_layout) as LinearLayout
         btn_ca.setOnClickListener {
             setDefaultLang(Language.CA.langCode, false)
             navigateToMenu()
         }
 
         //Lang = es  Button onClick
-        val btn_es = findViewById<View>(R.id.es) as ImageView
+        val btn_es = findViewById<View>(R.id.es_layout) as LinearLayout
         btn_es.setOnClickListener {
             setDefaultLang(Language.ES.langCode, false)
             navigateToMenu()
         }
 
         //Lang = es_audio  Button onClick
-        val btn_es_audio = findViewById<View>(R.id.es_audio) as ImageView
+        val btn_es_audio = findViewById<View>(R.id.es_audio_layout) as LinearLayout
         btn_es_audio.setOnClickListener {
             setDefaultLang(Language.ES.langCode, true)
             navigateToMenu()
         }
 
         //Lang = en  Button onClick
-        val btn_en = findViewById<View>(R.id.en) as ImageView
+        val btn_en = findViewById<View>(R.id.en_layout) as LinearLayout
         btn_en.setOnClickListener {
             setDefaultLang(Language.EN.langCode, false)
             navigateToMenu()
         }
 
         //Lang = de  Button onClick
-        val btn_de = findViewById<View>(R.id.de) as ImageView
+        val btn_de = findViewById<View>(R.id.de_layout) as LinearLayout
         btn_de.setOnClickListener {
             setDefaultLang(Language.DE.langCode, false)
             navigateToMenu()
         }
 
         //Lang = fr  Button onClick
-        val btn_fr = findViewById<View>(R.id.fr) as ImageView
+        val btn_fr = findViewById<View>(R.id.fr_layout) as LinearLayout
         btn_fr.setOnClickListener {
             setDefaultLang(Language.FR.langCode, false)
             navigateToMenu()
         }
 
         //Lang = it  Button onClick
-        val btn_it = findViewById<View>(R.id.it) as ImageView
+        val btn_it = findViewById<View>(R.id.it_layout) as LinearLayout
         btn_it.setOnClickListener {
             setDefaultLang(Language.IT.langCode, false)
             navigateToMenu()

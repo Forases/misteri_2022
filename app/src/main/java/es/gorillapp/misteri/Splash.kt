@@ -21,6 +21,8 @@ class Splash : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+
         //set statusBarColor
         val window = this.window
         window.statusBarColor = this.resources.getColor(R.color.misteri_yellow_2)

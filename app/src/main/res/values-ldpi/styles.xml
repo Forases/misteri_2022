@@ -46,6 +46,12 @@
         <item name="android:textColor">@color/black</item>
         <item name="android:fontFamily">@font/raleway_semibold</item>
     </style>
+    <style name="ticketsbar">
+        <item name="android:background">@color/misteri_yellow</item>
+        <item name="android:textColor">@color/misteri_black</item>
+        <item name="fontFamily">@font/playfairdisplay_black</item>
+        <item name="android:textSize">18sp</item>
+    </style>
     <style name="titlebar">
         <item name="android:background">#910101</item>
         <item name="android:textColor">#FFFFFF</item>
