@@ -42,7 +42,6 @@ class ListenActivity : AppCompatActivity() {
 
     private var audioNum: Int = 0
 
-    private lateinit var slide: Slide
     private val currentSlide: MutableLiveData<Slide> by lazy {
         MutableLiveData<Slide>()
     }
@@ -94,7 +93,7 @@ class ListenActivity : AppCompatActivity() {
                 "drawable/image${newSlide.nombreImagen!!.toInt()}",
                 null,
                 this.packageName))
-            numDiapositiva.text = newSlide.numDiapositiva.toString() + " de 62"
+            numDiapositiva.text = String.format(resources.getString(R.string.slideNum),newSlide.numDiapositiva.toString())
 
             val currentFragment = supportFragmentManager.findFragmentById(R.id.directo_fragment)
             if(currentFragment is DialogoFragment){
