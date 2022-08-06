@@ -139,7 +139,10 @@ class CastListActivity : AppCompatActivity() {
             },
             {error->
                 progressBar.visibility = GONE
-                Toast.makeText(this, getVolleyError(error), Toast.LENGTH_LONG).show()})
+                Toast.makeText(this, getVolleyError(error), Toast.LENGTH_LONG).show()
+                this.finish()
+            })
+
         queue.add(request)
     }
 }
