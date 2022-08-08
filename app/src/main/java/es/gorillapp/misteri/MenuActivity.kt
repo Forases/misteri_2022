@@ -91,6 +91,7 @@ class MenuActivity : AppCompatActivity() {
             val intent = Intent()
             intent.setClass(applicationContext, LangSettingActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
         //Credits  Button onClick
@@ -99,6 +100,7 @@ class MenuActivity : AppCompatActivity() {
             val intent = Intent()
             intent.setClass(applicationContext, CreditsActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
         //Live  Button onClick
@@ -108,6 +110,7 @@ class MenuActivity : AppCompatActivity() {
             intent.setClass(applicationContext, CastListActivity::class.java)
             intent.putExtra("showAdvice", true)
             startActivity(intent)
+            finish()
         }
 
         //Listen  Button onClick
@@ -124,6 +127,7 @@ class MenuActivity : AppCompatActivity() {
             val intent = Intent()
             intent.setClass(applicationContext, InfoListActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
         //Buy tickets  Button onClick
@@ -132,6 +136,7 @@ class MenuActivity : AppCompatActivity() {
             val intent = Intent()
             intent.setClass(applicationContext, BuyTicketsActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
         //Visit Elche Button onClick
@@ -140,6 +145,7 @@ class MenuActivity : AppCompatActivity() {
             val intent = Intent()
             intent.setClass(applicationContext, VisitElcheActivity::class.java)
             startActivity(intent)
+            finish()
         }
     }
 

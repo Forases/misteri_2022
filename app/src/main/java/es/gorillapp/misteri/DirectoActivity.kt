@@ -152,6 +152,7 @@ class DirectoActivity : AppCompatActivity() {
             val intent = Intent()
             intent.setClass(applicationContext, CastListActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
     }

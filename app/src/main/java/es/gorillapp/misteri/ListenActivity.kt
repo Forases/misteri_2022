@@ -163,6 +163,7 @@ class ListenActivity : AppCompatActivity() {
             val intent = Intent()
             intent.setClass(applicationContext, SceneListActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
     }

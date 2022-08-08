@@ -63,6 +63,7 @@ class CastListActivity : AppCompatActivity() {
             val intent = Intent()
             intent.setClass(applicationContext, MenuActivity::class.java)
             startActivity(intent)
+            finish()
         }
     }
 

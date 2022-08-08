@@ -42,6 +42,7 @@ class HistoriaActivity : AppCompatActivity() {
             val intent = Intent()
             intent.setClass(applicationContext, InfoListActivity::class.java)
             startActivity(intent)
+            finish()
         }
     }
 
