@@ -13,7 +13,6 @@ import java.io.*
 class DBManager(context: Context): SQLiteOpenHelper(
     context, "Slides.sqlite", null, 1) {
 
-    val DB_TABLE_NAME = "slides"
     val COL_EVENT = "evento"
     val COL_NB = "numDiapositiva"
     val COL_IMAGE = "nombreImagen"
@@ -21,8 +20,6 @@ class DBManager(context: Context): SQLiteOpenHelper(
     val COL_TRANSLATE_PARTIAL = "traduccion_"
     val COL_TITLE_PARTIAL = "titulo_"
     val COL_INFO_PARTIAL = "info_"
-    val COL_NB_SCENE = "numEscena"
-    val COL_STARTS_ON_SECOND = "segundoQueEmpieza"
     val EQUAL_STATEMENT = " = "
     val AND_STATEMENT = " AND "
 
@@ -157,24 +154,18 @@ class DBManager(context: Context): SQLiteOpenHelper(
         if (result != null) {
             if(result.moveToFirst()){
 
-                var nombreImagen = result.getString(result.getColumnIndexOrThrow(COL_IMAGE))
-                var textoOriginal = result.getString(result.getColumnIndexOrThrow(COL_ORIGINALTEXT))
-                var traduccion = result.getString(result.getColumnIndexOrThrow(colTranslate))
-                var titulo = result.getString(result.getColumnIndexOrThrow(colTitle))
-                var info = result.getString(result.getColumnIndexOrThrow(colInfo))
+                val nombreImagen = result.getString(result.getColumnIndexOrThrow(COL_IMAGE))
+                val textoOriginal = result.getString(result.getColumnIndexOrThrow(COL_ORIGINALTEXT))
+                val traduccion = result.getString(result.getColumnIndexOrThrow(colTranslate))
+                val titulo = result.getString(result.getColumnIndexOrThrow(colTitle))
+                val info = result.getString(result.getColumnIndexOrThrow(colInfo))
 
                 slide = Slide(slideNumber, textoOriginal, traduccion, nombreImagen, titulo, info)
             }
+            result.close()
         }else{
             Log.e("database", "Database ERROR. This row doesn�t exists in the DB")
         }
         return slide!!
-    }
-
-
-    companion object {
-        // If you change the database schema, you must increment the database version.
-        const val DATABASE_VERSION = 1
-        const val DATABASE_NAME = "Slides.db"
     }
 }

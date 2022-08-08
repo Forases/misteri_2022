@@ -12,17 +12,12 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.RecyclerView
-import com.android.volley.*
+import com.android.volley.Request
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import es.gorillapp.misteri.*
-import es.gorillapp.misteri.R
 import es.gorillapp.misteri.data.CastItem
 import org.json.JSONArray
-import es.gorillapp.misteri.infoList.InfoListActivity
-
-
-private const val TAG = "CastActivity"
 
 class CastListActivity : AppCompatActivity() {
 
@@ -68,6 +63,7 @@ class CastListActivity : AppCompatActivity() {
             val intent = Intent()
             intent.setClass(applicationContext, MenuActivity::class.java)
             startActivity(intent)
+            finish()
         }
     }
 
@@ -139,7 +135,10 @@ class CastListActivity : AppCompatActivity() {
             },
             {error->
                 progressBar.visibility = GONE
-                Toast.makeText(this, getVolleyError(error), Toast.LENGTH_LONG).show()})
+                Toast.makeText(this, getVolleyError(error), Toast.LENGTH_LONG).show()
+                this.finish()
+            })
+
         queue.add(request)
     }
 }

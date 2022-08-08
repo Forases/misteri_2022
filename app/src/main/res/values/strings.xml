@@ -4,7 +4,7 @@
     <string name="content_description_dummy" translatable="false">dummy</string>
 
     <!-- DB configuration  -->
-    <string name="db_path" translatable="false">/data/data/es.gorillapp.misteri/databases/</string>
+    <string name="db_path" translatable="false">/data/data/com.tarsagorilapp.misteri/databases/</string>
     <!-- string name="db_name">diapositivas.sqlite</string-->
 
 
@@ -29,7 +29,8 @@
     <string name="fr_button" translatable="false">Français</string>
 
     <!-- Credits activity-->
-    <string name="creditos">Información y Créditos</string>
+    <string name="creditos">Infromación y Créditos</string>
+    <string name="creditos_section">Créditos App</string>
     <string name="cred_title1">TEXTOS EXPLICATIVOS</string>
     <string name="cred_text1" translatable="false">Joan Castaño García</string>
     <string name="cred_title2">TRADUCCIONES</string>
@@ -39,12 +40,12 @@
     <string name="cred_title4">IDEA Y CONCEPTO</string>
     <string name="cred_text4" translatable="false">José Vicente Castaño</string>
     <string name="cred_title5">PRODUCCIÓN</string>
-    <string name="cred_text5" translatable="false">Tarsa &amp; Gorilapp</string>
+    <string name="cred_text5" translatable="false">Tarsa</string>
     <string name="cred_title6">DESARROLLO</string>
-    <string name="cred_text6" translatable="false">Gorilapp</string>
+    <string name="cred_text6" translatable="false">Julián Marín Porriño</string>
     <string name="cred_title7">ACCESIBILIDAD</string>
-    <string name="cred_text7" translatable="false">Teatro Acccesible y APTENT</string>
-    <string name="cred_title8">PATROCINADO POR</string>
+    <string name="cred_text7" translatable="false">Teatro Acccesible, APTENT y Fundación Vodafone</string>
+    <string name="cred_title8">PROMOVIDO POR</string>
 
 
     <string name="sharedPreferences" translatable="false">es.gorillap.misteri.SETTINGS</string>
@@ -52,11 +53,6 @@
     <string name="isAudioDescription" translatable="false">isAudioDescription</string>
     <string name="user_ringmode" translatable="false">user_ringmode</string>
     <string name="are_audios_downloaded" translatable="false">are_audios_downloaded</string>
-
-    <!-- string name="lang_es">es</string>
-    <string name="lang_en">en</string>
-    <string name="lang_fr">fr</string>
-    <string name="lang_de">de</string-->
 
     <!-- Dialogs messages -->
     <string name="dialog_btn_accept">Aceptar</string>
@@ -198,6 +194,7 @@
     <string name="dummy_sceneplayer_originalText" translatable="false">"<span style="color:red">Ai fill Joan e amic meu conforte‐us lo ver Fill de Déu car lo meu cor és molt plaent del vostre bon adveniment.</span>"</string>
     <string name="dummy_sceneplayer_translationText" translatable="false">"Ay Juan, hijo y amigo mío, conforteos el verdadero Dios Hijo pues mi corazón está muy contento de vuestro buen advenimiento."</string>
     <string name="dummy_sceneplayer_infoText" translatable="false">"María informa a San Juan de su inminente muerte y le entrega la palma para que la lleve en su entierro"</string>
+    <string name="slideNum" translatable="false">%1$s de 62</string>
 
 
     <!-- Menu option 3. Information and history activities-->
@@ -217,7 +214,7 @@
     <string name="info_text_subtitle">El texto literario del Misterio</string>
     <string name="info_text_thumbnail" translatable="false">texto_thumb</string>
     <string name="info_text_header_img" translatable="false">texto_01</string>
-    <string name="info_text_footer_img" translatable="false"></string>
+    <string name="info_text_footer_img" translatable="false" />
     <string name="info_text_longtext">El texto literario del Misterio de Elche, escrito en valenciano y con un salmo y algunos versos latinos, consta de doscientos cincuenta y nueve versos que aparecen distribuidos en estrofas de diversos tipos. \n\n
 		Los textos literario y musical, así como las acotaciones escénicas, se han conservado en unos manuscritos denominados consuetas. El primero está fechada en 1625 y es una copia del original que guardaba el Consejo de la villa realizada por Gaspar Soler Chacón. Ni el original ni esta copia se conservan actualmente, pero nos son conocidos por la edición realizada por el que fuera cronista de Elche, Pedro Ibarra i Ruiz (1858-1934). \n\n
 		En el año 1639, "un devoto" realizó una nueva copia del manuscrito oficial. Incluyó anotaciones con los nombres de los compositores que participaron en la reforma polifónica del Misterio, en el siglo XVI. Esta copia del consueta también nos es conocida únicamente a través de una edición parcial realizada por el publicista murciano Javier Fuentes y Ponte (1830-1903). \n\n
@@ -244,7 +241,7 @@
     <string name="info_tramoya_subtitle">La basílica de Santa María</string>
     <string name="info_tramoya_thumbnail" translatable="false">tramoya_thumb</string>
     <string name="info_tramoya_header_img" translatable="false">tramoya_02</string>
-    <string name="info_tramoya_footer_img" translatable="false"></string>
+    <string name="info_tramoya_footer_img" translatable="false" />
     <string name="info_tramoya_longtext">El gran escenario del Misterio de Elche es la Basílica de Santa María, un templo barroco cuya construcción se inició en 1673 y concluyó en 1784. La escena propiamente dicha se divide en dos partes bien diferenciadas: la horizontal o "terrestre" y la vertical o "aérea". \n\n
 		La primera está formado por un tablado o “cadafal” que se levanta en el crucero del templo. Su disposición permite que los espectadores, según la costumbre medieval, puedan situarse por sus cuatro lados. A este tablado se accede desde la puerta Mayor del templo mediante un plano inclinado denominado andador. A lo largo de este corredor se hallan colocados tres pequeños altares que representan el huerto de Getsemaní, el monte Calvario y el Santo Sepulcro. \n\n
 		El escenario aéreo o vertical se instala en la cúpula de la iglesia que simboliza el cielo. Por encima de la lona de cubre la cúpula, oculto a la vista de los espectadores, se instala en voladizo un pequeño tablado de madera que permite a los tramoyistas realizar todas las operaciones y trabajos necesarios para bajar y subir los aparatos aéreos con los personajes del mundo celestial. \n\n
@@ -266,10 +263,10 @@
 
     <string name="info_recognition_id" translatable="false">recognition</string>
     <string name="info_recognition_title">Reconocimientos</string>
-    <string name="info_recognition_subtitle" translatable="false"></string>
+    <string name="info_recognition_subtitle" translatable="false" />
     <string name="info_recognition_thumbnail" translatable="false">reconocimientos_thumb</string>
     <string name="info_recognition_header_img" translatable="false">reconocimientos_01</string>
-    <string name="info_recognition_footer_img" translatable="false"></string>
+    <string name="info_recognition_footer_img" translatable="false" />
     <string name="info_recognition_longtext">En los últimos años, los valores artísticos y tradicionales contenidos en el Misterio de Elche y su carácter único y excepcional, han sido objeto de diferentes reconocimientos y distinciones. Los más destacados son los siguientes:\n\n 
         · 1931: Declaración de Monumento Nacional por el Gobierno de la II República española\n 
         · 1965: Declaración de Fiesta de Interés Turístico Nacional por el Ministerio de Información y Turismo\n 
@@ -288,6 +285,10 @@
 
     <!-- Menu option 4. buy tickets activities-->
     <string name="buytickets">Compra de entradas</string>
+
+    <!-- Menu option 4. buy tickets activities-->
+    <string name="visitelche" translatable="false">VisitElche.com</string>
+    <string name="visitelche_description">Información turística de la ciudad</string>
 
     <!-- TitleBars-->
     <string name="seleccion_idioma">Selección de idioma</string>

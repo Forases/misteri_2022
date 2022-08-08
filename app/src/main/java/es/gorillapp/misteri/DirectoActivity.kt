@@ -8,10 +8,7 @@ import android.os.Bundle
 import android.view.View
 import android.view.View.GONE
 import android.view.View.VISIBLE
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
-import android.widget.ToggleButton
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
@@ -40,6 +37,7 @@ class DirectoActivity : AppCompatActivity() {
     private lateinit var directoTextoOriginal: TextView
     private lateinit var directoTraduccion: TextView
     private lateinit var directoInfo: TextView
+    private lateinit var misteriTitle: LinearLayout
 
     private lateinit var mediaPlayer: MediaPlayer
 
@@ -61,6 +59,8 @@ class DirectoActivity : AppCompatActivity() {
         val isAudiodescrption = accountPrefs.getBoolean("audioDescription", false)
         val url = "https://resources.gorilapp.com/misteri/misteriVivo.php?lang=$defaultLang"
         setContentView(R.layout.activity_directo)
+
+        misteriTitle = findViewById(R.id.misteri_delx)
 
         mediaPlayer = MediaPlayer()
 
@@ -85,6 +85,7 @@ class DirectoActivity : AppCompatActivity() {
             gradientImageView = findViewById(R.id.imageGradient)
 
             if(newDirectItem.nombreImagen!! == "interludio"){
+                misteriTitle.visibility = VISIBLE
                 actoTitulo.visibility = GONE
                 directoTitle.visibility = GONE
                 gradientImageView.visibility = GONE
@@ -92,6 +93,7 @@ class DirectoActivity : AppCompatActivity() {
                 actoTitulo.visibility = VISIBLE
                 directoTitle.visibility = VISIBLE
                 gradientImageView.visibility = VISIBLE
+                misteriTitle.visibility = GONE
             }
 
 
@@ -150,6 +152,7 @@ class DirectoActivity : AppCompatActivity() {
             val intent = Intent()
             intent.setClass(applicationContext, CastListActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
     }
@@ -193,7 +196,8 @@ class DirectoActivity : AppCompatActivity() {
                 itemDirecto.value = newItemDirecto
             },
             {error->
-                Toast.makeText(this, getVolleyError(error), Toast.LENGTH_LONG).show()})
+                Toast.makeText(this, getVolleyError(error), Toast.LENGTH_LONG).show()
+                this.finish()})
         queue.add(request)
 
     }

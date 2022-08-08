@@ -1,15 +1,11 @@
 package es.gorillapp.misteri
 
-import android.annotation.SuppressLint
-import android.app.AlertDialog
 import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.graphics.Bitmap
 import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.Drawable
-import android.media.AudioManager
 import android.os.Bundle
-import android.os.Handler
 import android.util.DisplayMetrics
 import android.view.View
 import android.view.Window
@@ -17,23 +13,22 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import es.gorillapp.misteri.castList.CastListActivity
 import es.gorillapp.misteri.infoList.InfoListActivity
 import es.gorillapp.misteri.sceneList.SceneListActivity
-import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.math.roundToInt
 
 class MenuActivity : AppCompatActivity() {
-    private val oropelRainINTERVAL = 7
-    var mHandler = Handler()
     var screenWidth = 0
     var screenHeight:Int = 0
-    var parameters: ArrayList<String>? = null
 
     //	BroadcastReceiver downloadCompleteReceiver = null;
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 
         //Set orientation of layout  based on if is tablet or smartphone
         if(isTablet(this))
@@ -43,13 +38,10 @@ class MenuActivity : AppCompatActivity() {
         val window = this.window
         window.statusBarColor = this.resources.getColor(R.color.misteri_yellow_2)
 
-
-
         // Languages //
         //Retrieve default lang
         val accountPrefs = getSharedPreferences(getString(R.string.sharedPreferences), MODE_PRIVATE)
         val defaultLang = accountPrefs.getString(getString(R.string.lang), "es")
-        val isAudioDescription = accountPrefs.getBoolean(getString(R.string.isAudioDescription), false)
         val config = resources.configuration
         //Set default lang at the app context
         val locale = defaultLang?.let { Locale(it) }
@@ -95,16 +87,11 @@ class MenuActivity : AppCompatActivity() {
 
         //Language  Button onClick
         val langButton = findViewById<View>(R.id.lang)
-        //Set the correct language flag
-        val flagId = resources.getIdentifier(
-            defaultLang + "_flag", "drawable",
-            packageName
-        )
-        //langButton.setBackgroundResource(flagId)
         langButton.setOnClickListener {
             val intent = Intent()
             intent.setClass(applicationContext, LangSettingActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
         //Credits  Button onClick
@@ -113,6 +100,7 @@ class MenuActivity : AppCompatActivity() {
             val intent = Intent()
             intent.setClass(applicationContext, CreditsActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
         //Live  Button onClick
@@ -122,6 +110,7 @@ class MenuActivity : AppCompatActivity() {
             intent.setClass(applicationContext, CastListActivity::class.java)
             intent.putExtra("showAdvice", true)
             startActivity(intent)
+            finish()
         }
 
         //Listen  Button onClick
@@ -138,6 +127,7 @@ class MenuActivity : AppCompatActivity() {
             val intent = Intent()
             intent.setClass(applicationContext, InfoListActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
         //Buy tickets  Button onClick
@@ -146,38 +136,18 @@ class MenuActivity : AppCompatActivity() {
             val intent = Intent()
             intent.setClass(applicationContext, BuyTicketsActivity::class.java)
             startActivity(intent)
+            finish()
+        }
+
+        //Visit Elche Button onClick
+        val visitElche = findViewById<View>(R.id.visitElche) as LinearLayout
+        visitElche.setOnClickListener {
+            val intent = Intent()
+            intent.setClass(applicationContext, VisitElcheActivity::class.java)
+            startActivity(intent)
+            finish()
         }
     }
-
-    override fun onResume() {
-        super.onResume()
-
-        // If we have muted the user device, we reset his configuration
-        val accountPrefs = getSharedPreferences(getString(R.string.sharedPreferences), MODE_PRIVATE)
-        val userRingmode = accountPrefs.getString(getString(R.string.user_ringmode), null)
-        if (userRingmode != null) {
-            val audio = applicationContext.getSystemService(AUDIO_SERVICE) as AudioManager
-            audio.ringerMode = userRingmode.toInt()
-        }
-    }
-
-    @SuppressLint("SimpleDateFormat")
-    fun isMisteriDay(): Boolean {
-        var isMisteriDay = false
-        val calendar = Calendar.getInstance()
-        val sdf = SimpleDateFormat("dd/MM/yyyy")
-        val formattedDate = sdf.format(calendar.time)
-        val misteriDates = resources.getStringArray(R.array.misteri_dates)
-        var i = 0
-        while (i < misteriDates.size && !isMisteriDay) {
-            if (misteriDates[i] == formattedDate) {
-                isMisteriDay = true
-            }
-            i++
-        }
-        return isMisteriDay
-    }
-
 
     private fun getScreenDimensions() {
         val dm = DisplayMetrics()

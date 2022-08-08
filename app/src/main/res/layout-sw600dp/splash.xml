@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/bg"
+        android:src="@drawable/bg_tablet"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,7 +20,7 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="144dp"
+        android:layout_marginBottom="35dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,22 +31,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/content_description_dummy"
-            android:src="@drawable/ic_misteri_title" />
+            android:src="@drawable/ic_misteri_title_tablet" />
 
         <ImageView
             android:id="@+id/misteri_subtitle2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/content_description_dummy"
-            android:src="@drawable/ic_misteri_subtitle" />
+            android:src="@drawable/ic_misteri_subtitle_tablet" />
     </LinearLayout>
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:src="@drawable/imagepromocion"
+        android:layout_marginBottom="77dp"
+        android:src="@drawable/image_promocion_tablet"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

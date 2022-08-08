@@ -2,6 +2,7 @@ package es.gorillapp.misteri
 
 import android.content.Context
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.view.Window
 import android.view.WindowManager
@@ -22,6 +23,10 @@ class Splash : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+
+        //Set orientation of layout  based on if is tablet or smartphone
+        if(isTablet(this))
+            requestedOrientation =  ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
 
         //set statusBarColor
         val window = this.window
@@ -61,6 +66,7 @@ class Splash : AppCompatActivity() {
                     }
                     intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
                     startActivity(intent)
+                    finish()
                 }
             }
         }

@@ -53,6 +53,32 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <LinearLayout
+            android:id="@+id/misteri_delx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/directo_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/directo_image"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/misteri_title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/content_description_dummy"
+                android:src="@drawable/ic_misteri_title" />
+
+            <ImageView
+                android:id="@+id/misteri_subtitle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/content_description_dummy"
+                android:src="@drawable/ic_misteri_subtitle" />
+        </LinearLayout>
+
         <ImageView
             android:id="@+id/imageGradient"
             android:layout_width="match_parent"
@@ -66,34 +92,33 @@
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="40dp"
+            android:background="@color/misteri_black"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/directo_image"
-            android:orientation="horizontal"
-            android:background="@color/misteri_black"
-            android:gravity="center_horizontal">
+            app:layout_constraintTop_toBottomOf="@+id/directo_image">
 
             <ToggleButton
                 android:id="@+id/toggleButton"
                 android:layout_width="150dp"
                 android:layout_height="36dp"
-                android:text="ToggleButton"
                 android:background="@drawable/toggle_selector"
+                android:text="ToggleButton"
                 android:textOff=""
-                android:textOn=""/>
+                android:textOn="" />
         </LinearLayout>
-
 
 
         <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:background="@color/misteri_bone"
+            android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-            android:orientation="vertical"
-            android:background="@color/misteri_bone">
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
             <ScrollView
                 android:layout_width="match_parent"
@@ -103,10 +128,9 @@
                     android:id="@+id/directo_fragment"
                     android:name="es.gorillapp.misteri.DialogoFragment"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent" />
 
             </ScrollView>
-
 
 
         </RelativeLayout>
@@ -136,9 +160,6 @@
             app:layout_constraintBottom_toBottomOf="@+id/directo_image"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/imageGradient" />
-
-
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

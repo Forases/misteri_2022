@@ -64,6 +64,32 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
+                <LinearLayout
+                    android:id="@+id/misteri_delx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="@+id/directo_image"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/directo_image"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/misteri_title2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/content_description_dummy"
+                        android:src="@drawable/ic_misteri_title"/>
+
+                    <ImageView
+                        android:id="@+id/misteri_subtitle2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/content_description_dummy"
+                        android:src="@drawable/ic_misteri_subtitle"/>
+                </LinearLayout>
+
                 <ImageView
                     android:id="@+id/imageGradient"
                     android:layout_width="match_parent"

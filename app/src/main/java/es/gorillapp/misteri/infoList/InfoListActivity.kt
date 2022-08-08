@@ -64,6 +64,7 @@ class InfoListActivity : AppCompatActivity() {
             val intent = Intent()
             intent.setClass(applicationContext, MenuActivity::class.java)
             startActivity(intent)
+            finish()
         }
     }
 
@@ -72,5 +73,6 @@ class InfoListActivity : AppCompatActivity() {
         val intent = Intent(this, HistoriaActivity()::class.java)
         intent.putExtra("itemID", infoItem.id)
         startActivity(intent)
+        finish()
     }
 }

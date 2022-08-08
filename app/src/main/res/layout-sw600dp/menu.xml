@@ -145,42 +145,6 @@
                     android:text="@string/btn_menu_live_subtitle" />
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/listen"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/btn_menu.main"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="10dp"
-                android:orientation="vertical">
-
-                <TextView
-                    style="@style/btn_menu_text.title"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:textAlignment="textStart"
-                    android:textSize="26sp"
-                    android:paddingStart="10dp"
-                    android:text="@string/btn_menu_listen_title" />
-
-                <TextView
-                    style="@style/btn_menu_text.subtitle"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:textAlignment="textStart"
-                    android:textSize="16sp"
-                    android:paddingStart="10dp"
-                    android:layout_marginBottom="5dp"
-                    android:text="@string/btn_menu_listen_subtitle" />
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_weight="0.5">
 
             <LinearLayout
                 android:id="@+id/infoHistory"
@@ -212,6 +176,73 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/visitElche"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/btn_menu.main"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/btn_menu_text.title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textStart"
+                    android:textSize="26sp"
+                    android:paddingStart="10dp"
+                    android:text="@string/visitelche" />
+
+                <TextView
+                    style="@style/btn_menu_text.subtitle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textStart"
+                    android:textSize="16sp"
+                    android:paddingStart="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/visitelche_description" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="0.5">
+
+
+            <LinearLayout
+                android:id="@+id/listen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/btn_menu.main"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/btn_menu_text.title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textStart"
+                    android:textSize="26sp"
+                    android:paddingStart="10dp"
+                    android:text="@string/btn_menu_listen_title" />
+
+                <TextView
+                    style="@style/btn_menu_text.subtitle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textStart"
+                    android:textSize="16sp"
+                    android:paddingStart="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/btn_menu_listen_subtitle" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:id="@+id/buyTickets"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -239,49 +270,35 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="32dp"
-                    android:layout_marginStart="20dp"
-                    android:src="@drawable/ic_rectangle"
-                    android:layout_weight="1"/>
-
-                <ImageView
-                    android:layout_width="28dp"
-                    android:layout_height="32dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/ic_magrana" />
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="32dp"
-                    android:layout_marginEnd="20dp"
-                    android:src="@drawable/ic_rectangle"
-                    android:layout_weight="1"/>
-            </LinearLayout>
-
-            <LinearLayout
                 android:id="@+id/infoCredits"
-                style="@style/btn_menu.main"
                 android:layout_width="fill_parent"
                 android:layout_height="56dp"
-                android:orientation="vertical">
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/misteri_yellow"
+                android:focusable="true">
 
                 <TextView
                     style="@style/btn_menu_text.title"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:textAlignment="textStart"
-                    android:textSize="26sp"
+                    android:textSize="18sp"
                     android:paddingStart="10dp"
-                    android:text="@string/creditos" />
+                    android:text="@string/creditos"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:id="@+id/es"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:background="@color/misteri_yellow_2"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_vector_right"
+                    android:layout_weight="0"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
