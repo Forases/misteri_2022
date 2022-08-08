@@ -76,4 +76,6 @@
     <string name="seleccion_idioma">Selezione della lingua</string>
     <string name="primer_acto">ATTO PRIMO</string>
     <string name="segundo_acto">ATTO SECONDO</string>
+    <string name="visitelche_description">Informazioni turistiche della città</string>
+    <string name="creditos_section">Crediti App</string>
 </resources>

@@ -29,7 +29,8 @@
     <string name="fr_button" translatable="false">Français</string>
 
     <!-- Credits activity-->
-    <string name="creditos">Información y Créditos</string>
+    <string name="creditos">Infromación y Créditos</string>
+    <string name="creditos_section">Créditos App</string>
     <string name="cred_title1">TEXTOS EXPLICATIVOS</string>
     <string name="cred_text1" translatable="false">Joan Castaño García</string>
     <string name="cred_title2">TRADUCCIONES</string>
@@ -39,12 +40,12 @@
     <string name="cred_title4">IDEA Y CONCEPTO</string>
     <string name="cred_text4" translatable="false">José Vicente Castaño</string>
     <string name="cred_title5">PRODUCCIÓN</string>
-    <string name="cred_text5" translatable="false">Tarsa &amp; Gorilapp</string>
+    <string name="cred_text5" translatable="false">Tarsa</string>
     <string name="cred_title6">DESARROLLO</string>
-    <string name="cred_text6" translatable="false">Gorilapp</string>
+    <string name="cred_text6" translatable="false">Julián Marín Porriño</string>
     <string name="cred_title7">ACCESIBILIDAD</string>
-    <string name="cred_text7" translatable="false">Teatro Acccesible y APTENT</string>
-    <string name="cred_title8">PATROCINADO POR</string>
+    <string name="cred_text7" translatable="false">Teatro Acccesible, APTENT y Fundación Vodafone</string>
+    <string name="cred_title8">PROMOVIDO POR</string>
 
 
     <string name="sharedPreferences" translatable="false">es.gorillap.misteri.SETTINGS</string>
@@ -284,6 +285,10 @@
 
     <!-- Menu option 4. buy tickets activities-->
     <string name="buytickets">Compra de entradas</string>
+
+    <!-- Menu option 4. buy tickets activities-->
+    <string name="visitelche" translatable="false">VisitElche.com</string>
+    <string name="visitelche_description">Información turística de la ciudad</string>
 
     <!-- TitleBars-->
     <string name="seleccion_idioma">Selección de idioma</string>

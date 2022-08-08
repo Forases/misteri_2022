@@ -113,4 +113,6 @@
     <string name="live">Live</string>
     <string name="primer_acto">FIRST ACT</string>
     <string name="segundo_acto">SECOND ACT</string>
+    <string name="visitelche_description">City tourist information</string>
+    <string name="creditos_section">Credits App</string>
 </resources>

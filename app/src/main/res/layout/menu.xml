@@ -199,6 +199,26 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/visitElche"
+                style="@style/btn_menu.main"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="11dp"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/btn_menu_text.title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/visitelche" />
+
+                <TextView
+                    style="@style/btn_menu_text.subtitle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/visitelche_description" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"

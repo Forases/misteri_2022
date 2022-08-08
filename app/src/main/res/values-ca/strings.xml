@@ -120,4 +120,6 @@
     <string name="live">En directe</string>
     <string name="primer_acto">PRIMER ACTE</string>
     <string name="segundo_acto">SEGON ACTE</string>
+    <string name="visitelche_description">Informació turística de la ciutat</string>
+    <string name="creditos_section">Crèdits App</string>
 </resources>

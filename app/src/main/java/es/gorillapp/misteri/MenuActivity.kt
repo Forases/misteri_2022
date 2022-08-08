@@ -13,6 +13,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import es.gorillapp.misteri.castList.CastListActivity
 import es.gorillapp.misteri.infoList.InfoListActivity
 import es.gorillapp.misteri.sceneList.SceneListActivity
@@ -26,6 +27,8 @@ class MenuActivity : AppCompatActivity() {
     //	BroadcastReceiver downloadCompleteReceiver = null;
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 
         //Set orientation of layout  based on if is tablet or smartphone
         if(isTablet(this))
@@ -128,6 +131,14 @@ class MenuActivity : AppCompatActivity() {
         buyTickets.setOnClickListener {
             val intent = Intent()
             intent.setClass(applicationContext, BuyTicketsActivity::class.java)
+            startActivity(intent)
+        }
+
+        //Visit Elche Button onClick
+        val visitElche = findViewById<View>(R.id.visitElche) as LinearLayout
+        visitElche.setOnClickListener {
+            val intent = Intent()
+            intent.setClass(applicationContext, VisitElcheActivity::class.java)
             startActivity(intent)
         }
     }
