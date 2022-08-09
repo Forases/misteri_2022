@@ -151,6 +151,7 @@ class DirectoActivity : AppCompatActivity() {
         backButton.setOnClickListener {
             val intent = Intent()
             intent.setClass(applicationContext, CastListActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(intent)
             finish()
         }

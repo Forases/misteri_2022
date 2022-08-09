@@ -55,6 +55,7 @@ class CastListActivity : AppCompatActivity() {
         btnStart.setOnClickListener {
             val intent = Intent()
             intent.setClass(applicationContext, DirectoActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(intent)
         }
 
@@ -62,6 +63,7 @@ class CastListActivity : AppCompatActivity() {
         backButton.setOnClickListener {
             val intent = Intent()
             intent.setClass(applicationContext, MenuActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(intent)
             finish()
         }

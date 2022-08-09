@@ -162,6 +162,8 @@ class ListenActivity : AppCompatActivity() {
         backButton.setOnClickListener {
             val intent = Intent()
             intent.setClass(applicationContext, SceneListActivity::class.java)
+            // set the new task and clear flags
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(intent)
             finish()
         }

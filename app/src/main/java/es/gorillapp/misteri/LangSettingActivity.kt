@@ -77,6 +77,7 @@ class LangSettingActivity : AppCompatActivity() {
         backButton.setOnClickListener {
             val intent = Intent()
             intent.setClass(applicationContext, MenuActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(intent)
             finish()
         }
@@ -111,6 +112,7 @@ class LangSettingActivity : AppCompatActivity() {
     private fun navigateToMenu() {
         val intent = Intent()
         intent.setClass(applicationContext, MenuActivity::class.java)
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(intent)
         finish()
     }

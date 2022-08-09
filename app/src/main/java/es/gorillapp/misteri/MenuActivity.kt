@@ -90,6 +90,7 @@ class MenuActivity : AppCompatActivity() {
         langButton.setOnClickListener {
             val intent = Intent()
             intent.setClass(applicationContext, LangSettingActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(intent)
             finish()
         }
@@ -99,6 +100,7 @@ class MenuActivity : AppCompatActivity() {
         creditsButton.setOnClickListener {
             val intent = Intent()
             intent.setClass(applicationContext, CreditsActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(intent)
             finish()
         }
@@ -109,6 +111,7 @@ class MenuActivity : AppCompatActivity() {
             val intent = Intent()
             intent.setClass(applicationContext, CastListActivity::class.java)
             intent.putExtra("showAdvice", true)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(intent)
             finish()
         }
@@ -126,6 +129,7 @@ class MenuActivity : AppCompatActivity() {
         infohistory.setOnClickListener {
             val intent = Intent()
             intent.setClass(applicationContext, InfoListActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(intent)
             finish()
         }
@@ -135,6 +139,7 @@ class MenuActivity : AppCompatActivity() {
         buyTickets.setOnClickListener {
             val intent = Intent()
             intent.setClass(applicationContext, BuyTicketsActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(intent)
             finish()
         }
@@ -144,6 +149,7 @@ class MenuActivity : AppCompatActivity() {
         visitElche.setOnClickListener {
             val intent = Intent()
             intent.setClass(applicationContext, VisitElcheActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(intent)
             finish()
         }

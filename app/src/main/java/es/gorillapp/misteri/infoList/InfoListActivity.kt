@@ -63,6 +63,7 @@ class InfoListActivity : AppCompatActivity() {
         backButton.setOnClickListener {
             val intent = Intent()
             intent.setClass(applicationContext, MenuActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(intent)
             finish()
         }
@@ -72,6 +73,7 @@ class InfoListActivity : AppCompatActivity() {
     private fun adapterOnClick(infoItem: InfoItem) {
         val intent = Intent(this, HistoriaActivity()::class.java)
         intent.putExtra("itemID", infoItem.id)
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(intent)
         finish()
     }
